@@ -1,0 +1,17 @@
+{
+  "name": "guidebook-template",
+  "version": "1.0.0",
+  "description": "Vanilla HTML/CSS/TS property guidebook template",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.2",
+    "vite": "^6.3.5",
+    "vite-plugin-pwa": "^0.21.1",
+    "workbox-window": "^7.3.0"
+  }
+}

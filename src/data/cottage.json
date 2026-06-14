@@ -1,0 +1,773 @@
+{
+  "property": {
+    "name": "The Cottage",
+    "title": "The Cottage | Guidebook",
+    "subtitle": "Tresowes Green Cottage",
+    "shortName": "Cottage Guide",
+    "description": "Welcome Book for The Cottage in Tresowes Green Cottage",
+    "siteUrl": "https://the-cottage.tgcottage.com",
+    "heroImage": "/images/the-cottage-exterior.webp",
+    "logo": "/icons/logo-150.webp",
+    "themeColor": "#c5a880",
+    "type": "cottage"
+  },
+  "contact": {
+    "address": "Tresowes Green Cottage, Tresowes, Ashton",
+    "addressFull": "Tresowes Green Cottage, Tresowes, Ashton, Helston, Cornwall, TR13 9SY, GB",
+    "email": "info@tresowesgreencottage.com",
+    "homePhone": "01736 763 669",
+    "homePhoneHref": "01736763669",
+    "contacts": [
+      {
+        "name": "Leslie",
+        "phone": "07790 611 150",
+        "phoneHref": "07790611150"
+      },
+      { "name": "Johnny", "phone": "07854 306 340", "phoneHref": "07854306340" }
+    ],
+    "what3words": "escapades.twit.tribes",
+    "what3wordsUrl": "https://w3w.co/escapades.twit.tribes",
+    "what3wordsSiteUrl": "https://what3words.com/",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.5477652680033!2d-5.371000287133512!3d50.11347117141103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486ad965755ad565%3A0xeb8e49e608fbc47d!2sTresowes%20Green%20Cottage!5e0!3m2!1sen!2suk!4v1718180197256!5m2!1sen!2suk",
+    "directions": "From the A30 take the A394 towards Helston. After hamlets of Rosudgeon and Newtown pass the Praa Sands Golf Course on the right and there is a sign for Tresowes to the left. Tresowes Green Cottage is the first property on the right (after the layby). From Helston follow the A394 towards Penzance and look for the second Tresowes sign after the village of Ashton. Tresowes Green Cottage is the first property on the right, after the layby and two tall chimneys.",
+    "parking": {
+      "summary": "You can park in the driveway by the pergola.",
+      "detail": [
+        "You can park in the driveway by the pergola.",
+        "One car per property. If you need more space for an additional car, there is a parking bay nearby.",
+        "As you drive down, please park on the left hand side.",
+        "Close the entrance gates after you enter the property. Only lower the right hand side bolt down after closing the gates."
+      ]
+    }
+  },
+  "hero": {
+    "heading": "Welcome to The Cottage in Tresowes Green Cottage",
+    "body": "This has been our home since July 2012 and we are delighted to share it with you. We hope this guestbook helps to make your stay with us enjoyable. Please let us know if you require any further information or if you have suggestions as to what else we could include for future guests.",
+    "navbarTitle": "Guidebook"
+  },
+  "arrival": {
+    "checkIn": {
+      "summary": "Check-in time from 3:00 PM",
+      "detail": [
+        "Check-in time is between 3:00 PM and 10:00 PM",
+        "Contact us if you need checking in at other times, we will be happy to help subject to availability."
+      ]
+    },
+    "access": {
+      "summary": "There is a lockbox containing your house key.",
+      "detail": [
+        "There is a lockbox containing your house key.",
+        "We will email you the access codes prior to arrival. Don't forget to check your email.",
+        "We might be here to meet you and show you the property, otherwise we will meet during your stay."
+      ]
+    },
+    "welcomePack": {
+      "summary": "We provide you with a welcome pack.",
+      "detail": [
+        "We provide you with a welcome pack to start your stay.",
+        "Normally we include orange juice, butter, milk, biscuits, eggs, jams and bread.",
+        "Please let us know if you have any dietary allergies in which case we could alter the basket content."
+      ]
+    },
+    "wifi": {
+      "summary": "Wifi is available and the code is provided in the Cottage.",
+      "detail": [
+        "Wifi is available and the code is provided in the Cottage. Please enjoy our wifi. If you have any problems, please contact us."
+      ]
+    }
+  },
+  "houseManual": {
+    "intro": "We hope you enjoy the Cottage and the facilities.",
+    "facilities": [
+      {
+        "id": "laundry",
+        "icon": "washing-machine",
+        "title": "Laundry",
+        "summary": "There are a washing machine and a dryer in the laundry room.",
+        "detail": [
+          "There are a washing machine and a dryer in the laundry room.",
+          "We provide detergent and fabric softener for your convenience.",
+          "There is also an outdoor wash line for those who wish to use it."
+        ]
+      },
+      {
+        "id": "coffee",
+        "icon": "coffee",
+        "title": "Coffee",
+        "summary": "There is an espresso machine in the kitchen.",
+        "detail": [
+          "There are an espresso machine, a caffetiere and a filter coffee machine in the kitchen. We love our coffee.",
+          "Coffee and sugar are provided.",
+          "The instruction manual for the espresso is in the kitchen top."
+        ]
+      },
+      {
+        "id": "television",
+        "icon": "tv",
+        "title": "Television & Media",
+        "summary": "There is a flat screen TV in the living room.",
+        "detail": [
+          "There is a flat screen TV in the living room.",
+          "Smart TV and Netflix subscriptions are provided.",
+          "There is also a DVD player in the living room and some films in the wall cupboard.",
+          "The mini hifi in the living room offers the options of cd, bluetooth, dab radio and radio."
+        ]
+      },
+      {
+        "id": "smoke-detectors",
+        "icon": "alarm-smoke",
+        "title": "Smoke Detectors",
+        "summary": "There are smoke, heat and CO1 detectors.",
+        "detail": [
+          "There are smoke, heat and CO1 detectors.",
+          "This has been tested before your arrival.",
+          "There is a fire extinguisher and a fire blanket in the kitchen.",
+          "Please do not tamper with the alarms."
+        ]
+      },
+      {
+        "id": "towels",
+        "icon": "dry-cleaning",
+        "title": "Towels & Linen",
+        "summary": "Egyptian cotton towels and linen are provided.",
+        "detail": [
+          "Egyptian cotton towels, bathrobes and linen are provided.",
+          "We provide beach towels for your use. Please do not take the bathroom towels outside the property.",
+          "If you require a change of towels during your stay please contact us."
+        ]
+      },
+      {
+        "id": "heating",
+        "icon": "heater",
+        "title": "Heating",
+        "summary": "Heating is provided.",
+        "detail": [
+          "Heating is available in all rooms.",
+          "The program runs daily and the thermostat display is on the shelf in the living room by the mini hi-fi.",
+          "The heating is sourced with a heat pump and runs 24 hours with the same temperature to be more effective.",
+          "If you need to reduce the temperature in the rooms please manipulate the radiators valve in the room."
+        ]
+      },
+      {
+        "id": "summerhouse",
+        "icon": "home",
+        "title": "Summerhouse",
+        "summary": "A preferred spot by the lake.",
+        "detail": [
+          "The Summerhouse is for all guests with the chance to dine, have a drink or listen to music while enjoying the fantastic views.",
+          "Please keep it tidy.",
+          "There is a radio with a docking station which offers the possibility to connect with Bluetooth devices and listen to music.",
+          "The Summerhouse lights come on every day at sunset and off at 10:30 pm."
+        ]
+      },
+      {
+        "id": "garden",
+        "icon": "tree",
+        "title": "Garden",
+        "summary": "Enjoy our gardens and the seating areas.",
+        "detail": [
+          "Enjoy our gardens and the seating areas.",
+          "There are several spaces in the garden with seating areas and dining tables.",
+          "Please return cushions for the different seating area indoors or in the garden chest after use.",
+          "If possible, please do not leave cushions outside overnight."
+        ]
+      },
+      {
+        "id": "barbecue",
+        "icon": "barbecue",
+        "title": "Barbecue",
+        "summary": "There are charcoal barbecues for guests use.",
+        "detail": [
+          "There are charcoal barbecues for guests use.",
+          "If you have used any available charcoal please replace it.",
+          "Make sure of having cleaned the barbecue and the tools ready for future guests."
+        ]
+      },
+      {
+        "id": "transport",
+        "icon": "car",
+        "title": "Transport",
+        "summary": "Taxis and Buses that operate in the area.",
+        "detail": [
+          "These are links to a couple of local taxis and the Cornwall First Bus."
+        ],
+        "links": [
+          {
+            "label": "Kernow Cabs",
+            "url": "https://www.kernowcabs.co.uk",
+            "phone": "01326 464 646",
+            "phoneHref": "01326464646"
+          },
+          {
+            "label": "Darren Taxi",
+            "url": "https://darrens-taxis.co.uk/",
+            "phone": "01326 352 100",
+            "phoneHref": "01326352100"
+          },
+          {
+            "label": "Kernow First Bus",
+            "url": "https://www.firstbus.co.uk/cornwall"
+          }
+        ]
+      },
+      {
+        "id": "septic",
+        "icon": "circle-off",
+        "title": "Septic Tanks",
+        "summary": "Please only use toilet paper in the toilet.",
+        "detail": [
+          "Please only use toilet paper in the toilet.",
+          "Sanitary products, dental floss, etc need to be disposed of in the bin."
+        ]
+      },
+      {
+        "id": "waste",
+        "icon": "recycle",
+        "title": "Waste & Recycle",
+        "summary": "Recycling, Refuse, Waste and Compost.",
+        "detail": [
+          "Compost: Please place compostable waste in the compost bins beside the black garden shed. No egg shells.",
+          "Recycling: Recyclable waste should be placed inside the green bin liner in the drawer under the ovens. Recyclable items are glass, metal, plastic and cardboard.",
+          "Waste: All other rubbish should be placed in the kitchen bin.",
+          "On departure, please bag all waste and put the green recycling and white general bags in the blue wheelie bin beside the garage."
+        ]
+      },
+      {
+        "id": "rules",
+        "icon": "scale",
+        "title": "General Rules",
+        "summary": "Some policies and rules for a pleasant stay.",
+        "detail": [
+          "Please no noise outside after 11:00 pm.",
+          "No smoking or vaping inside the property.",
+          "No pets allowed.",
+          "The property is for the number of guests specified in the booking."
+        ]
+      }
+    ]
+  },
+  "departure": {
+    "label": "Checkout",
+    "title": "Departure",
+    "intro": "We hope you have had an enjoyable stay in The Cottage and that everything has been great for you. We kindly ask you to check this list before departure. We look forward to welcoming you back.",
+    "items": [
+      {
+        "id": "checkout",
+        "icon": "badge-alert",
+        "title": "Check out",
+        "summary": "Check out time before 10:00 am",
+        "detail": [
+          "We kindly ask you to check-out before 10:00 am.",
+          "This will give us time to clean the Cottage before the next guest arrives.",
+          "If you'd like to request a late check-out, please contact us. However, please be informed that we may not be able to grant your request if we have same day check-in."
+        ]
+      },
+      {
+        "id": "kitchen",
+        "icon": "salad",
+        "title": "Kitchen",
+        "summary": "Please clean up any dirty dishes and put them away.",
+        "detail": [
+          "Please clean up any used utensils and dishes and put them away."
+        ]
+      },
+      {
+        "id": "power",
+        "icon": "power-off",
+        "title": "Power Off",
+        "summary": "Please turn off the stove, oven, lights and TV.",
+        "detail": [
+          "Please, make sure you turn off the stove, oven, lights and TV."
+        ]
+      },
+      {
+        "id": "furniture",
+        "icon": "sofa",
+        "title": "Furniture",
+        "summary": "Please replace any furniture to the original position.",
+        "detail": [
+          "Please, replace any furniture to the original position.",
+          "If something is missing or damaged please tell us in advance so we can replace or fix the item."
+        ]
+      },
+      {
+        "id": "linen",
+        "icon": "dry-cleaning",
+        "title": "Linen & Towels",
+        "summary": "Place all bed linen, used towels, kitchen towels in the laundry basket.",
+        "detail": [
+          "Place all the used bed linen, used towels, kitchen towels, cloths and robes in the grey laundry basket provided.",
+          "Do not strip the mattress and pillow protectors unless necessary."
+        ]
+      },
+      {
+        "id": "barbecue",
+        "icon": "barbecue",
+        "title": "Barbecue",
+        "summary": "Please remember to clean up the barbecues.",
+        "detail": [
+          "Please remember to clean up the barbecues.",
+          "If you have used any available charcoal please replace it.",
+          "Make sure of having cleaned the barbecue and the tools ready for future guests."
+        ]
+      },
+      {
+        "id": "waste",
+        "icon": "recycle",
+        "title": "Waste & Recycle",
+        "summary": "Recycling, Refuse, Waste and Compost.",
+        "detail": [
+          "Compost: Please place compostable waste in the compost bins. No egg shells.",
+          "Recycling: Recyclable waste in the green bin liner. Glass, metal, plastic and cardboard.",
+          "Waste: All other rubbish in the kitchen bin.",
+          "On departure, bag all waste and put bags in the blue wheelie bin beside the garage."
+        ]
+      },
+      {
+        "id": "keys",
+        "icon": "key",
+        "title": "Keys",
+        "summary": "Please return the keys to the lockbox.",
+        "detail": [
+          "Please return all keys to the lockbox and follow the instructions you received on arrival."
+        ]
+      },
+      {
+        "id": "feedback",
+        "icon": "heart",
+        "title": "Feedback",
+        "summary": "We would love to hear about your stay.",
+        "detail": [
+          "We would love to hear about your experience at The Cottage.",
+          "You can leave a review on the booking platform you used.",
+          "Thank you for staying with us!"
+        ]
+      }
+    ]
+  },
+  "emergency": {
+    "fire": {
+      "summary": "In case of fire, leave building and call 999.",
+      "steps": [
+        "Leave the building and go to the parking area",
+        "Call the Fire Brigade by telephoning 999",
+        "Contact Johnny or Leslie"
+      ],
+      "note": "There is a fire extinguisher and a fire blanket for use in the case of a small fire, where the exit is clear."
+    },
+    "medical": {
+      "summary": "For ambulance where life is at risk, call 999 or 112.",
+      "detail": [
+        "For ambulance where life is at risk, call 999 or 112.",
+        "For other medical issues call 111 or use the NHS 111 online service at 111.nhs.uk",
+        "There is a first aid kit in the bathroom.",
+        "Please inform Leslie or Johnny if you have an accident during your stay."
+      ]
+    },
+    "police": {
+      "summary": "Dial 999 or 112 in immediate danger.",
+      "detail": [
+        "In an Emergency contact the emergency services.",
+        "Dial 999 or 112 if you or someone else is in immediate danger.",
+        "For non-emergencies call 101."
+      ]
+    }
+  },
+  "restaurants": [
+    {
+      "name": "The Welloe",
+      "location": "Praa Sands",
+      "description": "Beach Bar and Restaurant",
+      "url": "https://www.thewelloe.com/",
+      "hearts": 2
+    },
+    {
+      "name": "Stones Reef Beach Bar & Kitchen",
+      "location": "Praa Sands",
+      "description": "Beachside bar and kitchen right on Praa Sands, open all day for drinks, coffee, and food.",
+      "url": "https://stonesreef.co.uk/",
+      "hearts": 3
+    },
+    {
+      "name": "The Square",
+      "location": "Porthleven",
+      "description": "Brasserie style menu",
+      "url": "https://www.thesquareatporthleven.co.uk/",
+      "hearts": 0
+    },
+    {
+      "name": "Kota Kai",
+      "location": "Porthleven",
+      "description": "Locally sourced, high quality food overlooking the harbour.",
+      "url": "https://kotakai.co.uk/",
+      "hearts": 3
+    },
+    {
+      "name": "The Victoria Inn",
+      "location": "Perranuthnoe",
+      "description": "Reputedly one of the oldest inns in Cornwall",
+      "url": "https://www.victoriainn-penzance.co.uk/",
+      "hearts": 2
+    },
+    {
+      "name": "The Cabin Beach Cafe",
+      "location": "Perranuthnoe",
+      "description": "Great food, stunning views and a very warm welcome",
+      "url": "https://www.thecabinbeachcafe.co.uk/",
+      "hearts": 2
+    },
+    {
+      "name": "The Peppercorn Cafe",
+      "location": "Perranuthnoe",
+      "description": "Tranquil location, breath-taking coastal walks, and a friendly welcome.",
+      "url": "https://www.thepeppercorncafe.co.uk/",
+      "hearts": 2
+    },
+    {
+      "name": "Bakehouse",
+      "location": "Penzance",
+      "description": "Restaurant in the heart of Penzance",
+      "url": "https://bakehouserestaurant.co.uk/",
+      "hearts": 0
+    },
+    {
+      "name": "The Shore",
+      "location": "Penzance",
+      "description": "Excellent fish and seafood.",
+      "url": "https://theshorerestaurant.uk/",
+      "hearts": 3
+    },
+    {
+      "name": "Argoe",
+      "location": "Newlyn",
+      "description": "Cornish fish and seafood, natural wine",
+      "url": "https://www.argoenewlyn.co.uk/",
+      "hearts": 3
+    },
+    {
+      "name": "Mackerel Sky Cafe",
+      "location": "Newlyn",
+      "description": "Seafood bar in the heart of Newlyn",
+      "url": "https://mackerelskycafe.co.uk/",
+      "hearts": 3
+    },
+    {
+      "name": "Nauti But Ice",
+      "location": "Porthleven",
+      "description": "Ice cream, cafe, pizza, sandwiches by the harbour.",
+      "url": "https://www.nautibutice.co.uk/",
+      "hearts": 2
+    },
+    {
+      "name": "The Packet Inn",
+      "location": "Rosudgeon",
+      "description": "Old Coaching Inn with locally sourced food.",
+      "url": "https://thepacketinn.co.uk/",
+      "hearts": 2
+    },
+    {
+      "name": "Amélie's",
+      "location": "Porthleven",
+      "description": "Informal menu with light bites, small and large plates.",
+      "url": "https://ameliesporthleven.co.uk/",
+      "hearts": 1
+    },
+    {
+      "name": "2 Fore Street",
+      "location": "Mousehole",
+      "description": "Stylish bistro-style restaurant",
+      "url": "https://www.2forestreet.co.uk/",
+      "hearts": 3
+    }
+  ],
+  "beaches": [
+    {
+      "name": "Praa Sands",
+      "location": "Helston, near Tresowes Green",
+      "url": "https://www.cornwall-beaches.co.uk/west-cornwall/praa-sands.htm",
+      "description": "A wide, sandy beach just 5 minutes from the cottage, great for swimming and surfing.",
+      "image": "/images/beaches/praa-sands.webp"
+    },
+    {
+      "name": "Rinsey Cove",
+      "location": "Between Praa Sands and Porthleven",
+      "url": "https://www.cornwall-beaches.co.uk/helston-lizard-falmouth/rinsey-cove.htm",
+      "description": "A secluded National Trust cove with dramatic cliffs and a ruined mine engine house.",
+      "image": "/images/beaches/rinsey-cove.webp"
+    },
+    {
+      "name": "Prussia Cove",
+      "location": "Prussia Cove, near Marazion",
+      "url": "https://www.cornwall-beaches.co.uk/west-cornwall/prussia-cove.htm",
+      "description": "A sheltered rocky cove with clear water, once the haunt of Cornwall's famous smugglers.",
+      "image": "/images/beaches/prussia-cove.webp"
+    },
+    {
+      "name": "Perranuthnoe",
+      "location": "Between Praa Sands and Marazion",
+      "url": "https://www.cornwall-beaches.co.uk/west-cornwall/perranuthnoe.htm",
+      "description": "A sandy family beach with views across Mount's Bay to St Michael's Mount.",
+      "image": "/images/beaches/perranuthnoe.webp"
+    },
+    {
+      "name": "Kynance Cove",
+      "location": "Lizard Peninsula",
+      "url": "https://www.cornwall-beaches.co.uk/helston-lizard-falmouth/kynance-cove.htm",
+      "description": "One of the most photographed beaches in Cornwall, with turquoise water and serpentine rock stacks.",
+      "image": "/images/beaches/kynance-cove.webp"
+    },
+    {
+      "name": "Polurrian Cove",
+      "location": "Lizard Peninsula",
+      "url": "https://www.cornwall-beaches.co.uk/helston-lizard-falmouth/polurrian-cove.htm",
+      "description": "A quiet, sheltered sandy beach on the Lizard, popular with families and swimmers.",
+      "image": "/images/beaches/polurrian-cove.webp"
+    },
+    {
+      "name": "Porthleven Beach",
+      "location": "Porthleven",
+      "url": "https://www.cornwall-beaches.co.uk/helston-lizard-falmouth/porthleven.htm",
+      "description": "A dramatic shingle and sand beach backed by the charming harbour village of Porthleven.",
+      "image": "/images/beaches/porthleven-beach.webp"
+    },
+    {
+      "name": "Gunwalloe Beach",
+      "location": "Near Helston",
+      "url": "https://www.cornwall-beaches.co.uk/helston-lizard-falmouth/gunwalloe.htm",
+      "description": "A National Trust beach with a medieval church set into the cliffs right on the sand.",
+      "image": "/images/beaches/gunwalloe.webp"
+    },
+    {
+      "name": "Marazion Beach",
+      "location": "Marazion",
+      "url": "https://www.cornwall-beaches.co.uk/west-cornwall/marazion.htm",
+      "description": "A long sandy beach with iconic views of St Michael's Mount across the bay.",
+      "image": "/images/beaches/marazion-beach.webp"
+    },
+    {
+      "name": "Longrock Beach",
+      "location": "Longrock, near Penzance",
+      "url": "https://www.cornwall-beaches.co.uk/west-cornwall/longrock.htm",
+      "description": "A quiet stretch of Mount's Bay shoreline popular with walkers and birdwatchers.",
+      "image": "/images/beaches/longrock-beach.webp"
+    }
+  ],
+  "attractions": [
+    {
+      "name": "Minack Theatre",
+      "location": "Porthcurno",
+      "url": "https://minack.com/",
+      "title": "Welcome to Minack Theatre - Cornwall's iconic cliff-top theatre",
+      "description": "Open-air cliffside theatre above Porthcurno, with performances, gardens, and sea views.",
+      "image": "/images/attractions/minack.webp"
+    },
+    {
+      "name": "Jubilee Pool",
+      "location": "Penzance",
+      "url": "https://jubileepool.co.uk/",
+      "title": "The UK's Most Celebrated Saltwater Lido - Jubilee Pool, Penzance, Cornwall",
+      "description": "Cornwall's celebrated Art Deco lido on Penzance's Promenade.",
+      "image": "/images/attractions/jubilee-pool.webp"
+    },
+    {
+      "name": "Glendurgan Garden",
+      "location": "Mawnan Smith, Falmouth",
+      "url": "https://www.nationaltrust.org.uk/visit/cornwall/glendurgan-garden",
+      "title": "Glendurgan Garden - National Trust",
+      "description": "Explore Glendurgan's three garden valleys that run down to the sheltered beach at Durgan.",
+      "image": "/images/attractions/glendurgan.webp"
+    },
+    {
+      "name": "Trengwainton Garden",
+      "location": "Madron, near Penzance",
+      "url": "https://www.nationaltrust.org.uk/visit/cornwall/trengwainton-garden",
+      "title": "Trengwainton Garden - National Trust",
+      "description": "Explore sheltered gardens bursting with exotic trees, shrubs, and colourful seasonal planting.",
+      "image": "/images/attractions/trengwainton.webp"
+    },
+    {
+      "name": "Barbara Hepworth Museum",
+      "location": "St. Ives",
+      "url": "https://www.tate.org.uk/visit/tate-st-ives/barbara-hepworth-museum-and-sculpture-garden",
+      "title": "Barbara Hepworth Museum and Sculpture Garden - Tate",
+      "description": "Discover Barbara Hepworth's studio and sculptures in the artist's uniquely preserved garden.",
+      "image": "/images/attractions/barbara-hepworth-museum.webp"
+    },
+    {
+      "name": "Helston Railway",
+      "location": "Prospidnick, Helston",
+      "url": "https://www.helstonrailway.co.uk/",
+      "title": "Helston Railway - Heritage Steam and Diesel Railway",
+      "description": "Ride a heritage steam and diesel railway through the Cornish countryside near Helston.",
+      "image": "/images/attractions/helston-railway.webp"
+    },
+    {
+      "name": "Penlee House",
+      "location": "Penzance",
+      "url": "https://penleehouse.org.uk/",
+      "title": "Penlee House - Cornwall's Gallery and Museum",
+      "description": "A gallery and museum in a park setting, with strong collections connected to West Cornwall.",
+      "image": "/images/attractions/penlee-house.webp"
+    },
+    {
+      "name": "St Michael's Mount",
+      "location": "Marazion",
+      "url": "https://stmichaelsmount.co.uk/",
+      "title": "St Michael's Mount - Cornwall's Iconic Island Castle",
+      "description": "Visit the island castle, harbour, and gardens just off the coast at Marazion.",
+      "image": "/images/attractions/st-michaels-mount.webp"
+    },
+    {
+      "name": "Tate St Ives",
+      "location": "St. Ives",
+      "url": "https://www.tate.org.uk/visit/tate-st-ives",
+      "title": "Tate St Ives - Modern and Contemporary Art Gallery",
+      "description": "See modern and contemporary art inspired by St Ives and the wider Cornish landscape.",
+      "image": "/images/attractions/tate-st-ives.webp"
+    },
+    {
+      "name": "Trebah Garden",
+      "location": "Mawnan Smith, Falmouth",
+      "url": "https://www.trebahgarden.co.uk/",
+      "title": "Trebah Garden - Subtropical Valley Garden",
+      "description": "Subtropical valley garden with dramatic planting, winding paths, and a private beach.",
+      "image": "/images/attractions/trebah-garden.webp"
+    },
+    {
+      "name": "Paradise Park",
+      "location": "Hayle",
+      "url": "https://paradisepark.org.uk/",
+      "title": "Paradise Park - Family-Friendly Wildlife Attraction",
+      "description": "Family-friendly wildlife attraction with birds, animals, gardens, and indoor play.",
+      "image": "/images/attractions/paradise-park.webp"
+    },
+    {
+      "name": "Telegraph Museum",
+      "location": "Porthcurno",
+      "url": "https://pkporthcurno.com/",
+      "title": "Porthcurno Telegraph Museum - Victorian Communications Heritage",
+      "description": "Explore the story of global communications from the Victorian telegraph era to today.",
+      "image": "/images/attractions/telegraph-museum.webp"
+    },
+    {
+      "name": "Godolphin",
+      "location": "Godolphin Cross",
+      "url": "https://www.nationaltrust.org.uk/visit/cornwall/godolphin",
+      "title": "Godolphin - National Trust Estate with Historic House and Gardens",
+      "description": "Visit the National Trust's Godolphin estate and explore its historic house and gardens.",
+      "image": "/images/attractions/godolphin.webp"
+    },
+    {
+      "name": "Geevor Tin Mine",
+      "location": "Land's End",
+      "url": "https://geevor.com/",
+      "title": "Geevor Tin Mine - Historic Mining Heritage Site",
+      "description": "Historic mining museum and heritage site with dramatic coastal views near Land's End.",
+      "image": "/images/attractions/geevor-tin-mine.webp"
+    },
+    {
+      "name": "Museum of Cornish Life",
+      "location": "Helston",
+      "url": "https://museumofcornishlife.co.uk/",
+      "title": "Museum of Cornish Life - Local History and Culture",
+      "description": "A local museum packed with objects and stories about everyday life in Cornwall.",
+      "image": "/images/attractions/museum-of-cornish-life.webp"
+    },
+    {
+      "name": "Tremenheere Sculpture Gardens",
+      "location": "Gulval, near Penzance",
+      "url": "https://www.tremenheere.co.uk/",
+      "title": "Tremenheere Sculpture Gardens - Contemporary Art in Beautiful Gardens",
+      "description": "Contemporary art and sculpture set within beautiful gardens overlooking Mount's Bay.",
+      "image": "/images/attractions/tremenheere.webp"
+    },
+    {
+      "name": "Land's End",
+      "location": "Sennen",
+      "url": "https://landsend-landmark.co.uk/",
+      "title": "Land's End - England's Westernmost Point",
+      "description": "England's westernmost point, clifftop trails, the iconic signpost, and sweeping Atlantic views.",
+      "image": "/images/attractions/lands-end.webp"
+    },
+    {
+      "name": "Seal Sanctuary",
+      "location": "Gweek",
+      "url": "https://sealsanctuary.sealifetrust.org/en/",
+      "title": "Seal Sanctuary - Rescued Marine Animals",
+      "description": "Meet rescued seals and other animals at this well-loved sanctuary in Gweek.",
+      "image": "/images/attractions/seal-sanctuary.webp"
+    }
+  ],
+  "shopping": [
+    {
+      "name": "Sainsbury's",
+      "location": "Helston",
+      "url": "https://stores.sainsburys.co.uk/2162/helston",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.6355942726464!2d-5.263477522703512!3d50.09310917152614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486b2791ca4b2cd7%3A0x8ef7608b97e194d7!2sSainsbury's!5e0!3m2!1sen!2suk!4v1718081574502!5m2!1sen!2suk"
+    },
+    {
+      "name": "Tesco",
+      "location": "Helston",
+      "url": "https://www.tesco.com/store-locator/helston/clodgey-ln",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.009584469785!2d-5.2676780227029925!3d50.10482757152827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486b278300e66881%3A0xfc9df08e378a94c!2sTesco%20Superstore!5e0!3m2!1sen!2suk!4v1718043302994!5m2!1sen!2suk"
+    },
+    {
+      "name": "Lidl",
+      "location": "Helston",
+      "url": "https://www.lidl.co.uk/s/en-GB/store-finder/helston/cornwall/penzance-road/",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.2571292755424!2d-5.2825763871341245!3d50.100193971408586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486b2780fe078e5d%3A0x347a9fd49f6e9d32!2sLidl!5e0!3m2!1sen!2suk!4v1718185681988!5m2!1sen!2suk"
+    },
+    {
+      "name": "Quayside Fish",
+      "location": "Porthleven",
+      "url": "https://www.quaysidefish.co.uk/",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.05027337052!2d-5.320328811293393!3d50.08534560859209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486ad849059009d3%3A0x4711bcb67367ec4!2sQuayside%20Fish!5e0!3m2!1sen!2suk!4v1718082891644!5m2!1sen!2suk"
+    },
+    {
+      "name": "Pengelly's of Porthleven",
+      "location": "Porthleven",
+      "url": "https://www.lidl.co.uk/s/en-GB/store-finder/helston/cornwall/penzance-road/",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.0264381768943!2d-5.3189016227038355!3d50.08579187152472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486ad84913c95047%3A0xb032010ddc185e8!2sPorthleven%20Supermarket%20Ltd!5e0!3m2!1sen!2suk!4v1718083167389!5m2!1sen!2suk"
+    },
+    {
+      "name": "Co-op",
+      "location": "Rosudgeon",
+      "url": "https://www.coop.co.uk/store-finder/TR20-9QE/main-road",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.4198939447756!2d-5.419398622702549!3d50.115864271530256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486adb175611edf1%3A0x2edb314ea2df1eb9!2sCo-op%20Food%20-%20Rosudgeon%20-%20Main%20Road!5e0!3m2!1sen!2suk!4v1718083994550!5m2!1sen!2suk"
+    },
+    {
+      "name": "Trelawney Fish",
+      "location": "Newlyn",
+      "url": "https://www.trelawneyfish.co.uk/",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.073251282936!2d-5.552283722703069!3d50.103635871528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486ac4471cd876b1%3A0xec5df8b58f7ff42e!2sTrelawney%20Fish!5e0!3m2!1sen!2suk!4v1718083643039!5m2!1sen!2suk"
+    },
+    {
+      "name": "Stevenson",
+      "location": "Newlyn",
+      "url": "https://www.wstevenson.co.uk/",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.0627212520453!2d-5.552148522703025!3d50.10383297152798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486ac446fb8a3519%3A0x6b4d9ae8ebc18697!2sStevenson%20W%20%26%20Sons%20Ltd!5e0!3m2!1sen!2suk!4v1718083413496!5m2!1sen!2suk"
+    }
+  ],
+  "sections": {
+    "restaurants": {
+      "label": "Places to Eat",
+      "title": "Restaurants, Cafes, Bars & Eateries",
+      "intro": "Some recommended places to eat in West Cornwall, conveniently located near us. Please note, a car is necessary to reach these destinations. We have personally enjoyed dining at several of these establishments and are delighted to recommend them. Others come highly praised by our guests and friends."
+    },
+    "beaches": {
+      "label": "Nearby beaches",
+      "title": "Beaches & Coves",
+      "intro": "Praa Sands is the closest beach to Tresowes Green Cottage, just a 5-minute drive or approximately a 25-minute walk away. We've also included information on other stunning and beautiful beaches in the area for you to explore."
+    },
+    "attractions": {
+      "label": "Things to do",
+      "title": "Visits - Attractions - Gardens",
+      "intro": "Explore the wonderful attractions, visits, and gardens in the area, most of which are just 5 to 30 minutes away by car. Please note, during high season, it's advisable to check if advance ticket booking is required."
+    },
+    "shopping": {
+      "label": "Supermarkets & Fish Shops",
+      "title": "Food Shopping",
+      "intro": "Here are some links and directions to the main supermarkets and fishmongers in the area."
+    }
+  }
+}

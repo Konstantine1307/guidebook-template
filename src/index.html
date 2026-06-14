@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#c5a880" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <title>Welcome | Property Guidebook</title>
+    <meta name="description" content="Welcome to your property guidebook." />
+  </head>
+  <body>
+    <guide-drawer></guide-drawer>
+    <guide-navbar title="Guidebooks"></guide-navbar>
+
+    <main id="hero-mount"></main>
+
+    <!-- PWA reload toast -->
+    <div class="pwa-toast" id="pwa-toast" role="status" aria-live="polite">
+      <span id="pwa-toast-msg"></span>
+      <div class="pwa-toast-actions">
+        <button class="btn-reload" id="pwa-btn-reload">Refresh</button>
+        <button class="btn-dismiss" id="pwa-btn-dismiss">Dismiss</button>
+      </div>
+    </div>
+
+    <script type="module" src="/scripts/index.ts"></script>
+  </body>
+</html>
