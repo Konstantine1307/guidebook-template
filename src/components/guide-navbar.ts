@@ -10,8 +10,8 @@ class GuideNavbar extends HTMLElement {
   connectedCallback() {
     // Page-specific title from attribute
     const pageTitle = this.getAttribute("title") ?? "Guidebook";
-    // Format: "Property Name | Page Title"
-    const mainTitle = `${guidebook.property.name} | ${pageTitle}`;
+    // Full title for desktop, just page title for mobile (via CSS)
+    const propertyName = guidebook.property.name;
 
     this.innerHTML = `
       <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -35,7 +35,11 @@ class GuideNavbar extends HTMLElement {
           </button>
         </div>
         <div class="navbar-title">
-          <div class="navbar-title-main">${mainTitle}</div>
+          <div class="navbar-title-main">
+            <span class="navbar-title-property">${propertyName}</span>
+            <span class="navbar-title-separator"> | </span>
+            <span class="navbar-title-page">${pageTitle}</span>
+          </div>
           <span class="navbar-title-sub">${guidebook.property.subtitle}</span>
         </div>
       </nav>

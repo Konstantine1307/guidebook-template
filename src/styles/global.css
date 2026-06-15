@@ -563,6 +563,14 @@ dialog::backdrop {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  /* Show only page title on mobile */
+  .navbar-title-property,
+  .navbar-title-separator {
+    display: none;
+  }
+  .navbar-title-page {
+    font-size: 1.35rem;
+  }
   .navbar-title-sub {
     font-size: 0.75rem;
     letter-spacing: 0.05em;
