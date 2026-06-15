@@ -972,31 +972,6 @@ dialog::backdrop {
   background-repeat: repeat;
 }
 
-/* Mobile: solid colors only, no images to prevent flash */
-@media (max-width: 767px) {
-  .bg-arrival .page-wrapper,
-  .bg-manual .page-wrapper,
-  .bg-food .page-wrapper,
-  .bg-emergency .page-wrapper,
-  .bg-departure .page-wrapper,
-  .bg-attractions .page-wrapper,
-  .bg-beaches .page-wrapper {
-    background-image: none;
-  }
-  /* Emergency and departure pages without bg-* classes */
-  #page-wrapper-emergency {
-    background-color: #7f1d1d;
-  }
-  #page-wrapper-departure {
-    background-color: #831843;
-  }
-  /* Hero/home page - solid background instead of photo */
-  .hero {
-    background-color: #4a5d4a; /* Sage green fallback */
-    background-image: none !important;
-  }
-}
-
 /* ---------- Fade-in animation ---------- */
 @keyframes fadein {
   from {
