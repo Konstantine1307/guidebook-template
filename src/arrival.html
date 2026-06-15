@@ -8,14 +8,26 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <title>Arrival | Property Guidebook</title>
-    <meta name="description" content="Check-in information, directions and food shopping." />
+    <meta
+      name="description"
+      content="Check-in information, directions and food shopping."
+    />
+    <link
+      rel="preload"
+      href="/topography-blue.svg"
+      as="image"
+      type="image/svg+xml"
+    />
   </head>
   <body class="bg-arrival">
     <guide-drawer></guide-drawer>
     <guide-navbar title="Arrival"></guide-navbar>
 
     <div class="page-wrapper">
-      <div id="page-content" style="width:100%;max-width:64rem;padding:0 1rem"></div>
+      <div
+        id="page-content"
+        style="width: 100%; max-width: 64rem; padding: 0 1rem"
+      ></div>
     </div>
 
     <div class="pwa-toast" id="pwa-toast" role="status" aria-live="polite">

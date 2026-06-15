@@ -9,13 +9,22 @@
     <link rel="manifest" href="/manifest.webmanifest" />
     <title>Beaches | Property Guidebook</title>
     <meta name="description" content="Nearby beaches guide." />
+    <link
+      rel="preload"
+      href="/topography-blue.svg"
+      as="image"
+      type="image/svg+xml"
+    />
   </head>
   <body class="bg-beaches">
     <guide-drawer></guide-drawer>
     <guide-navbar title="Beaches"></guide-navbar>
 
     <div class="page-wrapper">
-      <div id="page-content" style="width:100%;max-width:64rem;padding:0 1rem"></div>
+      <div
+        id="page-content"
+        style="width: 100%; max-width: 64rem; padding: 0 1rem"
+      ></div>
     </div>
 
     <div class="pwa-toast" id="pwa-toast" role="status" aria-live="polite">

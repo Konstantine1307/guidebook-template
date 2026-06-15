@@ -9,13 +9,22 @@
     <link rel="manifest" href="/manifest.webmanifest" />
     <title>Attractions | Property Guidebook</title>
     <meta name="description" content="Local attractions and things to do." />
+    <link
+      rel="preload"
+      href="/topography-orange.svg"
+      as="image"
+      type="image/svg+xml"
+    />
   </head>
   <body class="bg-attractions">
     <guide-drawer></guide-drawer>
     <guide-navbar title="Attractions"></guide-navbar>
 
     <div class="page-wrapper">
-      <div id="page-content" style="width:100%;max-width:64rem;padding:0 1rem"></div>
+      <div
+        id="page-content"
+        style="width: 100%; max-width: 64rem; padding: 0 1rem"
+      ></div>
     </div>
 
     <div class="pwa-toast" id="pwa-toast" role="status" aria-live="polite">
