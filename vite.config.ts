@@ -8,7 +8,7 @@ const configSrc = readFileSync(
   resolve(__dirname, "src/data/config.ts"),
   "utf-8",
 );
-const match = configSrc.match(/import data from '\.\/(.+?)\.json'/);
+const match = configSrc.match(/^import data from ['"]\.\/(.+?)\.json['"]/m);
 const jsonFile = match ? match[1] : "cottage";
 const property = JSON.parse(
   readFileSync(resolve(__dirname, `src/data/${jsonFile}.json`), "utf-8"),
