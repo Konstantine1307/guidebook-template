@@ -1,42 +1,60 @@
 # Guidebook Template
 
-Vanilla HTML + CSS + TypeScript property guidebook.  
-No framework — Web Components, CSS custom properties, Vite as dev/build tool.  
-Deployable to Cloudflare Pages.
+Vanilla HTML + CSS + TypeScript property guidebook.
+No framework — Web Components, CSS custom properties, Vite as dev/build tool.
+Deployable to Cloudflare Pages as a PWA.
+
+> **This is the template.** It is not deployed directly.
+> Each property (Cottage, Barn, etc.) gets its own copy of this repo with the relevant JSON file active.
+
+---
 
 ## Tech stack
 
-| Layer | Choice |
-|-------|--------|
-| Language | TypeScript (compiled by Vite) |
-| Components | Native Web Components (`customElements.define`) |
-| Styles | Plain CSS with custom properties |
-| Build / Dev | Vite |
-| PWA | vite-plugin-pwa + Workbox |
-| Deployment | Cloudflare Pages |
+| Layer       | Choice                                          |
+| ----------- | ----------------------------------------------- |
+| Language    | TypeScript (compiled by Vite)                   |
+| Components  | Native Web Components (`customElements.define`) |
+| Styles      | Plain CSS with custom properties                |
+| Build / Dev | Vite                                            |
+| PWA         | vite-plugin-pwa + Workbox                       |
+| Deployment  | Cloudflare Pages                                |
 
-## Switching between properties
+---
 
-Open `src/data/config.ts` and change the import:
+## How to spin up a new property
 
-```ts
-// Cottage
-import data from './cottage.json';
+1. Copy this repo (or use it as a GitHub template)
+2. In `src/data/config.ts` change the import to point at the property JSON:
+   ```ts
+   import data from "./cottage.json"; // or barn.json, etc.
+   ```
+3. Add the property hero image to `public/images/`
+4. Run `npm run build` — all content, PWA manifest, page titles and meta tags update automatically
+5. Push to GitHub and connect to Cloudflare Pages
 
-// Barn
-// import data from './barn.json';
-```
+**Cloudflare Pages build settings:**
 
-Then rebuild. That single change swaps every piece of property-specific content across all 8 pages.
+| Setting                | Value           |
+| ---------------------- | --------------- |
+| Build command          | `npm run build` |
+| Build output directory | `dist`          |
+| Node version           | 18+             |
 
-## Creating a new property deployment
+---
 
-```bash
-# From the cloudflare/ folder:
-cp -R guidebook-template barn-guidebook-no-astro
-```
+## Updating content
 
-Then in `barn-guidebook-no-astro/src/data/config.ts` switch the import to `barn.json`.
+All property content lives in the JSON file (`src/data/cottage.json` or `src/data/barn.json`). Editing the JSON is the only thing needed for:
+
+- Restaurants, beaches, attractions
+- House manual facilities
+- Arrival / departure / emergency information
+- Contact details, directions, parking
+
+For deployed repos, edit the JSON directly on GitHub — Cloudflare Pages rebuilds automatically on every commit.
+
+---
 
 ## Commands
 
@@ -47,26 +65,39 @@ npm run build    # production build → dist/
 npm run preview  # preview the production build locally
 ```
 
+---
+
 ## Project structure
 
 ```
 src/
 ├── data/
-│   ├── config.ts          ← ONE LINE to switch properties
-│   ├── cottage.json       ← cottage content
-│   ├── barn.json          ← barn content
-│   └── types.ts           ← TypeScript interfaces
+│   ├── config.ts              ← ONE LINE to switch properties
+│   ├── cottage.json           ← all cottage content
+│   ├── barn.json              ← all barn content
+│   └── types.ts               ← TypeScript interfaces
 ├── components/
-│   ├── guide-navbar.ts    ← <guide-navbar> Web Component
-│   ├── guide-drawer.ts    ← <guide-drawer> Web Component
-│   ├── guide-modal.ts     ← <guide-modal> Web Component
-│   ├── guide-pwa.ts       ← PWA service worker registration
-│   └── sections.ts        ← HTML renderers for all page sections
+│   ├── guide-navbar.ts        ← <guide-navbar> Web Component
+│   ├── guide-drawer.ts        ← <guide-drawer> Web Component
+│   ├── guide-modal.ts         ← <guide-modal> Web Component
+│   ├── guide-pwa.ts           ← PWA install/update toast
+│   └── sections/
+│       ├── helpers.ts         ← shared render utilities
+│       ├── arrival.ts         ← renderCheckIn
+│       ├── directions.ts      ← renderDirections
+│       ├── food-shopping.ts   ← renderFoodShopping
+│       ├── house-manual.ts    ← renderHouseManual
+│       ├── emergency.ts       ← renderEmergency
+│       ├── departure.ts       ← renderDeparture
+│       ├── restaurants.ts     ← renderRestaurants
+│       ├── beaches.ts         ← renderBeaches
+│       ├── attractions.ts     ← renderAttractions
+│       └── index.ts           ← re-exports all renderers
 ├── icons/
-│   └── icons.ts           ← Inline SVG icon map
+│   └── icons.ts               ← inline SVG icon map
 ├── scripts/
-│   ├── layout.ts          ← Shared bootstrap (imported by every page)
-│   ├── index.ts           ← Home page script
+│   ├── layout.ts              ← shared bootstrap (every page)
+│   ├── index.ts               ← home page
 │   ├── arrival.ts
 │   ├── house-manual.ts
 │   ├── emergency.ts
@@ -75,8 +106,8 @@ src/
 │   ├── attractions.ts
 │   └── beaches.ts
 ├── styles/
-│   └── global.css         ← Design system (CSS custom properties)
-├── index.html             ← Home page
+│   └── global.css             ← design system (CSS custom properties)
+├── index.html
 ├── arrival.html
 ├── house-manual.html
 ├── emergency.html
@@ -86,17 +117,22 @@ src/
 └── beaches.html
 
 public/
-├── images/                ← Hero images, beach & attraction photos
-├── icons/                 ← Logo, PWA icons
+├── images/                    ← hero images, beach & attraction photos
+├── icons/                     ← logo, PWA icons
 ├── favicon.svg
-├── _headers               ← Cloudflare Pages security headers
-└── _routes.json           ← Cloudflare Pages routing rules
+├── _headers                   ← Cloudflare Pages security headers
+└── _routes.json               ← Cloudflare Pages routing rules
 ```
 
-## Adding a new property
+---
 
-1. Copy `src/data/cottage.json` to e.g. `src/data/manor.json`
-2. Edit all property-specific fields (name, address, contacts, hero image, etc.)
-3. Add hero image to `public/images/`
-4. In `config.ts` import the new file
-5. Run `npm run build`
+## Workflow: template → deployed repos
+
+```
+guidebook-template  (this repo — never deployed)
+       │
+       ├── cottage-guidebook   (config.ts → cottage.json — deployed)
+       └── barn-guidebook      (config.ts → barn.json    — deployed)
+```
+
+Structural changes (new sections, CSS fixes, component updates) are made here in the template, then applied to the deployed repos. Content changes (restaurants, text, contacts) are made directly in the deployed repo's JSON on GitHub.
