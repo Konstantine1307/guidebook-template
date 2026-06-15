@@ -143,6 +143,7 @@ img {
   flex-direction: column;
   align-items: center;
   padding-top: var(--navbar-height); /* clear fixed navbar */
+  width: 100%;
 }
 
 /* ---------- Section card ---------- */
@@ -926,62 +927,45 @@ dialog::backdrop {
   }
 }
 
-/* ---------- Navbar placeholder (prevents flash before web component loads) ---------- */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--navbar-height);
-  background: var(--color-background);
-  border-bottom: 1px solid var(--color-border);
-  z-index: 99;
-}
-
-/* Once navbar loads, hide the placeholder */
-guide-navbar {
-  z-index: 100;
-}
-
 /* ---------- Page backgrounds ---------- */
-.bg-arrival {
+/* Keep body light gray - topography only on content area below navbar */
+.bg-arrival .page-wrapper {
   background-color: #4b5563;
   background-image: url("/topography-blue.svg");
   background-size: 600px 600px;
   background-repeat: repeat;
 }
-.bg-manual {
+.bg-manual .page-wrapper {
   background-color: #2e8098;
   background-image: url("/topography-cyan.svg");
   background-size: 600px 600px;
   background-repeat: repeat;
 }
-.bg-food {
+.bg-food .page-wrapper {
   background-color: #8a39d1;
   background-image: url("/topography-blue.svg");
   background-size: 600px 600px;
   background-repeat: repeat;
 }
-.bg-emergency {
+.bg-emergency .page-wrapper {
   background-color: #7f1d1d;
   background-image: url("/topography.svg");
   background-size: 600px 600px;
   background-repeat: repeat;
 }
-.bg-departure {
+.bg-departure .page-wrapper {
   background-color: #831843;
   background-image: url("/topography.svg");
   background-size: 600px 600px;
   background-repeat: repeat;
 }
-.bg-attractions {
+.bg-attractions .page-wrapper {
   background-color: #7c2d12;
   background-image: url("/topography-orange.svg");
   background-size: 600px 600px;
   background-repeat: repeat;
 }
-.bg-beaches {
+.bg-beaches .page-wrapper {
   background-color: #1e3a8a;
   background-image: url("/topography-blue.svg");
   background-size: 600px 600px;
