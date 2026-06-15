@@ -1,0 +1,45 @@
+import type { Shop } from "../../data/types";
+import { guidebook, getIcon, iconBadge } from "./helpers";
+
+export function renderFoodShopping(): string {
+  const meta = guidebook.sections?.shopping;
+  const label = meta?.label ?? "Supermarkets & Fish Shops";
+  const title = meta?.title ?? "Food Shopping";
+  const intro = meta?.intro ?? "Here are some links and directions to the main supermarkets and fishmongers in the area.";
+
+  const shopCards = guidebook.shopping
+    .map(
+      (shop: Shop) => `
+    <div class="shop-card">
+      <div class="shop-card-header">
+        <span class="shop-icon" aria-hidden="true">${getIcon("store")}</span>
+        <div class="shop-card-info">
+          <p class="shop-location">${shop.location}</p>
+          <a href="${shop.url}" target="_blank" rel="noopener" class="shop-name">${shop.name}</a>
+        </div>
+      </div>
+      <iframe
+        class="shop-map"
+        src="${shop.mapEmbed}"
+        title="Map for ${shop.name}"
+        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  `,
+    )
+    .join("");
+
+  return `
+    <section class="section-card fadein" id="food-shopping" style="--section-accent:var(--icon-shopping)">
+      <div class="section-header">
+        ${iconBadge("store", "var(--color-shopping)")}
+        <div class="section-header-text">
+          <p>${label}</p>
+          <p class="section-title">${title}</p>
+        </div>
+      </div>
+      <p class="section-subtitle">${intro}</p>
+      <div class="card-grid">${shopCards}</div>
+    </section>
+  `;
+}
