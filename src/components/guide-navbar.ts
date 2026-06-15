@@ -40,7 +40,7 @@ class GuideNavbar extends HTMLElement {
             <span class="navbar-title-separator"> | </span>
             <span class="navbar-title-page">${pageTitle}</span>
           </div>
-          <span class="navbar-title-sub">${guidebook.property.subtitle}</span>
+          <span class="navbar-title-sub" style="color:var(--color-heading-1)">${guidebook.property.subtitle}</span>
         </div>
       </nav>
     `;

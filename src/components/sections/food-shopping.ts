@@ -1,11 +1,13 @@
 import type { Shop } from "../../data/types";
-import { guidebook, getIcon, iconBadge } from "./helpers";
+import { getIcon, guidebook, iconBadge } from "./helpers";
 
 export function renderFoodShopping(): string {
   const meta = guidebook.sections?.shopping;
   const label = meta?.label ?? "Supermarkets & Fish Shops";
   const title = meta?.title ?? "Food Shopping";
-  const intro = meta?.intro ?? "Here are some links and directions to the main supermarkets and fishmongers in the area.";
+  const intro =
+    meta?.intro ??
+    "Here are some links and directions to the main supermarkets and fishmongers in the area.";
 
   const shopCards = guidebook.shopping
     .map(
@@ -30,7 +32,7 @@ export function renderFoodShopping(): string {
     .join("");
 
   return `
-    <section class="section-card fadein" id="food-shopping" style="--section-accent:var(--icon-shopping)">
+    <section class="section-card fadein" id="food-shopping" style="--section-accent:var(--icon-shopping); scroll-margin-top: calc(var(--navbar-height) + 1rem)">
       <div class="section-header">
         ${iconBadge("store", "var(--color-shopping)")}
         <div class="section-header-text">

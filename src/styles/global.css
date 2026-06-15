@@ -556,24 +556,47 @@ dialog::backdrop {
     text-align: center;
   }
   .navbar-title-main {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
     letter-spacing: 0.02em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     justify-content: center;
   }
-  /* Show only page title on mobile */
-  .navbar-title-property,
+  /* Show only property name on mobile (not page title) */
+  .navbar-title-page,
   .navbar-title-separator {
     display: none;
   }
-  .navbar-title-page {
-    font-size: 1.5rem;
+  .navbar-title-property {
+    font-size: 1.65rem;
   }
   .navbar-title-sub {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     letter-spacing: 0.05em;
+    color: var(--color-heading-1);
+    background: none;
+    -webkit-text-fill-color: var(--color-heading-1);
+  }
+
+  /* Larger base font size for readability */
+  html {
+    font-size: 18px;
+  }
+  .section-header-text .section-title {
+    font-size: 1.5rem;
+  }
+  .section-row-text {
+    font-size: 1rem;
+  }
+  .row-title {
+    font-size: 1.1rem;
+  }
+  .shop-name {
+    font-size: 1.05rem;
+  }
+  .restaurant-name {
+    font-size: 1.05rem;
   }
 }
 
