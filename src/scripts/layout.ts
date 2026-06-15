@@ -14,8 +14,8 @@ function initPageMeta() {
   const currentTitle = document.title;
   const pageName = currentTitle.split(" | ")[0] || "Guidebook";
 
-  // Update title: "Page | Property Name"
-  document.title = `${pageName} | ${propertyName}`;
+  // Update title: "Property Name | Page"
+  document.title = `${propertyName} | ${pageName}`;
 
   // Update meta description if it exists
   const metaDesc = document.querySelector('meta[name="description"]');
