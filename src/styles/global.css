@@ -609,19 +609,22 @@ dialog::backdrop {
   }
 }
 
-.navbar-title-sub {
-  font-size: 0.875rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  background: linear-gradient(
-    to right,
-    var(--color-primary),
-    rgba(197, 168, 128, 0.5),
-    var(--color-primary)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Desktop: gradient gold subtitle */
+@media (min-width: 768px) {
+  .navbar-title-sub {
+    font-size: 0.875rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    background: linear-gradient(
+      to right,
+      var(--color-primary),
+      rgba(197, 168, 128, 0.5),
+      var(--color-primary)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 /* ---------- Drawer ---------- */
