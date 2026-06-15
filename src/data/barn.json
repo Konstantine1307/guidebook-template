@@ -12,8 +12,8 @@
     "type": "barn"
   },
   "contact": {
-    "address": "Tresowes Green Barn, Tresowes, Ashton",
-    "addressFull": "Tresowes Green Barn, Tresowes, Ashton, Helston, Cornwall, TR13 9SY, GB",
+    "address": "Tresowes Green Cottage, Tresowes, Ashton",
+    "addressFull": "Tresowes Green Cottage, Tresowes, Ashton, Helston, Cornwall, TR13 9SY, GB",
     "email": "info@tresowesgreencottage.com",
     "homePhone": "01736 763 669",
     "homePhoneHref": "01736763669",
@@ -147,7 +147,7 @@
         "summary": "Heating is provided.",
         "detail": [
           "Heating is available.",
-          "The thermostat is on the wall.",
+          "The thermostat is on a shelf next to the vaccumm cleaner by the dining area.",
           "If you need assistance with the heating please contact us."
         ]
       },
@@ -208,7 +208,7 @@
         "detail": [
           "<strong>Compost:</strong> Please place compostable waste in the compost bins. No egg shells.",
           "</br>",
-          "<strong>Recycling:</strong> Recyclable waste should be placed inside the green bin liner. Recyclable items are glass, metal, plastic and cardboard.",
+          "<strong>Recycling:</strong> Recyclable waste should be placed inside the green bin liner in the metal dustbin on the side of The Barn. Recyclable items are glass, metal(tins, cans and jar lids), plastic, paper and cardboard. This is sorted at the depot.",
           "</br>",
           "<strong>Waste:</strong> All other rubbish should be placed in the kitchen bin.",
           "</br>",
@@ -303,7 +303,7 @@
         "detail": [
           "<strong>Compost:</strong> Please place compostable waste in the compost bins. No egg shells.",
           "</br>",
-          "<strong>Recycling:</strong> Recyclable waste should be placed inside the green bin liner. Recyclable items are glass, metal, plastic and cardboard.",
+          "<strong>Recycling:</strong> Recyclable waste should be placed inside the green bin liner in the metal dustbin on the side of The Barn. Recyclable items are glass, metal(tins, cans and jar lids), plastic, paper and cardboard. This is sorted at the depot.",
           "</br>",
           "<strong>Waste:</strong> All other rubbish should be placed in the kitchen bin.",
           "</br>",
@@ -316,9 +316,9 @@
         "id": "keys",
         "icon": "key",
         "title": "Keys",
-        "summary": "Please return the keys to the lockbox.",
+        "summary": "Please hand the keys to us return them to the lockbox.",
         "detail": [
-          "Please return all keys to the lockbox and follow the instructions you received on arrival."
+          "Please hand the keys to us or return to the lockbox and follow the instructions you received on arrival."
         ]
       },
       {
