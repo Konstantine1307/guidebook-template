@@ -316,9 +316,9 @@
         "id": "keys",
         "icon": "key",
         "title": "Keys",
-        "summary": "Please return the keys to the lockbox.",
+        "summary": "Please hand the keys to us or return them to the lockbox.",
         "detail": [
-          "Please return all keys to the lockbox and follow the instructions you received on arrival."
+          "Please hand the keys to us or return them to the lockbox and follow the instructions you received on arrival."
         ]
       },
       {
