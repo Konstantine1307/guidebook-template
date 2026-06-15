@@ -926,6 +926,24 @@ dialog::backdrop {
   }
 }
 
+/* ---------- Navbar placeholder (prevents flash before web component loads) ---------- */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  background: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 99;
+}
+
+/* Once navbar loads, hide the placeholder */
+guide-navbar {
+  z-index: 100;
+}
+
 /* ---------- Page backgrounds ---------- */
 .bg-arrival {
   background-color: #4b5563;
