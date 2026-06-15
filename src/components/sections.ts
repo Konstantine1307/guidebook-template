@@ -16,6 +16,9 @@ import { getIcon } from "../icons/icons";
 
 // ---- shared helpers ----
 
+// Module-level accent colour, set before building rows so modals inherit it
+let _currentAccent = "var(--color-primary)";
+
 function iconBadge(icon: string, bgColor: string, size = "3rem"): string {
   return `<span class="icon-badge" style="background:${bgColor};width:${size};height:${size}" aria-hidden="true">${getIcon(icon)}</span>`;
 }
@@ -27,17 +30,18 @@ function detailParagraphs(items: string[]): string {
 function modalTrigger(
   id: string,
   title: string,
-  iconHtml: string,
+  iconName: string,
   bodyHtml: string,
+  accentColor = "var(--color-primary)",
 ): string {
-  const safeIcon = iconHtml.replace(/"/g, "&quot;").replace(/\n/g, " ");
+  // Pass icon name and accent colour as data attributes — avoids SVG encoding issues.
   return `
     <button
       class="btn-more"
       onclick="document.getElementById('${id}').showModal()"
       aria-label="More information: ${title}"
     >${getIcon("arrow-right")}</button>
-    <guide-modal id="${id}" title="${title}" icon-html="${safeIcon}">
+    <guide-modal id="${id}" title="${title}" data-icon="${iconName}" data-accent="${accentColor}">
       ${bodyHtml}
     </guide-modal>
   `;
@@ -48,7 +52,7 @@ function sectionRow(
   title: string,
   summary: string,
   modalId: string,
-  iconHtml: string,
+  _iconHtml: string,
   bodyHtml: string,
 ): string {
   return `
@@ -61,7 +65,7 @@ function sectionRow(
         </div>
       </div>
       <div>
-        ${modalTrigger(modalId, title, iconHtml, bodyHtml)}
+        ${modalTrigger(modalId, title, icon, bodyHtml, _currentAccent)}
       </div>
     </div>
     <hr class="section-divider" />
@@ -105,6 +109,7 @@ function domain(url: string): string {
 // CHECK-IN SECTION
 // ================================================================
 export function renderCheckIn(): string {
+  _currentAccent = "var(--icon-arrival)";
   const { arrival } = guidebook;
   const rows = [
     sectionRow(
@@ -154,19 +159,20 @@ export function renderCheckIn(): string {
 // DIRECTIONS SECTION
 // ================================================================
 export function renderDirections(): string {
+  _currentAccent = "var(--icon-arrival)";
   const c = guidebook.contact;
   const contactRows = c.contacts
     .map(
       (p) =>
-        `<p class="mb-2"><strong>${p.name}'s Phone:</strong> <a href="tel:${p.phoneHref}" class="text-primary">${p.phone}</a></p>`,
+        `<p style="margin-bottom:0.5rem"><strong>${p.name}'s Phone:</strong> <a href="tel:${p.phoneHref}" style="color:var(--color-primary)">${p.phone}</a></p>`,
     )
     .join("");
 
   const addressBody = `
     <p>${c.addressFull}</p>
     <br/>
-    <p><strong>Email:</strong> <a href="mailto:${c.email}" class="text-primary">${c.email}</a></p>
-    <p><strong>Home Phone:</strong> <a href="tel:${c.homePhoneHref}" class="text-primary">${c.homePhone}</a></p>
+    <p><strong>Email:</strong> <a href="mailto:${c.email}" style="color:var(--color-primary)">${c.email}</a></p>
+    <p><strong>Home Phone:</strong> <a href="tel:${c.homePhoneHref}" style="color:var(--color-primary)">${c.homePhone}</a></p>
     ${contactRows}
   `;
 
@@ -182,11 +188,15 @@ export function renderDirections(): string {
     </div>
   `;
 
+  // First item in directions array is the intro paragraph; the rest are step-by-step directions
+  const [directionsIntro, ...directionSteps] = c.directions;
+  const directionDetails = detailParagraphs(directionSteps);
+
   const directionsBody = `
     <p><a href="${c.what3wordsUrl}" target="_blank" rel="noopener" class="underline"><span style="display:inline-block; vertical-align:top">${getIcon("what3words")}</span> ${c.what3words}</a> is the <a href="${c.what3wordsSiteUrl}" target="_blank" rel="noopener" class="underline">what3words</a> address for ${guidebook.property.name}.</p>
-    <p>More accurate than a street address — enter it into the free what3words app to find us easily.</p>
+    <p>${directionsIntro}</p>
     <br/>
-    <p>${c.directions}</p>
+    ${directionDetails}
     ${mapEmbed}
   `;
 
@@ -285,6 +295,7 @@ export function renderFoodShopping(): string {
 // HOUSE MANUAL SECTION
 // ================================================================
 export function renderHouseManual(): string {
+  _currentAccent = "var(--icon-manual)";
   const { houseManual } = guidebook;
 
   const rows = houseManual.facilities
@@ -293,10 +304,12 @@ export function renderHouseManual(): string {
         ? `<ul style="list-style:none;padding:0;margin-top:0.5rem">${f.links
             .map(
               (l) => `
-          <li style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
-            ${getIcon("car")}
-            <a href="${l.url}" target="_blank" rel="noopener" style="text-decoration:underline">${l.label}</a>
-            ${l.phone ? `<a href="tel:${l.phoneHref}" class="text-primary">${l.phone}</a>` : ""}
+          <li style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+            <span style="flex-shrink:0;width:1.5rem;height:1.5rem;color:var(--section-accent)">${getIcon(f.icon)}</span>
+            <span>
+              <a href="${l.url}" target="_blank" rel="noopener" style="text-decoration:underline;font-weight:600">${l.label}</a>
+              ${l.phone ? `&nbsp;&mdash;&nbsp;<a href="tel:${l.phoneHref}" style="color:var(--color-primary)">${l.phone}</a>` : ""}
+            </span>
           </li>`,
             )
             .join("")}</ul>`
@@ -322,7 +335,7 @@ export function renderHouseManual(): string {
           <p class="section-title">House Manual</p>
         </div>
       </div>
-      <p style="font-size:0.875rem">${houseManual.intro}</p>
+      <p class="section-subtitle">${houseManual.intro}</p>
       ${rows}
     </section>
   `;
@@ -332,6 +345,7 @@ export function renderHouseManual(): string {
 // EMERGENCY SECTION
 // ================================================================
 export function renderEmergency(): string {
+  _currentAccent = "var(--icon-emergency)";
   const { emergency } = guidebook;
 
   const fireInline = `
@@ -357,20 +371,18 @@ export function renderEmergency(): string {
     modalId: string,
     modalHtml: string,
   ): string {
-    const iconHtml = `<span style="color:#b91c1c">${getIcon(icon)}</span>`;
-    const safeIcon = iconHtml.replace(/"/g, "&quot;").replace(/\n/g, " ");
     return `
       <div class="section-row">
         <div class="section-row-main" style="align-items:flex-start">
           <div class="section-row-icon" aria-hidden="true" style="color:#b91c1c;margin-top:0.25rem">${getIcon(icon)}</div>
           <div class="section-row-text">
-            <p class="row-title">${title}</p>
+            <p class="row-title" style="font-size:1.1rem;font-weight:700">${title}</p>
             ${inlineHtml}
           </div>
         </div>
         <div style="align-self:flex-end">
           <button class="btn-more" onclick="document.getElementById('${modalId}').showModal()" aria-label="More information: ${title}">${getIcon("arrow-right")}</button>
-          <guide-modal id="${modalId}" title="${title}" icon-html="${safeIcon}">${modalHtml}</guide-modal>
+          <guide-modal id="${modalId}" title="${title}" data-icon="${icon}" data-accent="#b91c1c">${modalHtml}</guide-modal>
         </div>
       </div>
       <hr class="section-divider" />
@@ -408,6 +420,7 @@ export function renderEmergency(): string {
 // DEPARTURE SECTION
 // ================================================================
 export function renderDeparture(): string {
+  _currentAccent = "var(--icon-departure)";
   const { departure } = guidebook;
   const label = departure.label ?? "Checkout";
   const title = departure.title ?? "Departure";
@@ -434,7 +447,7 @@ export function renderDeparture(): string {
           <p class="section-title">${title}</p>
         </div>
       </div>
-      <p style="font-size:0.875rem">${departure.intro}</p>
+      <p style="font-size:1rem;text-align:center;font-style:italic;padding:0 1rem">${departure.intro}</p>
       ${rows}
     </section>
   `;

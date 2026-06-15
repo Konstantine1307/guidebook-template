@@ -29,7 +29,12 @@
     "what3wordsUrl": "https://w3w.co/escapades.twit.tribes",
     "what3wordsSiteUrl": "https://what3words.com/",
     "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.5477652680033!2d-5.371000287133512!3d50.11347117141103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486ad965755ad565%3A0xeb8e49e608fbc47d!2sTresowes%20Green%20Cottage!5e0!3m2!1sen!2suk!4v1718180197256!5m2!1sen!2suk",
-    "directions": "From the A30 take the A394 towards Helston. After hamlets of Rosudgeon and Newtown pass the Praa Sands Golf Course on the right and there is a sign for Tresowes to the left. Tresowes Green Cottage is the first property on the right (after the layby). From Helston follow the A394 towards Penzance and look for the second Tresowes sign after the village of Ashton. Tresowes Green Cottage is the first property on the right, after the layby and two tall chimneys.",
+    "directions": [
+      "More accurate than a street address, this points to the exact spot for arrival. Enter it into the free what3words app to find us easily. Alternatively, GPS is helpful but won't bring you to our place and often takes people down very narrow lanes. It is simplest to follow the directions below.",
+
+      "From the A30 take the A394 towards Helston. After hamlets of Rosudgeon and Newtown pass the Praa Sands Golf Course on the right and there is a sign for Tresowes to the left. Tresowes Green Cottage is the first property on the right (after the layby).",
+      "From Helston follow the A394 towards Penzance and look for the second Tresowes sign after the village of Ashton. Tresowes Green Cottage is the first property on the right, after the layby and two tall chimneys."
+    ],
     "parking": {
       "summary": "You can park in the driveway by the pergola.",
       "detail": [
@@ -72,12 +77,12 @@
     "wifi": {
       "summary": "Wifi is available and the code is provided in the Cottage.",
       "detail": [
-        "Wifi is available and the code is provided in the Cottage. Please enjoy our wifi. If you have any problems, please contact us."
+        "Wifi is available and the code is provided in the Cottage. Enjoy it! If you have any problems, please contact us."
       ]
     }
   },
   "houseManual": {
-    "intro": "We hope you enjoy the Cottage and the facilities.",
+    "intro": "We hope you enjoy the Cottage and the facilities. Below you will find information about the amenities available to you during your stay. Please do not hesitate to contact us if you have any questions.",
     "facilities": [
       {
         "id": "laundry",
@@ -110,7 +115,8 @@
           "There is a flat screen TV in the living room.",
           "Smart TV and Netflix subscriptions are provided.",
           "There is also a DVD player in the living room and some films in the wall cupboard.",
-          "The mini hifi in the living room offers the options of cd, bluetooth, dab radio and radio."
+          "The mini hifi in the living room offers the options of cd, bluetooth, dab radio and radio.",
+          "Music cds are in both towers by the hifi and the tv."
         ]
       },
       {
@@ -156,7 +162,6 @@
         "detail": [
           "The Summerhouse is for all guests with the chance to dine, have a drink or listen to music while enjoying the fantastic views.",
           "Please keep it tidy.",
-          "There is a radio with a docking station which offers the possibility to connect with Bluetooth devices and listen to music.",
           "The Summerhouse lights come on every day at sunset and off at 10:30 pm."
         ]
       },
@@ -189,7 +194,7 @@
         "title": "Transport",
         "summary": "Taxis and Buses that operate in the area.",
         "detail": [
-          "These are links to a couple of local taxis and the Cornwall First Bus."
+          "These are links to a couple of local taxis and the Cornwall First Bus:"
         ],
         "links": [
           {
@@ -226,10 +231,15 @@
         "title": "Waste & Recycle",
         "summary": "Recycling, Refuse, Waste and Compost.",
         "detail": [
-          "Compost: Please place compostable waste in the compost bins beside the black garden shed. No egg shells.",
-          "Recycling: Recyclable waste should be placed inside the green bin liner in the drawer under the ovens. Recyclable items are glass, metal, plastic and cardboard.",
-          "Waste: All other rubbish should be placed in the kitchen bin.",
-          "On departure, please bag all waste and put the green recycling and white general bags in the blue wheelie bin beside the garage."
+          "<strong>Compost:</strong> Please place compostable waste in the compost bins beside the black garden shed located at the other side of the Cottage. No egg shells.",
+          "</br>",
+          "<strong>Recycling:</strong> Recyclable waste should be placed inside the green bin liner in the drawer under the ovens. Recyclable items are glass, metal(tins, cans and jar lids), plastic, paper and cardboard. This is sorted at the depot.",
+          "</br>",
+          "<strong>Waste:</strong> All other rubbish should be placed in the kitchen bin.",
+          "</br>",
+          "<strong>Septic Tanks:</strong> Please only use toilet paper in the toilet.  Sanitary products, dental floss, etc need to be disposed of in the bin.",
+          "</br>",
+          "<strong>On departure:</strong> On departure, remember to include the bathroom waste within the kitchen waste. Please bag all waste and put the green recycling and white general bags in the blue wheelie bin beside the garage. Loose waste cannot be collected."
         ]
       },
       {
@@ -239,8 +249,10 @@
         "summary": "Some policies and rules for a pleasant stay.",
         "detail": [
           "Please no noise outside after 11:00 pm.",
-          "No smoking or vaping inside the property.",
-          "No pets allowed.",
+          "No smoking or vaping in the house.",
+          "We provide beach towels for your use. Please do not take the bathroom towels outside the property.",
+          "If you require a change of towels during your stay please contact us.",
+          "Pets are not allowed.",
           "The property is for the number of guests specified in the booking."
         ]
       }
@@ -317,19 +329,24 @@
         "title": "Waste & Recycle",
         "summary": "Recycling, Refuse, Waste and Compost.",
         "detail": [
-          "Compost: Please place compostable waste in the compost bins. No egg shells.",
-          "Recycling: Recyclable waste in the green bin liner. Glass, metal, plastic and cardboard.",
-          "Waste: All other rubbish in the kitchen bin.",
-          "On departure, bag all waste and put bags in the blue wheelie bin beside the garage."
+          "<strong>Compost:</strong> Please place compostable waste in the compost bins beside the black garden shed located at the other side of the Cottage. No egg shells.",
+          "</br>",
+          "<strong>Recycling:</strong> Recyclable waste should be placed inside the green bin liner in the drawer under the ovens. Recyclable items are glass, metal(tins, cans and jar lids), plastic, paper and cardboard. This is sorted at the depot.",
+          "</br>",
+          "<strong>Waste:</strong> All other rubbish should be placed in the kitchen bin.",
+          "</br>",
+          "<strong>Septic Tanks:</strong> Please only use toilet paper in the toilet.  Sanitary products, dental floss, etc need to be disposed of in the bin.",
+          "</br>",
+          "<strong>On departure:</strong> On departure, remember to include the bathroom waste within the kitchen waste. Please bag all waste and put the green recycling and white general bags in the blue wheelie bin beside the garage. Loose waste cannot be collected."
         ]
       },
       {
         "id": "keys",
         "icon": "key",
         "title": "Keys",
-        "summary": "Please return the keys to the lockbox.",
+        "summary": "Please hand the keys to us return them to the lockbox.",
         "detail": [
-          "Please return all keys to the lockbox and follow the instructions you received on arrival."
+          "Please hand the keys to us or return them to the lockbox and follow the instructions you received on arrival."
         ]
       },
       {
@@ -339,7 +356,9 @@
         "summary": "We would love to hear about your stay.",
         "detail": [
           "We would love to hear about your experience at The Cottage.",
-          "You can leave a review on the booking platform you used.",
+          "Sign our guestbook.",
+          "If you enjoyed your stay please leave a review on the booking platform you used.",
+          "If there is anything that we could do to improve the experience of our guests, please tell us in person.",
           "Thank you for staying with us!"
         ]
       }
@@ -350,26 +369,26 @@
       "summary": "In case of fire, leave building and call 999.",
       "steps": [
         "Leave the building and go to the parking area",
-        "Call the Fire Brigade by telephoning 999",
-        "Contact Johnny or Leslie"
+        "Call the Fire Brigade by telephoning <a href=\"tel:999\" class=\"text-primary font-bold\">999</a>",
+        "Contact <a href=\"tel:07790611150\" class=\"text-primary\">Leslie</a> or <a href=\"tel:07854306340\" class=\"text-primary\">Johnny</a>"
       ],
       "note": "There is a fire extinguisher and a fire blanket for use in the case of a small fire, where the exit is clear."
     },
     "medical": {
       "summary": "For ambulance where life is at risk, call 999 or 112.",
       "detail": [
-        "For ambulance where life is at risk, call 999 or 112.",
-        "For other medical issues call 111 or use the NHS 111 online service at 111.nhs.uk",
-        "There is a first aid kit in the bathroom.",
-        "Please inform Leslie or Johnny if you have an accident during your stay."
+        "For ambulance where life is at risk, call <a href=\"tel:999\" class=\"text-primary font-bold\">999</a> or <a href=\"tel:112\" class=\"text-primary font-bold\">112</a>.",
+        "For other medical issues call <a href=\"tel:111\" class=\"text-primary font-bold\">111</a> or use the <a href=\"https://111.nhs.uk\" target=\"_blank\" rel=\"noopener\" class=\"text-primary underline\">NHS 111 online service</a>.",
+        "There is a first aid kit in the kitchen.",
+        "Please inform <a href=\"tel:07790611150\" class=\"text-primary\">Leslie</a> or <a href=\"tel:07854306340\" class=\"text-primary\">Johnny</a> if you have an accident during your stay."
       ]
     },
     "police": {
       "summary": "Dial 999 or 112 in immediate danger.",
       "detail": [
-        "In an Emergency contact the emergency services.",
-        "Dial 999 or 112 if you or someone else is in immediate danger.",
-        "For non-emergencies call 101."
+        "In an emergency contact the emergency services.",
+        "Dial <a href=\"tel:999\" class=\"text-primary font-bold\">999</a> or <a href=\"tel:112\" class=\"text-primary font-bold\">112</a> if you or someone else is in immediate danger.",
+        "For non-emergencies call <a href=\"tel:101\" class=\"text-primary font-bold\">101</a>."
       ]
     }
   },

@@ -24,7 +24,7 @@ export interface Contact {
   what3wordsUrl: string;
   what3wordsSiteUrl: string;
   mapEmbed: string;
-  directions: string;
+  directions: string[];
   parking: { summary: string; detail: string[] };
 }
 
