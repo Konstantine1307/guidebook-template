@@ -2,6 +2,11 @@
    Design system — mirrors the Tailwind config from Astro projects
    ============================================================ */
 
+/* ---------- Page transitions (View Transitions API) ---------- */
+@view-transition {
+  navigation: auto;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
 
 /* ---------- CSS custom properties ---------- */
