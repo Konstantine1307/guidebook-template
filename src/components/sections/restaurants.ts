@@ -17,13 +17,15 @@ export function renderRestaurants(): string {
 
       return `
       <div class="restaurant-card">
+      <a href="${r.url}" target="_blank" rel="noopener" style="text-decoration: none;">
         <div class="link-card-body">
-          <a href="${r.url}" target="_blank" rel="noopener" class="link-card-name">${r.name}</a>
+          <p class="link-card-name">${r.name}</p>
           <p class="link-card-location">${r.location}</p>
           <p class="link-card-desc">${r.description}</p>
           <p class="link-card-domain">${domain(r.url)}</p>
           <div class="hearts" aria-label="${r.hearts} of ${MAX_HEARTS} hearts">${hearts}</div>
         </div>
+      </a>
       </div>
     `;
     })
