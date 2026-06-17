@@ -12,10 +12,6 @@
   view-transition-name: shared-page-bg;
 }
 
-#page-content {
-  view-transition-name: main-card-container;
-}
-
 /* Update this block to apply the duration and easing together */
 ::view-transition-group(*),
 ::view-transition-old(*),

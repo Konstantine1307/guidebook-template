@@ -23,13 +23,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "src/index.html",
-        arrival: "src/arrival.html",
-        "house-manual": "src/house-manual.html",
-        emergency: "src/emergency.html",
-        departure: "src/departure.html",
-        "places-to-eat": "src/places-to-eat.html",
-        attractions: "src/attractions.html",
-        beaches: "src/beaches.html",
       },
     },
   },

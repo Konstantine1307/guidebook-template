@@ -7,16 +7,48 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
-    <title>Welcome | Property Guidebook</title>
-    <meta name="description" content="Welcome to your property guidebook." />
+    <title>Property Guidebook</title>
+    <meta name="description" content="Your complete property guidebook." />
+
+    <!-- Preload all topography patterns since any route could need them -->
+    <link
+      rel="preload"
+      href="/topography.svg"
+      as="image"
+      type="image/svg+xml"
+    />
+    <link
+      rel="preload"
+      href="/topography-cyan.svg"
+      as="image"
+      type="image/svg+xml"
+    />
+    <link
+      rel="preload"
+      href="/topography-blue.svg"
+      as="image"
+      type="image/svg+xml"
+    />
+    <link
+      rel="preload"
+      href="/topography-orange.svg"
+      as="image"
+      type="image/svg+xml"
+    />
   </head>
-  <body>
+  <body class="bg-manual">
     <guide-drawer></guide-drawer>
-    <guide-navbar title="Guidebooks"></guide-navbar>
+    <guide-navbar title="Guidebook"></guide-navbar>
 
-    <main id="hero-mount"></main>
+    <div class="page-wrapper">
+      <div
+        id="page-content"
+        style="width: 100%; max-width: 64rem; padding: 0 1rem"
+      >
+        <!-- Content injected by router -->
+      </div>
+    </div>
 
-    <!-- PWA reload toast -->
     <div class="pwa-toast" id="pwa-toast" role="status" aria-live="polite">
       <span id="pwa-toast-msg"></span>
       <div class="pwa-toast-actions">
@@ -25,6 +57,6 @@
       </div>
     </div>
 
-    <script type="module" src="/scripts/index.ts"></script>
+    <script type="module" src="/scripts/main.ts"></script>
   </body>
 </html>

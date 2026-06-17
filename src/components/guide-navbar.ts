@@ -5,9 +5,26 @@ import { icons } from "../icons/icons";
  * <guide-navbar title="Page Title" gradient="from-gray-800/90 to-primary">
  *
  * Renders a fixed top navbar with logo, hamburger (opens guide-drawer), and title.
+ * SPA-aware: updates title dynamically when the 'title' attribute changes.
  */
 class GuideNavbar extends HTMLElement {
+  private _pageTitleEl: HTMLElement | null = null;
+
+  static get observedAttributes() {
+    return ["title"];
+  }
+
   connectedCallback() {
+    this.render();
+  }
+
+  attributeChangedCallback(name: string, _oldValue: string, _newValue: string) {
+    if (name === "title") {
+      this.updateTitle();
+    }
+  }
+
+  private render() {
     // Page-specific title from attribute
     const pageTitle = this.getAttribute("title") ?? "Guidebook";
     // Full title for desktop, just page title for mobile (via CSS)
@@ -16,7 +33,7 @@ class GuideNavbar extends HTMLElement {
     this.innerHTML = `
       <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="navbar-left">
-          <a href="/" aria-label="Home">
+          <a href="/" data-route="/" aria-label="Home">
             <img
               src="${guidebook.property.logo}"
               alt="${guidebook.property.name} logo"
@@ -45,6 +62,8 @@ class GuideNavbar extends HTMLElement {
       </nav>
     `;
 
+    this._pageTitleEl = this.querySelector(".navbar-title-page");
+
     this.querySelector("#drawer-toggle")?.addEventListener("click", () => {
       const drawer = document.querySelector("guide-drawer") as HTMLElement & {
         open: () => void;
@@ -55,6 +74,16 @@ class GuideNavbar extends HTMLElement {
         "true",
       );
     });
+  }
+
+  private updateTitle() {
+    const pageTitle = this.getAttribute("title") ?? "Guidebook";
+    if (this._pageTitleEl) {
+      this._pageTitleEl.textContent = pageTitle;
+    } else {
+      // Re-render if element not found
+      this.render();
+    }
   }
 }
 

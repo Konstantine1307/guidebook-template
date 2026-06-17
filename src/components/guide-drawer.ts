@@ -2,7 +2,7 @@ import { guidebook } from "../data/config";
 import { icons } from "../icons/icons";
 
 interface NavItem {
-  href: string;
+  route: string;
   icon: string;
   bgColor: string;
   text: string;
@@ -10,49 +10,49 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   {
-    href: "/arrival.html",
+    route: "/arrival",
     icon: "plane-landing",
     bgColor: "var(--color-arrival)",
     text: "Arrival",
   },
   {
-    href: "/emergency.html",
+    route: "/emergency",
     icon: "shield-plus",
     bgColor: "var(--color-emergency)",
     text: "Emergencies",
   },
   {
-    href: "/house-manual.html",
+    route: "/house-manual",
     icon: "notebook",
     bgColor: "var(--color-manual)",
     text: "House Manual",
   },
   {
-    href: "/arrival.html#food-shopping",
+    route: "/arrival",
     icon: "store",
     bgColor: "var(--color-shopping)",
     text: "Food Shopping",
   },
   {
-    href: "/departure.html",
+    route: "/departure",
     icon: "plane-takeoff",
     bgColor: "var(--color-departure)",
     text: "Departure",
   },
   {
-    href: "/places-to-eat.html",
+    route: "/places-to-eat",
     icon: "utensils",
     bgColor: "var(--color-food)",
     text: "Places To Eat",
   },
   {
-    href: "/attractions.html",
+    route: "/attractions",
     icon: "ferris-wheel",
     bgColor: "var(--color-attractions)",
     text: "Attractions",
   },
   {
-    href: "/beaches.html",
+    route: "/beaches",
     icon: "beach",
     bgColor: "var(--color-beaches)",
     text: "Beaches",
@@ -80,7 +80,7 @@ class GuideDrawer extends HTMLElement {
         aria-hidden="true"
       >
         <div class="drawer-top">
-          <a href="/" class="drawer-home-link" aria-label="Home">
+          <a href="/" data-route="/" class="drawer-home-link" aria-label="Home">
             <img
               src="${guidebook.property.logo}"
               alt="${guidebook.property.name} logo"
@@ -102,7 +102,7 @@ class GuideDrawer extends HTMLElement {
           ${NAV_ITEMS.map(
             (item) => `
             <li>
-              <a href="${item.href}">
+              <a href="${item.route}" data-route="${item.route}">
                 <span class="nav-icon" style="background:${item.bgColor}" aria-hidden="true">
                   ${icons[item.icon] ?? ""}
                 </span>

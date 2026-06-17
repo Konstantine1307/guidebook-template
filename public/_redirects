@@ -1,0 +1,10 @@
+# SPA redirect rules for Cloudflare Pages
+# All paths redirect to index.html for client-side routing
+
+/arrival    /index.html   200
+/emergency  /index.html   200
+/house-manual /index.html 200
+/departure  /index.html   200
+/places-to-eat /index.html 200
+/attractions /index.html   200
+/beaches    /index.html   200
