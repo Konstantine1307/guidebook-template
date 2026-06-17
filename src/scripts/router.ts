@@ -117,11 +117,11 @@ function updatePageContent(route: Route): void {
 
   if (!contentContainer || !pageWrapper) return;
 
-  // Update body class for background
+  // Update body class for background (CSS expects .bg-xxx .page-wrapper)
   document.body.className = route.bodyClass;
 
-  // Update page wrapper background class
-  pageWrapper.className = `page-wrapper ${route.bodyClass}`;
+  // page-wrapper stays as just 'page-wrapper' - background comes from body class
+  pageWrapper.className = "page-wrapper";
 
   // Update navbar title
   if (navbar) {
