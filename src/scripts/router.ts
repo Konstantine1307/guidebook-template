@@ -85,10 +85,12 @@ function getCurrentRoute(): Route {
 
 // Update page content - NO view transitions to prevent navbar flash
 async function navigateTo(path: string, pushState = true): Promise<void> {
-  const route = routes.find((r) => r.path === path) || routes[0];
+  // Parse path and hash (e.g., "/arrival#food-shopping")
+  const [pathname, hash] = path.split("#");
+  const route = routes.find((r) => r.path === pathname) || routes[0];
 
   // Instant update - no view transitions to avoid navbar flash
-  updatePageContent(route);
+  updatePageContent(route, hash);
 
   // Update browser history
   if (pushState) {
@@ -99,8 +101,8 @@ async function navigateTo(path: string, pushState = true): Promise<void> {
   const propertyName = guidebook.property.name;
   document.title = `${propertyName} | ${route.title}`;
 
-  // Update active state in drawer
-  updateDrawerActiveState(path);
+  // Update active state in drawer (use pathname without hash)
+  updateDrawerActiveState(pathname);
 
   // Close the drawer after navigation
   const drawer = document.querySelector("guide-drawer") as HTMLElement & {
@@ -110,7 +112,7 @@ async function navigateTo(path: string, pushState = true): Promise<void> {
 }
 
 // Update DOM for the route
-function updatePageContent(route: Route): void {
+function updatePageContent(route: Route, hash?: string): void {
   const contentContainer = document.getElementById("page-content");
   const pageWrapper = document.querySelector(".page-wrapper") as HTMLElement;
   const navbar = document.querySelector("guide-navbar") as HTMLElement;
@@ -131,8 +133,15 @@ function updatePageContent(route: Route): void {
   // Update content
   contentContainer.innerHTML = route.render();
 
-  // Scroll to top
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  // Scroll to hash element or top
+  if (hash) {
+    setTimeout(() => {
+      const element = document.getElementById(hash);
+      element?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 0);
+  } else {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 }
 
 // Update active state in drawer links
@@ -154,9 +163,10 @@ function updateDrawerActiveState(currentPath: string): void {
 
 // Initialize router
 export function initRouter(): void {
-  // Handle initial page load
+  // Handle initial page load (including hash)
   const initialRoute = getCurrentRoute();
-  updatePageContent(initialRoute);
+  const initialHash = window.location.hash.replace("#", "");
+  updatePageContent(initialRoute, initialHash);
 
   // Update page title for initial load
   const propertyName = guidebook.property.name;
@@ -164,9 +174,11 @@ export function initRouter(): void {
 
   // Listen for popstate (back/forward buttons)
   window.addEventListener("popstate", (e) => {
-    const path = e.state?.path || window.location.pathname;
-    const route = routes.find((r) => r.path === path) || routes[0];
-    updatePageContent(route);
+    const fullPath =
+      e.state?.path || window.location.pathname + window.location.hash;
+    const [pathname, hash] = fullPath.split("#");
+    const route = routes.find((r) => r.path === pathname) || routes[0];
+    updatePageContent(route, hash);
   });
 
   // Intercept all navigation clicks

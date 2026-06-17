@@ -28,7 +28,7 @@ const NAV_ITEMS: NavItem[] = [
     text: "House Manual",
   },
   {
-    route: "/arrival",
+    route: "/arrival#food-shopping",
     icon: "store",
     bgColor: "var(--color-shopping)",
     text: "Food Shopping",
