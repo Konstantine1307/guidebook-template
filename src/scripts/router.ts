@@ -83,18 +83,12 @@ function getCurrentRoute(): Route {
   return routes.find((r) => r.path === normalizedPath) || routes[0];
 }
 
-// Update page content with view transition
+// Update page content - NO view transitions to prevent navbar flash
 async function navigateTo(path: string, pushState = true): Promise<void> {
   const route = routes.find((r) => r.path === path) || routes[0];
 
-  // Use View Transitions API for smooth animation
-  if (document.startViewTransition) {
-    await document.startViewTransition(() => {
-      updatePageContent(route);
-    }).ready;
-  } else {
-    updatePageContent(route);
-  }
+  // Instant update - no view transitions to avoid navbar flash
+  updatePageContent(route);
 
   // Update browser history
   if (pushState) {
@@ -107,6 +101,12 @@ async function navigateTo(path: string, pushState = true): Promise<void> {
 
   // Update active state in drawer
   updateDrawerActiveState(path);
+
+  // Close the drawer after navigation
+  const drawer = document.querySelector("guide-drawer") as HTMLElement & {
+    close: () => void;
+  };
+  drawer?.close?.();
 }
 
 // Update DOM for the route
