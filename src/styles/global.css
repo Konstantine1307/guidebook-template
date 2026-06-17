@@ -22,7 +22,6 @@
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 /* ---------- CSS custom properties ---------- */
 :root {
   /* Brand */
@@ -105,7 +104,11 @@ body {
 }
 
 /* Ensure headings utilize your elegant imported serif font */
-h1, h2, h3, .navbar-title-main, .drawer-home-label {
+h1,
+h2,
+h3,
+.navbar-title-main,
+.drawer-home-label {
   font-family: "Old Standard TT", serif !important;
   color: var(--color-heading-1);
   margin: 0;
@@ -230,9 +233,11 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-accent-current, var(--color-primary)); /* Fallback cleanly */
+  color: var(
+    --color-accent-current,
+    var(--color-primary)
+  ); /* Fallback cleanly */
 }
-
 
 .section-row-icon svg {
   width: 2.5rem;
@@ -346,7 +351,10 @@ dialog::backdrop {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-accent-current, var(--color-primary)); /* Fallback cleanly */
+  color: var(
+    --color-accent-current,
+    var(--color-primary)
+  ); /* Fallback cleanly */
 }
 
 .dialog-icon svg {
@@ -957,14 +965,34 @@ dialog::backdrop {
 }
 
 /* Simply swap individual colors and SVG assets down below */
-.bg-arrival .page-wrapper     { background-color: #4b5563; background-image: url("/topography-blue.svg"); }
-.bg-manual .page-wrapper      { background-color: #2e8098; background-image: url("/topography-cyan.svg"); }
-.bg-food .page-wrapper        { background-color: #8a39d1; background-image: url("/topography-blue.svg"); }
-.bg-emergency .page-wrapper   { background-color: #7f1d1d; background-image: url("/topography.svg"); }
-.bg-departure .page-wrapper   { background-color: #831843; background-image: url("/topography.svg"); }
-.bg-attractions .page-wrapper { background-color: #7c2d12; background-image: url("/topography-orange.svg"); }
-.bg-beaches .page-wrapper     { background-color: #1e3a8a; background-image: url("/topography-blue.svg"); }
-
+.bg-arrival .page-wrapper {
+  background-color: #4b5563;
+  background-image: url("/topography-blue.svg");
+}
+.bg-manual .page-wrapper {
+  background-color: #2e8098;
+  background-image: url("/topography-cyan.svg");
+}
+.bg-food .page-wrapper {
+  background-color: #8a39d1;
+  background-image: url("/topography-blue.svg");
+}
+.bg-emergency .page-wrapper {
+  background-color: #7f1d1d;
+  background-image: url("/topography-light.svg");
+}
+.bg-departure .page-wrapper {
+  background-color: #831843;
+  background-image: url("/topography-light.svg");
+}
+.bg-attractions .page-wrapper {
+  background-color: #7c2d12;
+  background-image: url("/topography-orange.svg");
+}
+.bg-beaches .page-wrapper {
+  background-color: #1e3a8a;
+  background-image: url("/topography-blue.svg");
+}
 
 /* ---------- Fade-in animation ---------- */
 @keyframes fadein {
