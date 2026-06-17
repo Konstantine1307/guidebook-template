@@ -1,13 +1,31 @@
 /* ============================================================
    Design system — mirrors the Tailwind config from Astro projects
    ============================================================ */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
 
 /* ---------- Page transitions (View Transitions API) ---------- */
 @view-transition {
   navigation: auto;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
+.page-wrapper {
+  view-transition-name: shared-page-bg;
+}
+
+#page-content {
+  view-transition-name: main-card-container;
+}
+
+/* Update this block to apply the duration and easing together */
+::view-transition-group(*),
+::view-transition-old(*),
+::view-transition-new(*) {
+  animation-duration: 0.5s;
+
+  /* ADD THIS: Custom fluid easing function */
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 
 /* ---------- CSS custom properties ---------- */
 :root {
