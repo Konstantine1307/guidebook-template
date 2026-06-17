@@ -2,9 +2,11 @@
 
 ## Overview
 
-This project is a **vanilla HTML + CSS + TypeScript** property guidebook, built without any front-end framework. It uses native browser APIs (Web Components, `<dialog>`, View Transitions) and Vite purely as a dev server and bundler.
+This project is a **Single Page Application (SPA)** built with vanilla HTML + CSS + TypeScript — no front-end framework. It uses native browser APIs (Web Components, `<dialog>`, History API) and Vite purely as a dev server and bundler.
 
 The same codebase serves multiple properties. Switching properties is a single import line change in one file. Each property is deployed as its own independent copy of this repo.
+
+**Key architectural decision:** SPA with History API routing instead of Multi-Page Application (MPA). This eliminates the navbar flash/jump that guests noticed during navigation — the navbar stays mounted permanently while only the content area updates.
 
 ---
 
@@ -20,8 +22,8 @@ guidebook-template/
 │   │   └── types.ts               ← TypeScript interfaces for the JSON schema
 │   │
 │   ├── components/
-│   │   ├── guide-navbar.ts        ← <guide-navbar> Web Component
-│   │   ├── guide-drawer.ts        ← <guide-drawer> slide-in nav Web Component
+│   │   ├── guide-navbar.ts        ← <guide-navbar> Web Component (SPA-aware, updates title)
+│   │   ├── guide-drawer.ts        ← <guide-drawer> slide-in nav Web Component (data-route links)
 │   │   ├── guide-modal.ts         ← <guide-modal> native <dialog> Web Component
 │   │   ├── guide-pwa.ts           ← PWA service worker registration + toast UI
 │   │   └── sections/
@@ -41,27 +43,17 @@ guidebook-template/
 │   │   └── icons.ts               ← all SVG icons as inline strings (no icon font)
 │   │
 │   ├── scripts/
-│   │   ├── layout.ts              ← shared bootstrap imported by every page
-│   │   ├── index.ts               ← home page
-│   │   ├── arrival.ts
-│   │   ├── house-manual.ts
-│   │   ├── emergency.ts
-│   │   ├── departure.ts
-│   │   ├── places-to-eat.ts
-│   │   ├── attractions.ts
-│   │   └── beaches.ts
+│   │   ├── main.ts                ← SPA entry point (init router, components, PWA)
+│   │   ├── router.ts              ← History API router (client-side navigation)
+│   │   ├── layout.ts              ← legacy bootstrap (deprecated, use main.ts)
+│   │   └── *.ts                   ← legacy page entry points (deprecated)
 │   │
 │   ├── styles/
 │   │   └── global.css             ← full design system via CSS custom properties
 │   │
-│   ├── index.html                 ← home page shell
-│   ├── arrival.html
-│   ├── house-manual.html
-│   ├── emergency.html
-│   ├── departure.html
-│   ├── places-to-eat.html
-│   ├── attractions.html
-│   ├── beaches.html
+│   ├── index.html                 ← single SPA shell (navbar, drawer, mount point)
+│   ├── _backup_html/              ← legacy HTML files (MPA backup)
+│   │   └── *.html                 ← old page shells (not used in SPA mode)
 │   └── vite-pwa.d.ts              ← type declaration for virtual:pwa-register
 │
 ├── public/
@@ -73,10 +65,13 @@ guidebook-template/
 │   ├── icons/
 │   │   └── logo-150.webp
 │   ├── favicon.svg
+│   ├── topography*.svg            ← background patterns for each page theme
 │   ├── _headers                   ← Cloudflare Pages security headers
-│   └── _routes.json               ← Cloudflare Pages routing rules
+│   ├── _routes.json               ← Cloudflare Pages routing rules
+│   └── _redirects                 ← SPA redirect rules (all paths → index.html)
 │
-├── vite.config.ts                 ← Vite + PWA configuration (reads JSON at build time)
+├── vite.config.ts                 ← Vite + PWA configuration (SPA build)
+├── sync-to-repos.sh               ← sync template changes to property repos
 ├── tsconfig.json
 ├── package.json
 └── .gitignore
@@ -84,31 +79,41 @@ guidebook-template/
 
 ---
 
-## How a page works
+## How the SPA works
 
-Each page is a pair of files:
+This is a **Single Page Application** with one `index.html` shell and client-side routing:
 
 ```
-src/arrival.html        ← static HTML shell (navbar, drawer, mount point, PWA toast)
-src/scripts/arrival.ts  ← imports layout + calls section renderers, injects HTML
+src/index.html          ← single SPA shell (navbar, drawer, mount point, PWA toast)
+src/scripts/main.ts     ← SPA entry point (initializes router, components, PWA)
+src/scripts/router.ts   ← History API router (handles navigation without page reloads)
 ```
 
-The HTML shell is minimal — it contains the Web Component tags and a `<div id="page-content">` mount point. The TypeScript entry script does the rest at runtime:
+### Navigation flow
+
+1. **Initial load**: `index.html` loads, `main.ts` initializes the router and mounts the initial route content
+2. **Click navigation**: Drawer links use `data-route="/arrival"` instead of `href="arrival.html"`
+3. **Router intercepts**: `router.ts` catches the click, prevents default, calls `navigateTo('/arrival')`
+4. **Content swap**: Router updates `document.body.className` for background, calls section renderer, injects HTML into `#page-content`
+5. **History update**: `history.pushState()` updates the URL to `/arrival` without page reload
+6. **Navbar update**: `guide-navbar` component updates its title attribute (navbar stays mounted, never flashes)
+
+### Router example
 
 ```ts
-// src/scripts/arrival.ts
-import "../scripts/layout";
-import {
-  renderCheckIn,
-  renderDirections,
-  renderFoodShopping,
-} from "../components/sections";
-
-const mount = document.getElementById("page-content")!;
-mount.innerHTML = renderCheckIn() + renderDirections() + renderFoodShopping();
+// src/scripts/router.ts - route definition
+const routes = [
+  {
+    path: "/arrival",
+    render: () => renderDirections() + renderCheckIn() + renderFoodShopping(),
+    title: "Arrival",
+    bodyClass: "bg-arrival",
+  },
+  // ... other routes
+];
 ```
 
-Section renderers are plain functions that return HTML strings built from the active property's JSON data.
+Section renderers are plain functions that return HTML strings built from the active property's JSON data — same as before, but now called dynamically by the router.
 
 ---
 
@@ -146,21 +151,35 @@ guidebook-template  (this repo — source of truth, never deployed)
 
 **Updating content:** edit the JSON file directly on GitHub — Cloudflare Pages rebuilds and redeploys automatically.
 
-**Applying template changes:** make the change in this repo, then manually apply it to the deployed repos.
+**Applying template changes:** run `./sync-to-repos.sh` from this repo. This copies:
+
+- All TypeScript components and scripts
+- CSS styles
+- The SPA `index.html` shell
+- `vite.config.ts` and `public/_redirects`
+
+Then commits and pushes to both property repos.
+
+**SPA routing on Cloudflare Pages:** The `public/_redirects` file ensures all routes (`/arrival`, `/emergency`, etc.) serve `index.html`. Without this, direct URL access would 404.
 
 ---
 
 ## Web Components
 
-Three custom elements are registered globally via `src/scripts/layout.ts`:
+Three custom elements are registered globally via `src/scripts/main.ts`:
 
-| Element          | File              | Purpose                                        |
-| ---------------- | ----------------- | ---------------------------------------------- |
-| `<guide-navbar>` | `guide-navbar.ts` | Fixed top bar with logo, title and menu button |
-| `<guide-drawer>` | `guide-drawer.ts` | Slide-in sidebar navigation                    |
-| `<guide-modal>`  | `guide-modal.ts`  | Wraps native `<dialog>` for info modals        |
+| Element          | File              | Purpose                                                       |
+| ---------------- | ----------------- | ------------------------------------------------------------- |
+| `<guide-navbar>` | `guide-navbar.ts` | Fixed top bar with logo, dynamic title, menu button           |
+| `<guide-drawer>` | `guide-drawer.ts` | Slide-in sidebar navigation (SPA-aware with data-route links) |
+| `<guide-modal>`  | `guide-modal.ts`  | Wraps native `<dialog>` for info modals                       |
 
 All three are standard Custom Elements — no polyfill needed. They read from the active property config to show the correct logo, name and subtitle.
+
+**SPA-specific behaviors:**
+
+- `guide-navbar`: Updates its `title` attribute dynamically when the route changes (navbar never remounts)
+- `guide-drawer`: Uses `data-route` attributes instead of `href` for links; closes automatically after navigation
 
 ---
 
@@ -202,7 +221,7 @@ All visual tokens live in CSS custom properties in `src/styles/global.css`:
 
 Dark mode is supported via a `.dark` class on `<html>`. No Tailwind — all layout uses standard CSS (flexbox, grid, custom properties).
 
-Page transitions use the CSS View Transitions API (`@view-transition { navigation: auto; }`), which crossfades between navigations and degrades gracefully on unsupported browsers.
+**Note:** We intentionally do NOT use the CSS View Transitions API for SPA navigation — even though it's available, it causes a flash on the navbar because it captures element snapshots. The router performs instant content swaps instead for zero-flash navigation.
 
 ---
 
