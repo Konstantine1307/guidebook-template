@@ -507,7 +507,8 @@ dialog::backdrop {
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
+  flex-shrink: 0;
 }
 
 .navbar-logo {
@@ -516,17 +517,10 @@ dialog::backdrop {
   display: none;
   border-radius: 50%;
 }
-@media (min-width: 768px) {
-  .navbar-logo {
-    width: 4rem;
-    height: 4rem;
-    display: inline-block;
-  }
-}
 
 .navbar-menu-btn {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
   border-radius: 50%;
   background: var(--color-primary);
   color: #4b5563;
@@ -536,75 +530,95 @@ dialog::backdrop {
   display: flex;
   justify-content: center;
   padding: 0.25rem;
-  position: relative;
-}
-
-@media (min-width: 768px) {
-  .navbar-menu-btn {
-    width: 3rem;
-    height: 3rem;
-  }
 }
 
 .navbar-title {
   font-family: "Old Standard TT", serif;
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  flex: 1;
+  text-align: center;
+  padding: 0.25rem 0;
 }
 
 .navbar-title-main {
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   background: linear-gradient(to right, #1f2937, var(--color-primary));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Mobile navbar optimizations */
+.navbar-title-sub {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  color: var(--color-heading-1);
+  background: none;
+  -webkit-text-fill-color: var(--color-heading-1);
+}
+
+/* Mobile: hide page title, show only property name */
 @media (max-width: 767px) {
-  .navbar {
-    padding: 0.75rem 1rem;
-    justify-content: space-between;
-  }
-  .navbar-left {
-    gap: 0.75rem;
-    flex-shrink: 0;
-  }
-  .navbar-title {
-    padding: 0.25rem 0;
-    flex: 1;
-    min-width: 0;
-    text-align: center;
-  }
-  .navbar-title-main {
-    font-size: 1.65rem;
-    letter-spacing: 0.02em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    justify-content: center;
-  }
-  /* Show only property name on mobile (not page title) */
   .navbar-title-page,
   .navbar-title-separator {
     display: none;
   }
-  .navbar-title-property {
-    font-size: 1.65rem;
+}
+
+/* Tablet + desktop shared */
+@media (min-width: 768px) {
+  :root {
+    --navbar-height: 7rem;
   }
-  .navbar-title-sub {
-    font-size: 0.9rem;
-    letter-spacing: 0.05em;
-    color: var(--color-heading-1);
-    background: none;
-    -webkit-text-fill-color: var(--color-heading-1);
+  .navbar-logo {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: inline-block;
+  }
+  .navbar-left {
+    gap: 2rem;
   }
 
-  /* Larger base font size for readability */
+  .navbar-title-main {
+    font-size: 1.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  .navbar-title {
+    flex: none;
+    min-width: 512px;
+    padding: 1rem 0;
+    text-align: left;
+  }
+}
+/* Desktop */
+@media (min-width: 1025px) {
+  .navbar-title {
+    min-width: 612px;
+  }
+  .navbar-title-main {
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  .navbar-logo {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .navbar-menu-btn {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+/* ---------- Mobile typography ---------- */
+@media (max-width: 767px) {
   html {
     font-size: 18px;
   }
@@ -617,38 +631,9 @@ dialog::backdrop {
   .row-title {
     font-size: 1.1rem;
   }
-  .shop-name {
-    font-size: 1.05rem;
-  }
+  .shop-name,
   .restaurant-name {
     font-size: 1.05rem;
-  }
-}
-
-@media (min-width: 768px) {
-  :root {
-    --navbar-height: 7rem;
-  }
-  .navbar-title-main {
-    font-size: 2.5rem;
-  }
-}
-
-/* Desktop: gradient gold subtitle */
-@media (min-width: 768px) {
-  .navbar-title-sub {
-    font-size: 0.875rem;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    background: linear-gradient(
-      to right,
-      var(--color-primary),
-      rgba(197, 168, 128, 0.5),
-      var(--color-primary)
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 }
 

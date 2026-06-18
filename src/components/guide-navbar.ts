@@ -33,7 +33,7 @@ class GuideNavbar extends HTMLElement {
     this.innerHTML = `
       <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="navbar-left">
-          <a href="/" data-route="/" aria-label="Home">
+          <a href="/" data-route="/" aria-label="Home" title="${guidebook.property.subtitle}">
             <img
               src="${guidebook.property.logo}"
               alt="${guidebook.property.name} logo"
@@ -43,6 +43,7 @@ class GuideNavbar extends HTMLElement {
           </a>
           <button
             class="navbar-menu-btn"
+            title="Browse sections"
             aria-label="Open navigation menu"
             aria-expanded="false"
             aria-controls="guide-drawer"
