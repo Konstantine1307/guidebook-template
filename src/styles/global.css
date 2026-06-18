@@ -994,6 +994,12 @@ dialog::backdrop {
   background-image: url("/topography-blue.svg");
 }
 
+/* ---------- Home / hero page ---------- */
+.bg-home .page-wrapper {
+  padding-top: 0; /* hero fills full viewport, overlaps navbar */
+  background: #1a1a1a;
+}
+
 /* ---------- Fade-in animation ---------- */
 @keyframes fadein {
   from {

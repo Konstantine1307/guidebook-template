@@ -14,6 +14,33 @@ import { renderHouseManual } from "../components/sections/house-manual";
 import { renderRestaurants } from "../components/sections/restaurants";
 import { guidebook } from "../data/config";
 
+// Home / welcome page
+function renderHome(): string {
+  const { name, heroImage, subtitle } = guidebook.property;
+  const { body } = guidebook.hero;
+  return `
+    <div
+      class="hero"
+      style="background-image: url(${heroImage})"
+      role="img"
+      aria-label="Exterior of ${name}"
+    >
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Welcome to <span>${name}</span> in ${subtitle}</h1>
+        <p>${body}</p>
+        <button
+          class="btn-cta"
+          onclick="document.querySelector('guide-drawer').open()"
+          aria-label="Open navigation menu"
+        >
+          Get Started
+        </button>
+      </div>
+    </div>
+  `;
+}
+
 // Route definitions: path -> render function and metadata
 type RouteHandler = () => string;
 
@@ -27,9 +54,9 @@ interface Route {
 const routes: Route[] = [
   {
     path: "/",
-    render: () => renderHouseManual(),
-    title: "House Manual",
-    bodyClass: "bg-manual",
+    render: () => renderHome(),
+    title: "Welcome",
+    bodyClass: "bg-home",
   },
   {
     path: "/arrival",
@@ -132,6 +159,11 @@ function updatePageContent(route: Route, hash?: string): void {
 
   // Update content
   contentContainer.innerHTML = route.render();
+
+  // Home page: let hero fill full width (no padding/max-width)
+  const isHome = route.path === "/";
+  contentContainer.style.maxWidth = isHome ? "none" : "";
+  contentContainer.style.padding = isHome ? "0" : "";
 
   // Scroll to hash element or top
   if (hash) {
