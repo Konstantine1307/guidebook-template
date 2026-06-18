@@ -160,10 +160,8 @@ function updatePageContent(route: Route, hash?: string): void {
   // Update content
   contentContainer.innerHTML = route.render();
 
-  // Home page: let hero fill full width (no padding/max-width)
-  const isHome = route.path === "/";
-  contentContainer.style.maxWidth = isHome ? "none" : "";
-  contentContainer.style.padding = isHome ? "0" : "";
+  // Home page: let hero fill full width via CSS class
+  contentContainer.classList.toggle("is-home", route.path === "/");
 
   // Scroll to hash element or top
   if (hash) {

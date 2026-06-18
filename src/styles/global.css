@@ -107,9 +107,8 @@ body {
 h1,
 h2,
 h3,
-.navbar-title-main,
-.drawer-home-label {
-  font-family: "Old Standard TT", serif !important;
+.navbar-title-main {
+  font-family: "Old Standard TT";
   color: var(--color-heading-1);
   margin: 0;
 }
@@ -413,7 +412,7 @@ dialog::backdrop {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(64, 64, 64, 0.5);
+  background: rgba(64, 64, 64, 0.6);
 }
 
 .hero-content {
@@ -708,13 +707,13 @@ dialog::backdrop {
 }
 
 .drawer-home-label {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   background: linear-gradient(
     to right,
     rgba(31, 41, 55, 0.9),
-    rgba(197, 168, 128, 0.5),
+    rgba(106, 78, 38, 0.5),
     var(--color-primary)
   );
   -webkit-background-clip: text;
@@ -999,6 +998,19 @@ dialog::backdrop {
 .bg-home .page-wrapper {
   padding-top: 0; /* hero fills full viewport, overlaps navbar */
   background: #1a1a1a;
+}
+
+/* Page content container */
+#page-content {
+  width: 100%;
+  max-width: 64rem;
+  padding: 0 1rem;
+}
+
+/* Home route: hero fills full width */
+#page-content.is-home {
+  max-width: none;
+  padding: 0;
 }
 
 /* ---------- Fade-in animation ---------- */
