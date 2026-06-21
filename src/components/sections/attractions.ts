@@ -1,10 +1,10 @@
 import type { Attraction } from "../../data/types";
-import { guidebook, iconBadge, domain } from "./helpers";
+import { domain, guidebook, iconBadge, ui } from "./helpers";
 
 export function renderAttractions(): string {
   const meta = guidebook.sections?.attractions;
-  const label = meta?.label ?? "Things to do";
-  const title = meta?.title ?? "Visits - Attractions - Gardens";
+  const label = meta?.label ?? ui.sections.attractions.label;
+  const title = meta?.title ?? ui.sections.attractions.title;
   const intro = meta?.intro ?? "";
 
   const cards = guidebook.attractions

@@ -1,11 +1,19 @@
 import type { DepartureItem } from "../../data/types";
-import { guidebook, getIcon, iconBadge, detailParagraphs, sectionRow, setAccent } from "./helpers";
+import {
+  detailParagraphs,
+  getIcon,
+  guidebook,
+  iconBadge,
+  sectionRow,
+  setAccent,
+  ui,
+} from "./helpers";
 
 export function renderDeparture(): string {
   setAccent("var(--icon-departure)");
   const { departure } = guidebook;
-  const label = departure.label ?? "Checkout";
-  const title = departure.title ?? "Departure";
+  const label = departure.label ?? ui.sections.departure.label;
+  const title = departure.title ?? ui.sections.departure.title;
 
   const rows = departure.items
     .map((item: DepartureItem) =>

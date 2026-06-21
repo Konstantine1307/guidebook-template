@@ -1,11 +1,11 @@
-import { guidebook } from "../data/config";
+import { guidebook, ui } from "../data/config";
 import { icons } from "../icons/icons";
 
 interface NavItem {
   route: string;
   icon: string;
   bgColor: string;
-  text: string;
+  textKey: keyof typeof ui.nav;
 }
 
 const NAV_ITEMS: NavItem[] = [
@@ -13,49 +13,49 @@ const NAV_ITEMS: NavItem[] = [
     route: "/arrival",
     icon: "plane-landing",
     bgColor: "var(--color-arrival)",
-    text: "Arrival",
+    textKey: "arrival",
   },
   {
     route: "/emergency",
     icon: "shield-plus",
     bgColor: "var(--color-emergency)",
-    text: "Emergencies",
+    textKey: "emergencies",
   },
   {
     route: "/house-manual",
     icon: "notebook",
     bgColor: "var(--color-manual)",
-    text: "House Manual",
+    textKey: "houseManual",
   },
   {
     route: "/arrival#food-shopping",
     icon: "store",
     bgColor: "var(--color-shopping)",
-    text: "Food Shopping",
+    textKey: "foodShopping",
   },
   {
     route: "/departure",
     icon: "plane-takeoff",
     bgColor: "var(--color-departure)",
-    text: "Departure",
+    textKey: "departure",
   },
   {
     route: "/places-to-eat",
     icon: "utensils",
     bgColor: "var(--color-food)",
-    text: "Places To Eat",
+    textKey: "restaurants",
   },
   {
     route: "/attractions",
     icon: "ferris-wheel",
     bgColor: "var(--color-attractions)",
-    text: "Attractions",
+    textKey: "attractions",
   },
   {
     route: "/beaches",
     icon: "beach",
     bgColor: "var(--color-beaches)",
-    text: "Beaches",
+    textKey: "beaches",
   },
 ];
 
@@ -106,7 +106,7 @@ class GuideDrawer extends HTMLElement {
                 <span class="nav-icon" style="background:${item.bgColor}" aria-hidden="true">
                   ${icons[item.icon] ?? ""}
                 </span>
-                ${item.text}
+                ${ui.nav[item.textKey]}
               </a>
             </li>
           `,

@@ -1,10 +1,10 @@
 import type { Beach } from "../../data/types";
-import { guidebook, iconBadge, domain } from "./helpers";
+import { domain, guidebook, iconBadge, ui } from "./helpers";
 
 export function renderBeaches(): string {
   const meta = guidebook.sections?.beaches;
-  const label = meta?.label ?? "Nearby beaches";
-  const title = meta?.title ?? "Beaches & Coves";
+  const label = meta?.label ?? ui.sections.beaches.label;
+  const title = meta?.title ?? ui.sections.beaches.title;
   const intro = meta?.intro ?? "";
 
   const cards = guidebook.beaches

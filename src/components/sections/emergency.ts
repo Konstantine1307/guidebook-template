@@ -1,8 +1,16 @@
-import { guidebook, getIcon, detailParagraphs, sectionCard, setAccent } from "./helpers";
+import {
+  detailParagraphs,
+  getIcon,
+  guidebook,
+  sectionCard,
+  setAccent,
+  ui,
+} from "./helpers";
 
 export function renderEmergency(): string {
   setAccent("var(--icon-emergency)");
   const { emergency } = guidebook;
+  const s = ui.sections.emergency;
 
   const fireInline = `
     <ul style="list-style:disc;padding-left:1.25rem;margin-bottom:0.5rem">
@@ -11,8 +19,12 @@ export function renderEmergency(): string {
     <p>${emergency.fire.note ?? ""}</p>
   `;
 
-  const medicalInline = detailParagraphs(emergency.medical.detail ?? [emergency.medical.summary]);
-  const policeInline = detailParagraphs(emergency.police.detail ?? [emergency.police.summary]);
+  const medicalInline = detailParagraphs(
+    emergency.medical.detail ?? [emergency.medical.summary],
+  );
+  const policeInline = detailParagraphs(
+    emergency.police.detail ?? [emergency.police.summary],
+  );
 
   function emergencyRow(
     icon: string,
@@ -40,10 +52,28 @@ export function renderEmergency(): string {
   }
 
   const rows = [
-    emergencyRow("fire-extinguisher", "Fire Procedures", fireInline, "modal-fire", fireInline),
-    emergencyRow("hospital", "Medical", medicalInline, "modal-medical", medicalInline),
-    emergencyRow("siren", "Police", policeInline, "modal-police", policeInline),
+    emergencyRow(
+      "fire-extinguisher",
+      s.fire,
+      fireInline,
+      "modal-fire",
+      fireInline,
+    ),
+    emergencyRow(
+      "hospital",
+      s.medical,
+      medicalInline,
+      "modal-medical",
+      medicalInline,
+    ),
+    emergencyRow("siren", s.police, policeInline, "modal-police", policeInline),
   ].join("");
 
-  return sectionCard("var(--color-emergency)", "shield-plus", "Procedures & Urgencies", "Emergency", rows);
+  return sectionCard(
+    "var(--color-emergency)",
+    "shield-plus",
+    s.label,
+    s.sectionTitle,
+    rows,
+  );
 }

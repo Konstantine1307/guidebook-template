@@ -1,5 +1,13 @@
 import type { Facility } from "../../data/types";
-import { guidebook, getIcon, iconBadge, detailParagraphs, sectionRow, setAccent } from "./helpers";
+import {
+  detailParagraphs,
+  getIcon,
+  guidebook,
+  iconBadge,
+  sectionRow,
+  setAccent,
+  ui,
+} from "./helpers";
 
 export function renderHouseManual(): string {
   setAccent("var(--icon-manual)");
@@ -22,7 +30,14 @@ export function renderHouseManual(): string {
             .join("")}</ul>`
         : "";
       const body = detailParagraphs(f.detail) + linksHtml;
-      return sectionRow(f.icon, f.title, f.summary, `modal-manual-${f.id}`, getIcon(f.icon), body);
+      return sectionRow(
+        f.icon,
+        f.title,
+        f.summary,
+        `modal-manual-${f.id}`,
+        getIcon(f.icon),
+        body,
+      );
     })
     .join("");
 
@@ -31,8 +46,8 @@ export function renderHouseManual(): string {
       <div class="section-header">
         ${iconBadge("book-user", "var(--color-manual)")}
         <div class="section-header-text">
-          <p>Facilities &amp; amenities</p>
-          <p class="section-title">House Manual</p>
+          <p>${ui.sections.houseManual.label}</p>
+          <p class="section-title">${ui.sections.houseManual.title}</p>
         </div>
       </div>
       <p class="section-subtitle">${houseManual.intro}</p>

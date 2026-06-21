@@ -2,14 +2,20 @@
  * Shared helpers used by all section renderers.
  */
 
-import { guidebook } from "../../data/config";
+import { guidebook, ui } from "../../data/config";
 import { getIcon } from "../../icons/icons";
 
 // Module-level accent colour, set before building rows so modals inherit it
 export let _currentAccent = "var(--color-primary)";
-export function setAccent(val: string) { _currentAccent = val; }
+export function setAccent(val: string) {
+  _currentAccent = val;
+}
 
-export function iconBadge(icon: string, bgColor: string, size = "3rem"): string {
+export function iconBadge(
+  icon: string,
+  bgColor: string,
+  size = "3rem",
+): string {
   return `<span class="icon-badge" style="background:${bgColor};width:${size};height:${size}" aria-hidden="true">${getIcon(icon)}</span>`;
 }
 
@@ -93,4 +99,4 @@ export function domain(url: string): string {
   }
 }
 
-export { guidebook, getIcon };
+export { getIcon, guidebook, ui };

@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "arrival": "Arrival",
+    "emergencies": "Emergencies",
+    "houseManual": "House Manual",
+    "foodShopping": "Food Shopping",
+    "departure": "Departure",
+    "restaurants": "Places To Eat",
+    "attractions": "Attractions",
+    "beaches": "Beaches"
+  },
+  "navbar": {
+    "homeAriaLabel": "Home",
+    "menuTooltip": "Browse sections",
+    "menuAriaLabel": "Open navigation menu"
+  },
+  "pwa": {
+    "newVersion": "New version available.",
+    "offlineReady": "App ready to work offline.",
+    "reload": "Reload",
+    "dismiss": "Dismiss"
+  },
+  "sections": {
+    "arrival": {
+      "label": "Check In",
+      "sectionTitle": "Check In",
+      "pageTitle": "Arrival",
+      "checkIn": "Check In",
+      "access": "Gaining Access",
+      "welcomePack": "Welcome Pack",
+      "wifi": "WiFi"
+    },
+    "directions": {
+      "label": "Getting Here",
+      "sectionTitle": "Getting Here",
+      "pageTitle": "Arrival",
+      "addressContact": "Address & Contact",
+      "directions": "Directions",
+      "parking": "Parking"
+    },
+    "emergency": {
+      "label": "Procedures & Urgencies",
+      "sectionTitle": "Emergency",
+      "fire": "Fire Procedures",
+      "medical": "Medical",
+      "police": "Police"
+    },
+    "restaurants": {
+      "label": "Places to Eat",
+      "title": "Restaurants, Cafes, Bars & Eateries"
+    },
+    "foodShopping": {
+      "label": "Supermarkets & Fish Shops",
+      "title": "Food Shopping",
+      "intro": "Here are some links and directions to the main supermarkets and fishmongers in the area."
+    },
+    "attractions": {
+      "label": "Things to do",
+      "title": "Visits - Attractions - Gardens"
+    },
+    "beaches": {
+      "label": "Nearby beaches",
+      "title": "Beaches & Coves"
+    },
+    "departure": {
+      "label": "Checkout",
+      "title": "Departure"
+    },
+    "houseManual": {
+      "label": "House Manual",
+      "title": "House Manual"
+    }
+  }
+}

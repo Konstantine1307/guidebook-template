@@ -1,5 +1,61 @@
 // Types for the property JSON config schema.
 
+export interface UiStrings {
+  nav: {
+    arrival: string;
+    emergencies: string;
+    houseManual: string;
+    foodShopping: string;
+    departure: string;
+    restaurants: string;
+    attractions: string;
+    beaches: string;
+  };
+  navbar: {
+    homeAriaLabel: string;
+    menuTooltip: string;
+    menuAriaLabel: string;
+  };
+  pwa: {
+    newVersion: string;
+    offlineReady: string;
+    reload: string;
+    dismiss: string;
+  };
+  sections: {
+    arrival: {
+      label: string;
+      sectionTitle: string;
+      pageTitle: string;
+      checkIn: string;
+      access: string;
+      welcomePack: string;
+      wifi: string;
+    };
+    directions: {
+      label: string;
+      sectionTitle: string;
+      pageTitle: string;
+      addressContact: string;
+      directions: string;
+      parking: string;
+    };
+    emergency: {
+      label: string;
+      sectionTitle: string;
+      fire: string;
+      medical: string;
+      police: string;
+    };
+    restaurants: { label: string; title: string };
+    foodShopping: { label: string; title: string; intro: string };
+    attractions: { label: string; title: string };
+    beaches: { label: string; title: string };
+    departure: { label: string; title: string };
+    houseManual: { label: string; title: string };
+  };
+}
+
 export interface PropertyConfig {
   name: string;
   title: string;

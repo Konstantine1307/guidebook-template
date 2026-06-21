@@ -1,8 +1,17 @@
-import { guidebook, getIcon, detailParagraphs, sectionRow, sectionCard, setAccent } from "./helpers";
+import {
+  detailParagraphs,
+  getIcon,
+  guidebook,
+  sectionCard,
+  sectionRow,
+  setAccent,
+  ui,
+} from "./helpers";
 
 export function renderDirections(): string {
   setAccent("var(--icon-arrival)");
   const c = guidebook.contact;
+  const s = ui.sections.directions;
 
   const contactRows = c.contacts
     .map(
@@ -49,10 +58,37 @@ export function renderDirections(): string {
   `;
 
   const rows = [
-    sectionRow("map", "Address & Contact", c.address, "modal-address", getIcon("map"), addressBody),
-    sectionRow("signpost", "Directions", directionsSummary, "modal-directions", getIcon("signpost"), directionsBody),
-    sectionRow("circle-parking", "Parking", c.parking.summary, "modal-parking", getIcon("circle-parking"), detailParagraphs(c.parking.detail)),
+    sectionRow(
+      "map",
+      s.addressContact,
+      c.address,
+      "modal-address",
+      getIcon("map"),
+      addressBody,
+    ),
+    sectionRow(
+      "signpost",
+      s.directions,
+      directionsSummary,
+      "modal-directions",
+      getIcon("signpost"),
+      directionsBody,
+    ),
+    sectionRow(
+      "circle-parking",
+      s.parking,
+      c.parking.summary,
+      "modal-parking",
+      getIcon("circle-parking"),
+      detailParagraphs(c.parking.detail),
+    ),
   ].join("");
 
-  return sectionCard("var(--color-arrival)", "plane-landing", "Getting Here", "Arrival", rows);
+  return sectionCard(
+    "var(--color-arrival)",
+    "plane-landing",
+    s.sectionTitle,
+    s.pageTitle,
+    rows,
+  );
 }

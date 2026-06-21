@@ -1,13 +1,11 @@
 import type { Shop } from "../../data/types";
-import { getIcon, guidebook, iconBadge } from "./helpers";
+import { getIcon, guidebook, iconBadge, ui } from "./helpers";
 
 export function renderFoodShopping(): string {
   const meta = guidebook.sections?.shopping;
-  const label = meta?.label ?? "Supermarkets & Fish Shops";
-  const title = meta?.title ?? "Food Shopping";
-  const intro =
-    meta?.intro ??
-    "Here are some links and directions to the main supermarkets and fishmongers in the area.";
+  const label = meta?.label ?? ui.sections.foodShopping.label;
+  const title = meta?.title ?? ui.sections.foodShopping.title;
+  const intro = meta?.intro ?? ui.sections.foodShopping.intro;
 
   const shopCards = guidebook.shopping
     .map(

@@ -1,12 +1,21 @@
-import { guidebook, getIcon, detailParagraphs, sectionRow, sectionCard, setAccent } from "./helpers";
+import {
+  detailParagraphs,
+  getIcon,
+  guidebook,
+  sectionCard,
+  sectionRow,
+  setAccent,
+  ui,
+} from "./helpers";
 
 export function renderCheckIn(): string {
   setAccent("var(--icon-arrival)");
   const { arrival } = guidebook;
+  const s = ui.sections.arrival;
   const rows = [
     sectionRow(
       "badge-check",
-      "Check In",
+      s.checkIn,
       arrival.checkIn.summary,
       "modal-checkin",
       getIcon("badge-check"),
@@ -14,7 +23,7 @@ export function renderCheckIn(): string {
     ),
     sectionRow(
       "key-round",
-      "Gaining Access",
+      s.access,
       arrival.access.summary,
       "modal-access",
       getIcon("key-round"),
@@ -22,7 +31,7 @@ export function renderCheckIn(): string {
     ),
     sectionRow(
       "shopping-basket",
-      "Welcome Pack",
+      s.welcomePack,
       arrival.welcomePack.summary,
       "modal-welcomepack",
       getIcon("shopping-basket"),
@@ -30,7 +39,7 @@ export function renderCheckIn(): string {
     ),
     sectionRow(
       "wifi",
-      "WiFi",
+      s.wifi,
       arrival.wifi.summary,
       "modal-wifi",
       getIcon("wifi"),
@@ -38,5 +47,11 @@ export function renderCheckIn(): string {
     ),
   ].join("");
 
-  return sectionCard("var(--color-arrival)", "book-check", "Check In", "Arrival", rows);
+  return sectionCard(
+    "var(--color-arrival)",
+    "book-check",
+    s.sectionTitle,
+    s.pageTitle,
+    rows,
+  );
 }
