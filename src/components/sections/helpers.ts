@@ -47,7 +47,7 @@ export function sectionRow(
   return `
     <div class="section-row">
       <div class="section-row-main">
-        <div class="section-row-icon" aria-hidden="true">${getIcon(icon)}</div>
+        <div class="section-row-icon" style="color:var(--section-accent)" aria-hidden="true">${getIcon(icon)}</div>
         <div class="section-row-text">
           <p class="row-title">${title}</p>
           <span>${summary}</span>

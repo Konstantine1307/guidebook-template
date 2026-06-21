@@ -29,7 +29,7 @@ class GuideModal extends HTMLElement {
       <dialog class="guide-dialog" style="--section-accent:${accent}">
         <div class="dialog-inner">
           <div class="dialog-header">
-            <span class="dialog-icon" aria-hidden="true">${iconHtml}</span>
+            <span class="dialog-icon" aria-hidden="true" style="color:var(--section-accent)">${iconHtml}</span>
             <span class="dialog-title">${title}</span>
           </div>
           <div class="dialog-body">${body}</div>
