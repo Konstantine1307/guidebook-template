@@ -275,7 +275,7 @@
         "summary": "Bitte stellen Sie alle Möbel wieder an den ursprünglichen Platz.",
         "detail": [
           "Bitte stellen Sie alle Möbel wieder an den ursprünglichen Platz.",
-          "Wenn etwas fehlt oder beschädigt ist, teilen Sie es uns bitte im Voraus mit, damit wir den Gegenstand ersetzen oder reparieren können."
+          "Wenn etwas fehlt oder beschädigt ist, teilen Sie uns dies bitte im Voraus mit, damit wir den Gegenstand ersetzen oder reparieren können."
         ]
       },
       {
@@ -347,7 +347,7 @@
         "Rufen Sie die Feuerwehr unter <a href=\"tel:999\" class=\"text-primary font-bold\">999</a> an",
         "Kontaktieren Sie <a href=\"tel:07790611150\" class=\"text-primary\">Leslie</a> oder <a href=\"tel:07854306340\" class=\"text-primary\">Johnny</a>"
       ],
-      "note": "Im Falle eines kleinen Brandes, bei dem der Ausgang frei ist, steht ein Feuerlöscher zur Verfügung."
+      "note": "Im Falle eines kleinen Brandes,stehen ein Feuerlöscher und eine Feuerdecke zur Verfügung."
     },
     "medical": {
       "summary": "Für einen Krankenwagen, wenn das Leben in Gefahr ist, rufen Sie 999 oder 112.",
