@@ -1,8 +1,8 @@
 import {
   detailParagraphs,
+  getGuidebook,
   getIcon,
   getUI,
-  guidebook,
   sectionCard,
   sectionRow,
   setAccent,
@@ -10,12 +10,13 @@ import {
 
 export function renderDirections(): string {
   setAccent("var(--icon-arrival)");
-  const c = guidebook.contact;
+  const gb = getGuidebook();
+  const c = gb.contact;
   const s = getUI().sections.directions;
 
   const contactRows = c.contacts
     .map(
-      (p) =>
+      (p: { name: string; phone: string; phoneHref: string }) =>
         `<p style="margin-bottom:0.5rem"><strong>${p.name}'s Phone:</strong> <a href="tel:${p.phoneHref}" style="color:var(--color-primary)">${p.phone}</a></p>`,
     )
     .join("");
@@ -35,7 +36,7 @@ export function renderDirections(): string {
         width="100%" height="250"
         style="border:0;border-radius:0.375rem;box-shadow:0 4px 12px rgba(0,0,0,0.15)"
         allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        title="Map to ${guidebook.property.name}"
+        title="Map to ${gb.property.name}"
       ></iframe>
     </div>
   `;
@@ -45,7 +46,7 @@ export function renderDirections(): string {
   const directionDetails = detailParagraphs(directionSteps);
 
   const directionsBody = `
-    <p><a href="${c.what3wordsUrl}" target="_blank" rel="noopener" class="underline"><span style="display:inline-block; vertical-align:top">${getIcon("what3words")}</span> ${c.what3words}</a> is the <a href="${c.what3wordsSiteUrl}" target="_blank" rel="noopener" class="underline">what3words</a> address for ${guidebook.property.name}.</p>
+    <p><a href="${c.what3wordsUrl}" target="_blank" rel="noopener" class="underline"><span style="display:inline-block; vertical-align:top">${getIcon("what3words")}</span> ${c.what3words}</a> is the <a href="${c.what3wordsSiteUrl}" target="_blank" rel="noopener" class="underline">what3words</a> address for ${gb.property.name}.</p>
     <p>${directionsIntro}</p>
     <br/>
     ${directionDetails}
@@ -53,7 +54,7 @@ export function renderDirections(): string {
   `;
 
   const directionsSummary = `
-    <span><a href="${c.what3wordsUrl}" target="_blank" rel="noopener" class="underline" style="font-size:1.1rem"><span style="display:inline-block; vertical-align:top">${getIcon("what3words")}</span> ${c.what3words}</a> is the <a href="${c.what3wordsSiteUrl}" target="_blank" rel="noopener" class="underline">what3words</a> address for ${guidebook.property.name}.</span>
+    <span><a href="${c.what3wordsUrl}" target="_blank" rel="noopener" class="underline" style="font-size:1.1rem"><span style="display:inline-block; vertical-align:top">${getIcon("what3words")}</span> ${c.what3words}</a> is the <a href="${c.what3wordsSiteUrl}" target="_blank" rel="noopener" class="underline">what3words</a> address for ${gb.property.name}.</span>
     ${mapEmbed}
   `;
 

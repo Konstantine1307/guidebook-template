@@ -1,13 +1,14 @@
 import type { Shop } from "../../data/types";
-import { getIcon, getUI, guidebook, iconBadge } from "./helpers";
+import { getIcon, getUI, getGuidebook, iconBadge } from "./helpers";
 
 export function renderFoodShopping(): string {
-  const meta = guidebook.sections?.shopping;
+  const gb = getGuidebook();
+  const meta = gb.sections?.shopping;
   const label = meta?.label ?? getUI().sections.foodShopping.label;
   const title = meta?.title ?? getUI().sections.foodShopping.title;
   const intro = meta?.intro ?? getUI().sections.foodShopping.intro;
 
-  const shopCards = guidebook.shopping
+  const shopCards = gb.shopping
     .map(
       (shop: Shop) => `
     <div class="shop-card">

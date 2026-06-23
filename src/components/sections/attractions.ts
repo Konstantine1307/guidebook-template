@@ -1,13 +1,14 @@
 import type { Attraction } from "../../data/types";
-import { domain, getUI, guidebook, iconBadge } from "./helpers";
+import { domain, getUI, getGuidebook, iconBadge } from "./helpers";
 
 export function renderAttractions(): string {
-  const meta = guidebook.sections?.attractions;
+  const gb = getGuidebook();
+  const meta = gb.sections?.attractions;
   const label = meta?.label ?? getUI().sections.attractions.label;
   const title = meta?.title ?? getUI().sections.attractions.title;
   const intro = meta?.intro ?? "";
 
-  const cards = guidebook.attractions
+  const cards = gb.attractions
     .map(
       (a: Attraction) => `
     <a href="${a.url}" target="_blank" rel="noopener" class="link-card">

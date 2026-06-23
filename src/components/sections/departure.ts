@@ -1,9 +1,9 @@
 import type { DepartureItem } from "../../data/types";
 import {
   detailParagraphs,
+  getGuidebook,
   getIcon,
   getUI,
-  guidebook,
   iconBadge,
   sectionRow,
   setAccent,
@@ -11,7 +11,7 @@ import {
 
 export function renderDeparture(): string {
   setAccent("var(--icon-departure)");
-  const { departure } = guidebook;
+  const { departure } = getGuidebook();
   const label = departure.label ?? getUI().sections.departure.label;
   const title = departure.title ?? getUI().sections.departure.title;
 

@@ -2,7 +2,7 @@
  * Shared helpers used by all section renderers.
  */
 
-import { getUI, guidebook } from "../../data/config";
+import { getGuidebook, getUI, guidebook } from "../../data/config";
 import { getIcon } from "../../icons/icons";
 
 // Module-level accent colour, set before building rows so modals inherit it
@@ -99,4 +99,4 @@ export function domain(url: string): string {
   }
 }
 
-export { getIcon, getUI, guidebook };
+export { getGuidebook, getIcon, getUI, guidebook };

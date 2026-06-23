@@ -1,14 +1,15 @@
 import type { Restaurant } from "../../data/types";
-import { domain, getUI, guidebook, iconBadge } from "./helpers";
+import { domain, getUI, getGuidebook, iconBadge } from "./helpers";
 
 export function renderRestaurants(): string {
-  const meta = guidebook.sections?.restaurants;
+  const gb = getGuidebook();
+  const meta = gb.sections?.restaurants;
   const label = meta?.label ?? getUI().sections.restaurants.label;
   const title = meta?.title ?? getUI().sections.restaurants.title;
   const intro = meta?.intro ?? "";
   const MAX_HEARTS = 3;
 
-  const cards = guidebook.restaurants
+  const cards = gb.restaurants
     .map((r: Restaurant) => {
       const hearts = Array.from(
         { length: MAX_HEARTS },

@@ -1,9 +1,9 @@
 import type { Facility } from "../../data/types";
 import {
   detailParagraphs,
+  getGuidebook,
   getIcon,
   getUI,
-  guidebook,
   iconBadge,
   sectionRow,
   setAccent,
@@ -11,7 +11,7 @@ import {
 
 export function renderHouseManual(): string {
   setAccent("var(--icon-manual)");
-  const { houseManual } = guidebook;
+  const { houseManual } = getGuidebook();
 
   const rows = houseManual.facilities
     .map((f: Facility) => {

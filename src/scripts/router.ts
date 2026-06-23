@@ -12,12 +12,13 @@ import { renderEmergency } from "../components/sections/emergency";
 import { renderFoodShopping } from "../components/sections/food-shopping";
 import { renderHouseManual } from "../components/sections/house-manual";
 import { renderRestaurants } from "../components/sections/restaurants";
-import { getUI, guidebook } from "../data/config";
+import { getGuidebook, getUI, guidebook } from "../data/config";
 
 // Home / welcome page
 function renderHome(): string {
-  const { name, heroImage } = guidebook.property;
-  const { body, heading } = guidebook.hero;
+  const gb = getGuidebook();
+  const { name, heroImage } = gb.property;
+  const { body, heading } = gb.hero;
   return `
     <div
       class="hero"

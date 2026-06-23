@@ -1,13 +1,14 @@
 import type { Beach } from "../../data/types";
-import { domain, getUI, guidebook, iconBadge } from "./helpers";
+import { domain, getUI, getGuidebook, iconBadge } from "./helpers";
 
 export function renderBeaches(): string {
-  const meta = guidebook.sections?.beaches;
+  const gb = getGuidebook();
+  const meta = gb.sections?.beaches;
   const label = meta?.label ?? getUI().sections.beaches.label;
   const title = meta?.title ?? getUI().sections.beaches.title;
   const intro = meta?.intro ?? "";
 
-  const cards = guidebook.beaches
+  const cards = gb.beaches
     .map(
       (b: Beach) => `
     <a href="${b.url}" target="_blank" rel="noopener" class="link-card">

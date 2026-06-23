@@ -1,8 +1,8 @@
 import {
   detailParagraphs,
+  getGuidebook,
   getIcon,
   getUI,
-  guidebook,
   sectionCard,
   sectionRow,
   setAccent,
@@ -10,7 +10,7 @@ import {
 
 export function renderCheckIn(): string {
   setAccent("var(--icon-arrival)");
-  const { arrival } = guidebook;
+  const { arrival } = getGuidebook();
   const s = getUI().sections.arrival;
   const rows = [
     sectionRow(

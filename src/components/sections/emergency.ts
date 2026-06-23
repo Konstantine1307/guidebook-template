@@ -1,20 +1,20 @@
 import {
   detailParagraphs,
+  getGuidebook,
   getIcon,
   getUI,
-  guidebook,
   sectionCard,
   setAccent,
 } from "./helpers";
 
 export function renderEmergency(): string {
   setAccent("var(--icon-emergency)");
-  const { emergency } = guidebook;
+  const { emergency } = getGuidebook();
   const s = getUI().sections.emergency;
 
   const fireInline = `
     <ul style="list-style:disc;padding-left:1.25rem;margin-bottom:0.5rem">
-      ${(emergency.fire.steps ?? []).map((s) => `<li>${s}</li>`).join("")}
+      ${(emergency.fire.steps ?? []).map((step: string) => `<li>${step}</li>`).join("")}
     </ul>
     <p>${emergency.fire.note ?? ""}</p>
   `;
