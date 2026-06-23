@@ -20,6 +20,20 @@
     "reload": "Reload",
     "dismiss": "Dismiss"
   },
+  "routes": {
+    "welcome": "Welcome",
+    "arrival": "Arrival",
+    "houseManual": "House Manual",
+    "restaurants": "Places to Eat",
+    "beaches": "Beaches",
+    "attractions": "Attractions",
+    "emergency": "Emergency",
+    "departure": "Departure"
+  },
+  "hero": {
+    "getStarted": "Get Started",
+    "openMenuAriaLabel": "Open navigation menu"
+  },
   "sections": {
     "arrival": {
       "label": "Check In",

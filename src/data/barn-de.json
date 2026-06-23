@@ -1,0 +1,767 @@
+{
+  "property": {
+    "name": "The Barn",
+    "title": "The Barn | Gästebuch",
+    "subtitle": "Tresowes Green Cottage",
+    "shortName": "Barn Gästebuch",
+    "description": "Willkommensbuch für The Barn in Tresowes Green Cottage",
+    "siteUrl": "https://the-barn.tgcottage.com",
+    "heroImage": "/images/the-barn-exterior.webp",
+    "logo": "/icons/logo-150.webp",
+    "themeColor": "#c5a880",
+    "type": "barn"
+  },
+  "contact": {
+    "address": "Tresowes Green Cottage, Tresowes, Ashton",
+    "addressFull": "Tresowes Green Cottage, Tresowes, Ashton, Helston, Cornwall, TR13 9SY, GB",
+    "email": "info@tresowesgreencottage.com",
+    "homePhone": "01736 763 669",
+    "homePhoneHref": "01736763669",
+    "contacts": [
+      {
+        "name": "Leslie",
+        "phone": "07790 611 150",
+        "phoneHref": "07790611150"
+      },
+      {
+        "name": "Johnny",
+        "phone": "07854 306 340",
+        "phoneHref": "07854306340"
+      }
+    ],
+    "what3words": "escapades.twit.tribes",
+    "what3wordsUrl": "https://w3w.co/escapades.twit.tribes",
+    "what3wordsSiteUrl": "https://what3words.com",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.5477652680033!2d-5.371000287133512!3d50.11347117141103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486ad965755ad565%3A0xeb8e49e608fbc47d!2sTresowes%20Green%20Cottage!5e0!3m2!1sen!2suk!4v1718180197256!5m2!1sen!2suk",
+    "directions": [
+      "Genauer als eine Straßenadresse, dies zeigt auf den genauen Ankunftsort. Geben Sie es in die kostenlose what3words-App ein, um uns leicht zu finden. Alternativ ist GPS hilfreich, bringt Sie aber nicht zu unserem Haus und führt Menschen oft durch sehr enge Gassen. Es ist am einfachsten, der untenstehenden Route zu folgen.",
+      "Von der A30 fahren Sie auf die A394 in Richtung Helston. Nach den Dörfern Rosudgeon und Newtown passieren Sie den Praa Sands Golf Course rechts und es gibt ein Schild nach Tresowes links. Tresowes Green ist das erste Haus rechts (nach dem Parkplatz).",
+      "Von Helston folgen Sie der A394 in Richtung Penzance und suchen Sie das zweite Schild nach Tresowes nach dem Dorf Ashton. Tresowes Green ist das erste Haus rechts, nach dem Parkplatz und zwei hohen Schornsteinen."
+    ],
+    "parking": {
+      "summary": "Sie können auf der Einfahrt bei der Pergola parken.",
+      "detail": [
+        "Sie können auf der Einfahrt bei der Pergola parken.",
+        "Ein Auto pro Ferienwohnung. Wenn Sie mehr Platz für ein weiteres Auto benötigen, gibt es in der Nähe einen Parkplatz.",
+        "Bitte parken Sie auf der linken Seite der Einfahrt.",
+        "Schließen Sie das Einfahrtstor, nachdem Sie das Grundstück betreten haben. Lassen Sie nur den rechten Riegel herunter, nachdem Sie das Tor geschlossen haben."
+      ]
+    }
+  },
+  "hero": {
+    "heading": "Willkommen in The Barn in Tresowes Green Cottage",
+    "body": "The Barn ist ein gemütlicher Einzimmer-Rückzugsort auf dem Gelände von Tresowes Green Cottage. Wir freuen uns sehr, ihn mit Ihnen zu teilen. Wir hoffen, dass dieses Gästebuch Ihnen hilft, Ihren Aufenthalt bei uns so angenehm wie möglich zu gestalten. Bitte lassen Sie uns wissen, wenn Sie weitere Informationen benötigen oder Vorschläge haben, was wir für zukünftige Gäste ergänzen könnten.",
+    "navbarTitle": "Gästebuch"
+  },
+  "arrival": {
+    "checkIn": {
+      "summary": "Check-in ab 15:00 Uhr",
+      "detail": [
+        "Die Check-in-Zeit ist zwischen 15:00 Uhr und 22:00 Uhr.",
+        "Bitte kontaktieren Sie uns, wenn Sie zu einer anderen Zeit einchecken müssen. Wir helfen Ihnen gerne, je nach Verfügbarkeit."
+      ]
+    },
+    "access": {
+      "summary": "Es gibt einen Schlüsseltresor mit Ihrem Hausschlüssel.",
+      "detail": [
+        "Es gibt einen Schlüsseltresor mit Ihrem Hausschlüssel.",
+        "Wir senden Ihnen die Zugangscodes vor Ihrer Ankunft per E-Mail. Vergessen Sie nicht, Ihre E-Mails zu prüfen.",
+        "Wir sind möglicherweise hier, um Sie zu begrüßen und Ihnen die Unterkunft zu zeigen, ansonsten treffen wir uns während Ihres Aufenthalts."
+      ]
+    },
+    "welcomePack": {
+      "summary": "Wir stellen Ihnen ein Willkommenspaket bereit.",
+      "detail": [
+        "Wir stellen Ihnen ein Willkommenspaket für den Beginn Ihres Aufenthalts bereit.",
+        "Normalerweise enthält es Orangensaft, Butter, Milch, Kekse, Eier, Marmeladen und Brot.",
+        "Bitte lassen Sie uns wissen, ob Sie Lebensmittelallergien haben, damit wir den Inhalt des Korbes anpassen können."
+      ]
+    },
+    "wifi": {
+      "summary": "WiFi ist verfügbar und der Code befindet sich in The Barn.",
+      "detail": [
+        "WiFi ist verfügbar und der Code befindet sich in The Barn. Viel Spaß damit! Wenn Sie Probleme haben, kontaktieren Sie uns bitte."
+      ]
+    }
+  },
+  "houseManual": {
+    "intro": "The Barn ist ein gemütlicher, einzimmeriger Rückzugsort, der mit allem ausgestattet ist, was Sie für einen angenehmen Aufenthalt benötigen. Wir stellen Ihnen Toilettenartikel, Handtücher und Bademäntel zur Verfügung. Die Küche ist mit Grundnahrungsmitteln bestückt, darunter Kaffee, Tee, Zucker, Öl, Essig, Salz und Pfeffer. Sie finden außerdem ein Willkommenspaket bei Ihrer Ankunft.",
+    "facilities": [
+      {
+        "id": "laundry",
+        "icon": "washing-machine",
+        "title": "Wäsche",
+        "summary": "In der Küche befindet sich eine Waschmaschine mit Trockner.",
+        "detail": [
+          "In der Küche befindet sich eine Waschmaschine mit integriertem Trockner. Die Bedienungsanleitung liegt in der unteren Schublade in der Küche.",
+          "Wir stellen Ihnen Waschmittel und Weichspüler zur Verfügung.",
+          "Es gibt auch eine Wäscheleine im Freien für diejenigen, die sie nutzen möchten."
+        ]
+      },
+      {
+        "id": "coffee",
+        "icon": "coffee",
+        "title": "Kaffee",
+        "summary": "In der Küche befindet sich eine Kaffeemaschine.",
+        "detail": [
+          "In der Küche befinden sich eine Kaffeemaschine und eine Kaffeepresse.",
+          "Kaffee und Zucker sind vorhanden.",
+          "Die Bedienungsanleitung für die Kaffeemaschine liegt in der Küchenschublade."
+        ]
+      },
+      {
+        "id": "television",
+        "icon": "tv",
+        "title": "Fernsehen & Medien",
+        "summary": "Im Wohnbereich befindet sich ein Flachbildfernseher.",
+        "detail": [
+          "Im Wohnbereich befindet sich ein Flachbildfernseher.",
+          "Ein Netflix-Abonnement ist vorhanden.",
+          "Die Mini-HiFi-Anlage bietet Bluetooth, DAB-Radio und Radio."
+        ]
+      },
+      {
+        "id": "smoke-detectors",
+        "icon": "alarm-smoke",
+        "title": "Rauchmelder",
+        "summary": "Es gibt Rauch-, Wärme- und CO-Melder.",
+        "detail": [
+          "Es gibt Rauch-, Wärme- und CO-Melder.",
+          "Diese wurden vor Ihrer Ankunft geprüft.",
+          "In der Küche befindet sich ein Feuerlöscher.",
+          "Bitte manipulieren Sie die Alarme nicht."
+        ]
+      },
+      {
+        "id": "towels",
+        "icon": "dry-cleaning",
+        "title": "Handtücher & Bettwäsche",
+        "summary": "Ägyptische Baumwollhandtücher und Bettwäsche werden bereitgestellt.",
+        "detail": [
+          "Ägyptische Baumwollhandtücher, Bademäntel und Bettwäsche werden bereitgestellt.",
+          "Wir stellen Ihnen Strandhandtücher zur Verfügung. Bitte nehmen Sie die Badezimmerhandtücher nicht außerhalb der Unterkunft mit.",
+          "Wenn Sie während Ihres Aufenthalts einen Handtuchwechsel benötigen, kontaktieren Sie uns bitte."
+        ]
+      },
+      {
+        "id": "heating",
+        "icon": "heater",
+        "title": "Heizung",
+        "summary": "Heizung ist vorhanden.",
+        "detail": [
+          "Im Raum ist Heizung verfügbar.",
+          "Das Thermostat befindet sich auf einem Regal neben dem Staubsauger beim Essbereich.",
+          "Bei Fragen zur Heizung kontaktieren Sie uns bitte."
+        ]
+      },
+      {
+        "id": "garden",
+        "icon": "tree",
+        "title": "Garten",
+        "summary": "Genießen Sie den Außensitzbereich.",
+        "detail": [
+          "Genießen Sie den Außensitzbereich.",
+          "Bitte bringen Sie die Kissen nach der Nutzung wieder herein.",
+          "Bitte lassen Sie die Kissen möglichst nicht über Nacht draußen."
+        ]
+      },
+      {
+        "id": "barbecue",
+        "icon": "barbecue",
+        "title": "Grill",
+        "summary": "Es gibt einen Holzkohlegrill zur Nutzung durch die Gäste.",
+        "detail": [
+          "Es gibt einen Holzkohlegrill zur Nutzung durch die Gäste.",
+          "Wenn Sie die vorhandene Holzkohle verwendet haben, ersetzen Sie sie bitte.",
+          "Stellen Sie sicher, dass Sie den Grill und das Zubehör für zukünftige Gäste gereinigt haben."
+        ]
+      },
+      {
+        "id": "transport",
+        "icon": "car",
+        "title": "Transport",
+        "summary": "Taxis und Busse in der Gegend.",
+        "detail": [
+          "Hier sind Links zu einigen lokalen Taxis und dem Cornwall First Bus:"
+        ],
+        "links": [
+          {
+            "label": "Kernow Cabs",
+            "url": "https://www.kernowcabs.co.uk",
+            "phone": "01326 464 646",
+            "phoneHref": "01326464646"
+          },
+          {
+            "label": "Darren Taxi",
+            "url": "https://darrens-taxis.co.uk/",
+            "phone": "01326 352 100",
+            "phoneHref": "01326352100"
+          },
+          {
+            "label": "Kernow First Bus",
+            "url": "https://www.firstbus.co.uk/cornwall"
+          }
+        ]
+      },
+      {
+        "id": "waste",
+        "icon": "recycle",
+        "title": "Abfall & Recycling",
+        "summary": "Recycling, Abfall und Kompost.",
+        "detail": [
+          "<strong>Kompost:</strong> Bitte geben Sie kompostierbaren Abfall in die Kompostbehälter. Keine Eierschalen.",
+          "</br>",
+          "<strong>Recycling:</strong> Recycelbarer Abfall sollte in den grünen Müllbeutel im Metalleimer neben The Barn gegeben werden. Recycelbare Materialien sind Glas, Metall (Dosen, Konservendosen und Deckel), Kunststoff, Papier und Pappe.",
+          "</br>",
+          "<strong>Abfall:</strong> Alle anderen Abfälle sollten in die Küchenabfalltonne gelegt werden.",
+          "</br>",
+          "<strong>Kläranlagen:</strong> Bitte verwenden Sie im WC nur Toilettenpapier. Damenhygieneartikel, Zahnseide usw. müssen in den Abfalleimer entsorgt werden.",
+          "</br>",
+          "<strong>Bei Abreise:</strong> Denken Sie bei Abreise daran, den Badezimmerabfall im Küchenabfall zu entsorgen. Bitte verpacken Sie alle Abfälle und geben Sie den grünen Recycling- und weißen Restmüllbeutel in die blaue Mülltonne neben der Garage. Lose Abfälle können nicht abgeholt werden."
+        ]
+      },
+      {
+        "id": "rules",
+        "icon": "scale",
+        "title": "Allgemeine Regeln",
+        "summary": "Einige Richtlinien und Regeln für einen angenehmen Aufenthalt.",
+        "detail": [
+          "Bitte kein Lärm im Freien nach 23:00 Uhr.",
+          "Rauchen oder Dampfen im Gebäude ist nicht erlaubt.",
+          "Haustiere sind nicht erlaubt.",
+          "Die Unterkunft ist für die in der Buchung angegebene Anzahl an Gästen bestimmt."
+        ]
+      }
+    ]
+  },
+  "departure": {
+    "label": "Check-out",
+    "title": "Abreise",
+    "intro": "Wir hoffen, dass Sie einen angenehmen Aufenthalt in The Barn hatten und dass alles für Sie perfekt war. Wir bitten Sie, vor der Abreise diese Liste zu prüfen. Wir freuen uns darauf, Sie bald wieder bei uns begrüßen zu dürfen.",
+    "items": [
+      {
+        "id": "checkout",
+        "icon": "badge-alert",
+        "title": "Check-out",
+        "summary": "Check-out vor 10:00 Uhr",
+        "detail": [
+          "Wir bitten Sie, vor 10:00 Uhr auszuchecken.",
+          "Dies gibt uns Zeit, The Barn vor der Ankunft des nächsten Gastes zu reinigen.",
+          "Wenn Sie einen späten Check-out wünschen, kontaktieren Sie uns bitte. Bitte beachten Sie jedoch, dass wir Ihrer Bitte möglicherweise nicht nachkommen können, wenn am selben Tag ein neuer Gast einzieht."
+        ]
+      },
+      {
+        "id": "kitchen",
+        "icon": "salad",
+        "title": "Küche",
+        "summary": "Bitte spülen Sie das schmutzige Geschirr ab und räumen Sie es weg.",
+        "detail": [
+          "Bitte spülen Sie das benutzte Geschirr und das Besteck ab und räumen Sie sie weg."
+        ]
+      },
+      {
+        "id": "power",
+        "icon": "power-off",
+        "title": "Strom ausschalten",
+        "summary": "Bitte schalten Sie Herd, Backofen, Lichter und Fernseher aus.",
+        "detail": [
+          "Bitte stellen Sie sicher, dass Sie Herd, Backofen, Lichter und Fernseher ausschalten."
+        ]
+      },
+      {
+        "id": "furniture",
+        "icon": "sofa",
+        "title": "Möbel",
+        "summary": "Bitte stellen Sie alle Möbel wieder an den ursprünglichen Platz.",
+        "detail": [
+          "Bitte stellen Sie alle Möbel wieder an den ursprünglichen Platz.",
+          "Wenn etwas fehlt oder beschädigt ist, teilen Sie es uns bitte im Voraus mit, damit wir den Gegenstand ersetzen oder reparieren können."
+        ]
+      },
+      {
+        "id": "linen",
+        "icon": "dry-cleaning",
+        "title": "Bettwäsche & Handtücher",
+        "summary": "Legen Sie alle Bettwäsche, benutzten Handtücher und Küchentücher in den Wäschekorb.",
+        "detail": [
+          "Legen Sie alle benutzte Bettwäsche, Handtücher, Küchentücher, Lappen und Bademäntel in den bereitgestellten grauen Wäschekorb.",
+          "Entfernen Sie die Matratzen- und Kissenschoner nur wenn nötig."
+        ]
+      },
+      {
+        "id": "barbecue",
+        "icon": "barbecue",
+        "title": "Grill",
+        "summary": "Bitte denken Sie daran, den Grill zu reinigen.",
+        "detail": [
+          "Bitte denken Sie daran, den Grill zu reinigen.",
+          "Wenn Sie die vorhandene Holzkohle verwendet haben, ersetzen Sie sie bitte."
+        ]
+      },
+      {
+        "id": "waste",
+        "icon": "recycle",
+        "title": "Abfall & Recycling",
+        "summary": "Recycling, Abfall und Kompost.",
+        "detail": [
+          "<strong>Kompost:</strong> Bitte geben Sie kompostierbaren Abfall in die Kompostbehälter. Keine Eierschalen.",
+          "</br>",
+          "<strong>Recycling:</strong> Recycelbarer Abfall sollte in den grünen Müllbeutel im Metalleimer neben The Barn gegeben werden. Recycelbare Materialien sind Glas, Metall (Dosen, Konservendosen und Deckel), Kunststoff, Papier und Pappe.",
+          "</br>",
+          "<strong>Abfall:</strong> Alle anderen Abfälle sollten in die Küchenabfalltonne gelegt werden.",
+          "</br>",
+          "<strong>Kläranlagen:</strong> Bitte verwenden Sie im WC nur Toilettenpapier. Damenhygieneartikel, Zahnseide usw. müssen in den Abfalleimer entsorgt werden.",
+          "</br>",
+          "<strong>Bei Abreise:</strong> Denken Sie bei Abreise daran, den Badezimmerabfall im Küchenabfall zu entsorgen. Bitte verpacken Sie alle Abfälle und geben Sie den grünen Recycling- und weißen Restmüllbeutel in die blaue Mülltonne neben der Garage. Lose Abfälle können nicht abgeholt werden."
+        ]
+      },
+      {
+        "id": "keys",
+        "icon": "key",
+        "title": "Schlüssel",
+        "summary": "Bitte geben Sie uns die Schlüssel oder legen Sie sie zurück in den Schlüsseltresor.",
+        "detail": [
+          "Bitte geben Sie uns die Schlüssel oder legen Sie sie zurück in den Schlüsseltresor und folgen Sie den Anweisungen, die Sie bei der Ankunft erhalten haben."
+        ]
+      },
+      {
+        "id": "feedback",
+        "icon": "heart",
+        "title": "Feedback",
+        "summary": "Wir würden uns sehr über Ihren Aufenthalt freuen.",
+        "detail": [
+          "Wir würden uns sehr über Ihre Erfahrungen in The Barn freuen.",
+          "Tragen Sie sich in unser Gästebuch ein.",
+          "Wenn Ihnen Ihr Aufenthalt gefallen hat, hinterlassen Sie bitte eine Bewertung auf der Buchungsplattform, die Sie genutzt haben.",
+          "Wenn es etwas gibt, das wir tun könnten, um das Erlebnis unserer Gäste zu verbessern, teilen Sie uns dies bitte persönlich mit.",
+          "Vielen Dank, dass Sie bei uns waren!"
+        ]
+      }
+    ]
+  },
+  "emergency": {
+    "fire": {
+      "summary": "Im Brandfall das Gebäude verlassen und 999 anrufen.",
+      "steps": [
+        "Verlassen Sie das Gebäude und gehen Sie zum Parkplatz.",
+        "Rufen Sie die Feuerwehr unter <a href=\"tel:999\" class=\"text-primary font-bold\">999</a> an",
+        "Kontaktieren Sie <a href=\"tel:07790611150\" class=\"text-primary\">Leslie</a> oder <a href=\"tel:07854306340\" class=\"text-primary\">Johnny</a>"
+      ],
+      "note": "Im Falle eines kleinen Brandes, bei dem der Ausgang frei ist, steht ein Feuerlöscher zur Verfügung."
+    },
+    "medical": {
+      "summary": "Für einen Krankenwagen, wenn das Leben in Gefahr ist, rufen Sie 999 oder 112.",
+      "detail": [
+        "Bei lebensbedrohlichen Situationen rufen Sie <a href=\"tel:999\" class=\"text-primary font-bold\">999</a> oder <a href=\"tel:112\" class=\"text-primary font-bold\">112</a>.",
+        "Bei anderen medizinischen Problemen rufen Sie <a href=\"tel:111\" class=\"text-primary font-bold\">111</a> an oder nutzen Sie den <a href=\"https://111.nhs.uk\" target=\"_blank\" rel=\"noopener\" class=\"text-primary underline\">NHS 111 Online-Dienst</a>.",
+        "Im Badezimmer befindet sich ein Erste-Hilfe-Kasten.",
+        "Bitte informieren Sie <a href=\"tel:07790611150\" class=\"text-primary\">Leslie</a> oder <a href=\"tel:07854306340\" class=\"text-primary\">Johnny</a>, wenn Sie während Ihres Aufenthalts einen Unfall haben."
+      ]
+    },
+    "police": {
+      "summary": "Wählen Sie 999 oder 112 bei unmittelbarer Gefahr.",
+      "detail": [
+        "Im Notfall kontaktieren Sie den Notdienst.",
+        "Wählen Sie <a href=\"tel:999\" class=\"text-primary font-bold\">999</a> oder <a href=\"tel:112\" class=\"text-primary font-bold\">112</a>, wenn Sie oder jemand anderes in unmittelbarer Gefahr ist.",
+        "Für Nicht-Notfälle rufen Sie <a href=\"tel:101\" class=\"text-primary font-bold\">101</a> an."
+      ]
+    }
+  },
+  "restaurants": [
+    {
+      "name": "The Welloe",
+      "location": "Praa Sands",
+      "description": "Strandbar und Restaurant",
+      "url": "https://www.thewelloe.com/",
+      "hearts": 2
+    },
+    {
+      "name": "Stones Reef Beach Bar & Kitchen",
+      "location": "Praa Sands",
+      "description": "Strandbar und Küche direkt am Praa Sands, den ganzen Tag geöffnet für Getränke, Kaffee und Essen.",
+      "url": "https://stonesreef.co.uk/",
+      "hearts": 3
+    },
+    {
+      "name": "The Square",
+      "location": "Porthleven",
+      "description": "Brasserie-Style-Menü",
+      "url": "https://www.thesquareatporthleven.co.uk/",
+      "hearts": 0
+    },
+    {
+      "name": "Kota Kai",
+      "location": "Porthleven",
+      "description": "Hochwertige, regional bezogene Küche mit Blick auf den Hafen.",
+      "url": "https://kotakai.co.uk/",
+      "hearts": 3
+    },
+    {
+      "name": "The Victoria Inn",
+      "location": "Perranuthnoe",
+      "description": "Angeblich eine der ältesten Gasthöfe in Cornwall",
+      "url": "https://www.victoriainn-penzance.co.uk/",
+      "hearts": 2
+    },
+    {
+      "name": "The Cabin Beach Cafe",
+      "location": "Perranuthnoe",
+      "description": "Gutes Essen, atemberaubende Aussicht und ein sehr herzliches Willkommen",
+      "url": "https://www.thecabinbeachcafe.co.uk/",
+      "hearts": 2
+    },
+    {
+      "name": "The Peppercorn Cafe",
+      "location": "Perranuthnoe",
+      "description": "Ruhige Lage, atemberaubende Küstenwanderungen und ein freundlicher Empfang.",
+      "url": "https://www.thepeppercorncafe.co.uk/",
+      "hearts": 3
+    },
+    {
+      "name": "Bakehouse",
+      "location": "Penzance",
+      "description": "Restaurant im Herzen von Penzance",
+      "url": "https://bakehouserestaurant.co.uk/",
+      "hearts": 0
+    },
+    {
+      "name": "The Shore",
+      "location": "Penzance",
+      "description": "Hervorragender Fisch und Meeresfrüchte.",
+      "url": "https://theshorerestaurant.uk/",
+      "hearts": 3
+    },
+    {
+      "name": "Argoe",
+      "location": "Newlyn",
+      "description": "Kornischer Fisch und Meeresfrüchte, natürlicher Wein",
+      "url": "https://www.argoenewlyn.co.uk/",
+      "hearts": 3
+    },
+    {
+      "name": "Mackerel Sky Cafe",
+      "location": "Newlyn",
+      "description": "Meeresfrüchte-Bar im Herzen von Newlyn",
+      "url": "https://mackerelskycafe.co.uk/",
+      "hearts": 3
+    },
+    {
+      "name": "Nauti But Ice",
+      "location": "Porthleven",
+      "description": "Eis, Café, Pizza, Sandwiches am Hafen.",
+      "url": "https://www.nautibutice.co.uk/",
+      "hearts": 2
+    },
+    {
+      "name": "The Packet Inn",
+      "location": "Rosudgeon",
+      "description": "Alte Postkutschen-Gaststätte mit regional bezogenem Essen.",
+      "url": "https://thepacketinn.co.uk/",
+      "hearts": 2
+    },
+    {
+      "name": "Amélie's",
+      "location": "Porthleven",
+      "description": "Informelles Menü mit kleinen Häppchen, kleinen und großen Tellern.",
+      "url": "https://ameliesporthleven.co.uk/",
+      "hearts": 1
+    },
+    {
+      "name": "2 Fore Street",
+      "location": "Mousehole",
+      "description": "Stilvolles Bistro-Restaurant",
+      "url": "https://www.2forestreet.co.uk/",
+      "hearts": 3
+    }
+  ],
+  "beaches": [
+    {
+      "name": "Praa Sands",
+      "location": "Helston, near Tresowes Green",
+      "url": "https://www.cornwall-beaches.co.uk/west-cornwall/praa-sands.htm",
+      "description": "Ein breiter Sandstrand nur 5 Minuten von Tresowes Green Cottage entfernt, ideal zum Schwimmen und Surfen.",
+      "image": "/images/beaches/praa-sands.webp"
+    },
+    {
+      "name": "Rinsey Cove",
+      "location": "Between Praa Sands and Porthleven",
+      "url": "https://www.cornwall-beaches.co.uk/helston-lizard-falmouth/rinsey-cove.htm",
+      "description": "Eine abgelegene National-Trust-Bucht mit dramatischen Klippen und einer verfallenen Bergwerksmaschinenhalle.",
+      "image": "/images/beaches/rinsey-cove.webp"
+    },
+    {
+      "name": "Prussia Cove",
+      "location": "Prussia Cove, near Marazion",
+      "url": "https://www.cornwall-beaches.co.uk/west-cornwall/prussia-cove.htm",
+      "description": "Eine geschützte felsige Bucht mit klarem Wasser, einst der Aufenthaltsort berühmter kornischer Schmuggler.",
+      "image": "/images/beaches/prussia-cove.webp"
+    },
+    {
+      "name": "Perranuthnoe",
+      "location": "Between Praa Sands and Marazion",
+      "url": "https://www.cornwall-beaches.co.uk/west-cornwall/perranuthnoe.htm",
+      "description": "Ein sandiger Familienstrand mit Blick über die Mount's Bay auf St Michael's Mount.",
+      "image": "/images/beaches/perranuthnoe.webp"
+    },
+    {
+      "name": "Kynance Cove",
+      "location": "Lizard Peninsula",
+      "url": "https://www.cornwall-beaches.co.uk/helston-lizard-falmouth/kynance-cove.htm",
+      "description": "Einer der meistfotografierten Strände in Cornwall, mit türkisfarbenem Wasser und Serpentinit-Felsen.",
+      "image": "/images/beaches/kynance-cove.webp"
+    },
+    {
+      "name": "Polurrian Cove",
+      "location": "Lizard Peninsula",
+      "url": "https://www.cornwall-beaches.co.uk/helston-lizard-falmouth/polurrian-cove.htm",
+      "description": "Ein ruhiger, geschützter Sandstrand auf dem Lizard, beliebt bei Familien und Schwimmern.",
+      "image": "/images/beaches/polurrian-cove.webp"
+    },
+    {
+      "name": "Porthleven Beach",
+      "location": "Porthleven",
+      "url": "https://www.cornwall-beaches.co.uk/helston-lizard-falmouth/porthleven.htm",
+      "description": "Ein dramatischer Kies- und Sandstrand, der vom charmanten Hafendorf Porthleven eingerahmt wird.",
+      "image": "/images/beaches/porthleven-beach.webp"
+    },
+    {
+      "name": "Gunwalloe Beach",
+      "location": "Near Helston",
+      "url": "https://www.cornwall-beaches.co.uk/helston-lizard-falmouth/gunwalloe.htm",
+      "description": "Ein National-Trust-Strand mit einer mittelalterlichen Kirche, die direkt in die Klippen hinein gebaut ist.",
+      "image": "/images/beaches/gunwalloe.webp"
+    },
+    {
+      "name": "Marazion Beach",
+      "location": "Marazion",
+      "url": "https://www.cornwall-beaches.co.uk/west-cornwall/marazion.htm",
+      "description": "Ein langer Sandstrand mit malerischen Blick auf St Michael's Mount über die Bucht.",
+      "image": "/images/beaches/marazion-beach.webp"
+    },
+    {
+      "name": "Longrock Beach",
+      "location": "Longrock, near Penzance",
+      "url": "https://www.cornwall-beaches.co.uk/west-cornwall/longrock.htm",
+      "description": "Eine ruhige Küstenstrecke der Mount's Bay, beliebt bei Wanderern und Vogelbeobachtern.",
+      "image": "/images/beaches/longrock-beach.webp"
+    }
+  ],
+  "attractions": [
+    {
+      "name": "Minack Theatre",
+      "location": "Porthcurno",
+      "url": "https://minack.com/",
+      "title": "Willkommen im Minack Theatre - Cornwalls berühmtes Klippentheater",
+      "description": "Freilufttheater auf der Klippe über Porthcurno, mit Aufführungen, Gärten und Meerblick.",
+      "image": "/images/attractions/minack.webp"
+    },
+    {
+      "name": "Jubilee Pool",
+      "location": "Penzance",
+      "url": "https://jubileepool.co.uk/",
+      "title": "Das berühmteste Meerwasserbecken Großbritanniens - Jubilee Pool, Penzance, Cornwall",
+      "description": "Cornwalls berühmtes Art-Déco-Meerwasserbecken an der Promenade von Penzance.",
+      "image": "/images/attractions/jubilee-pool.webp"
+    },
+    {
+      "name": "Glendurgan Garden",
+      "location": "Mawnan Smith, Falmouth",
+      "url": "https://www.nationaltrust.org.uk/visit/cornwall/glendurgan-garden",
+      "title": "Glendurgan Garden - National Trust",
+      "description": "Erkunden Sie die drei Gartentäler von Glendurgan, die zum geschützten Strand von Durgan führen.",
+      "image": "/images/attractions/glendurgan.webp"
+    },
+    {
+      "name": "Trengwainton Garden",
+      "location": "Madron, near Penzance",
+      "url": "https://www.nationaltrust.org.uk/visit/cornwall/trengwainton-garden",
+      "title": "Trengwainton Garden - National Trust",
+      "description": "Erkunden Sie geschützte Gärten mit exotischen Bäumen, Sträuchern und farbenfroher saisonaler Bepflanzung.",
+      "image": "/images/attractions/trengwainton.webp"
+    },
+    {
+      "name": "Barbara Hepworth Museum",
+      "location": "St. Ives",
+      "url": "https://www.tate.org.uk/visit/tate-st-ives/barbara-hepworth-museum-and-sculpture-garden",
+      "title": "Barbara Hepworth Museum and Sculpture Garden - Tate",
+      "description": "Entdecken Sie Barbara Hepworths Atelier und Skulpturen in dem einzigartig erhaltenen Garten der Künstlerin.",
+      "image": "/images/attractions/barbara-hepworth-museum.webp"
+    },
+    {
+      "name": "Helston Railway",
+      "location": "Prospidnick, Helston",
+      "url": "https://www.helstonrailway.co.uk/",
+      "title": "Helston Railway - Heritage Dampf- und Dieselbahn",
+      "description": "Fahren Sie mit einer historischen Dampf- und Dieselbahn durch die kornische Landschaft in der Nähe von Helston.",
+      "image": "/images/attractions/helston-railway.webp"
+    },
+    {
+      "name": "Penlee House",
+      "location": "Penzance",
+      "url": "https://penleehouse.org.uk/",
+      "title": "Penlee House - Cornwalls Galerie und Museum",
+      "description": "Eine Galerie und ein Museum in Parkumgebung mit bedeutenden Sammlungen aus West Cornwall.",
+      "image": "/images/attractions/penlee-house.webp"
+    },
+    {
+      "name": "St Michael's Mount",
+      "location": "Marazion",
+      "url": "https://stmichaelsmount.co.uk/",
+      "title": "St Michael's Mount - Cornwalls malerische Inselburg",
+      "description": "Besuchen Sie die Inselburg, den Hafen und die Gärten direkt vor der Küste von Marazion.",
+      "image": "/images/attractions/st-michaels-mount.webp"
+    },
+    {
+      "name": "Tate St Ives",
+      "location": "St. Ives",
+      "url": "https://www.tate.org.uk/visit/tate-st-ives",
+      "title": "Tate St Ives - Galerie für moderne und zeitgenössische Kunst",
+      "description": "Sehen Sie moderne und zeitgenössische Kunst, inspiriert von St Ives und der weiteren kornischen Landschaft.",
+      "image": "/images/attractions/tate-st-ives.webp"
+    },
+    {
+      "name": "Trebah Garden",
+      "location": "Mawnan Smith, Falmouth",
+      "url": "https://www.trebahgarden.co.uk/",
+      "title": "Trebah Garden - Subtropischer Talgarten",
+      "description": "Subtropischer Talgarten mit dramatischer Bepflanzung, gewundenen Wegen und einem privaten Strand.",
+      "image": "/images/attractions/trebah-garden.webp"
+    },
+    {
+      "name": "Paradise Park",
+      "location": "Hayle",
+      "url": "https://paradisepark.org.uk/",
+      "title": "Paradise Park - Familienfreundliche Wildtierattraktion",
+      "description": "Familienfreundliche Wildtierattraktion mit Vögeln, Tieren, Gärten und einem Indoor-Spielbereich.",
+      "image": "/images/attractions/paradise-park.webp"
+    },
+    {
+      "name": "Telegraph Museum",
+      "location": "Porthcurno",
+      "url": "https://pkporthcurno.com/",
+      "title": "Porthcurno Telegraph Museum - Viktorianisches Kommunikationserbe",
+      "description": "Erkunden Sie die Geschichte der globalen Kommunikation von der viktorianischen Telegraphenära bis heute.",
+      "image": "/images/attractions/telegraph-museum.webp"
+    },
+    {
+      "name": "Godolphin",
+      "location": "Godolphin Cross",
+      "url": "https://www.nationaltrust.org.uk/visit/cornwall/godolphin",
+      "title": "Godolphin - National-Trust-Anwesen mit historischem Haus und Gärten",
+      "description": "Besuchen Sie das National-Trust-Anwesen Godolphin und erkunden Sie das historische Haus und die Gärten.",
+      "image": "/images/attractions/godolphin.webp"
+    },
+    {
+      "name": "Geevor Tin Mine",
+      "location": "Land's End",
+      "url": "https://geevor.com/",
+      "title": "Geevor Tin Mine - Historisches Bergbau-Erbe",
+      "description": "Historisches Bergbaumuseum und Erbe mit dramatischer Küstenaussicht in der Nähe von Land's End.",
+      "image": "/images/attractions/geevor-tin-mine.webp"
+    },
+    {
+      "name": "Museum of Cornish Life",
+      "location": "Helston",
+      "url": "https://museumofcornishlife.co.uk/",
+      "title": "Museum of Cornish Life - Lokale Geschichte und Kultur",
+      "description": "Ein lokales Museum voller Objekte und Geschichten über das alltägliche Leben in Cornwall.",
+      "image": "/images/attractions/museum-of-cornish-life.webp"
+    },
+    {
+      "name": "Tremenheere Sculpture Gardens",
+      "location": "Gulval, near Penzance",
+      "url": "https://www.tremenheere.co.uk/",
+      "title": "Tremenheere Sculpture Gardens - Zeitgenössische Kunst in wunderschönen Gärten",
+      "description": "Zeitgenössische Kunst und Skulpturen in wunderschönen Gärten mit Blick auf die Mount's Bay.",
+      "image": "/images/attractions/tremenheere.webp"
+    },
+    {
+      "name": "Land's End",
+      "location": "Sennen",
+      "url": "https://landsend-landmark.co.uk/",
+      "title": "Land's End - Englands westlichster Punkt",
+      "description": "Englands westlichster Punkt, Klippenwege, das bekannte Wegweiser-Schild und weite Atlantikblicke.",
+      "image": "/images/attractions/lands-end.webp"
+    },
+    {
+      "name": "Seal Sanctuary",
+      "location": "Gweek",
+      "url": "https://sealsanctuary.sealifetrust.org/en/",
+      "title": "Seal Sanctuary - Gerettete Meerestiere",
+      "description": "Lernen Sie gerettete Seehunde und andere Tiere in diesem beliebten Heim in Gweek kennen.",
+      "image": "/images/attractions/seal-sanctuary.webp"
+    }
+  ],
+  "shopping": [
+    {
+      "name": "Sainsbury's",
+      "location": "Helston",
+      "url": "https://stores.sainsburys.co.uk/2162/helston",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.6355942726464!2d-5.263477522703512!3d50.09310917152614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486b2791ca4b2cd7%3A0x8ef7608b97e194d7!2sSainsbury's!5e0!3m2!1sen!2suk!4v1718081574502!5m2!1sen!2suk"
+    },
+    {
+      "name": "Tesco",
+      "location": "Helston",
+      "url": "https://www.tesco.com/store-locator/helston/clodgey-ln",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.009584469785!2d-5.2676780227029925!3d50.10482757152827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486b278300e66881%3A0xfc9df08e378a94c!2sTesco%20Superstore!5e0!3m2!1sen!2suk!4v1718043302994!5m2!1sen!2suk"
+    },
+    {
+      "name": "Lidl",
+      "location": "Helston",
+      "url": "https://www.lidl.co.uk/s/en-GB/store-finder/helston/cornwall/penzance-road/",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.2571292755424!2d-5.2825763871341245!3d50.100193971408586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486b2780fe078e5d%3A0x347a9fd49f6e9d32!2sLidl!5e0!3m2!1sen!2suk!4v1718185681988!5m2!1sen!2suk"
+    },
+    {
+      "name": "Quayside Fish",
+      "location": "Porthleven",
+      "url": "https://www.quaysidefish.co.uk/",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.05027337052!2d-5.320328811293393!3d50.08534560859209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486ad849059009d3%3A0x4711bcb67367ec4!2sQuayside%20Fish!5e0!3m2!1sen!2suk!4v1718082891644!5m2!1sen!2suk"
+    },
+    {
+      "name": "Pengelly's of Porthleven",
+      "location": "Porthleven",
+      "url": "https://www.lidl.co.uk/s/en-GB/store-finder/helston/cornwall/penzance-road/",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.0264381768943!2d-5.3189016227038355!3d50.08579187152472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486ad84913c95047%3A0xb032010ddc185e8!2sPorthleven%20Supermarket%20Ltd!5e0!3m2!1sen!2suk!4v1718083167389!5m2!1sen!2suk"
+    },
+    {
+      "name": "Co-op",
+      "location": "Rosudgeon",
+      "url": "https://www.coop.co.uk/store-finder/TR20-9QE/main-road",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.4198939447756!2d-5.419398622702549!3d50.115864271530256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486adb175611edf1%3A0x2edb314ea2df1eb9!2sCo-op%20Food%20-%20Rosudgeon%20-%20Main%20Road!5e0!3m2!1sen!2suk!4v1718083994550!5m2!1sen!2suk"
+    },
+    {
+      "name": "Trelawney Fish",
+      "location": "Newlyn",
+      "url": "https://www.trelawneyfish.co.uk/",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.073251282936!2d-5.552283722703069!3d50.103635871528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486ac4471cd876b1%3A0xec5df8b58f7ff42e!2sTrelawney%20Fish!5e0!3m2!1sen!2suk!4v1718083643039!5m2!1sen!2suk"
+    },
+    {
+      "name": "Stevenson",
+      "location": "Newlyn",
+      "url": "https://www.wstevenson.co.uk/",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.0627212520453!2d-5.552148522703025!3d50.10383297152798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486ac446fb8a3519%3A0x6b4d9ae8ebc18697!2sStevenson%20W%20%26%20Sons%20Ltd!5e0!3m2!1sen!2suk!4v1718083413496!5m2!1sen!2suk"
+    }
+  ],
+  "sections": {
+    "restaurants": {
+      "label": "Gastronomie",
+      "title": "Restaurants, Cafés, Bars & Gaststätten",
+      "intro": "Einige empfohlene Restaurants in West Cornwall, die sich in der Nähe unserer Unterkunft befinden. Bitte beachten Sie, dass ein Auto erforderlich ist, um diese Ziele zu erreichen. Mehrere dieser Einrichtungen haben wir persönlich besucht und empfehlen sie Ihnen gerne. Andere werden von unseren Gästen und Freunden sehr gelobt."
+    },
+    "beaches": {
+      "label": "Strände in der Nähe",
+      "title": "Strände & Buchten",
+      "intro": "Praa Sands ist der nächste Strand zu Tresowes Green Cottage, nur 5 Minuten mit dem Auto oder etwa 25 Minuten zu Fuß entfernt. Wir haben auch Informationen über andere atemberaubende und wunderschöne Strände in der Gegend für Sie zusammengestellt."
+    },
+    "attractions": {
+      "label": "Aktivitäten",
+      "title": "Ausflüge - Attraktionen - Gärten",
+      "intro": "Erkunden Sie die wunderbaren Attraktionen, Ausflugsziele und Gärten in der Gegend, die meisten nur 5 bis 30 Minuten mit dem Auto entfernt. Bitte beachten Sie, dass während der Hochsaison eine vorherige Ticketbuchung erforderlich sein kann."
+    },
+    "shopping": {
+      "label": "Supermärkte & Fischgeschäfte",
+      "title": "Lebensmittel-Einkauf",
+      "intro": "Hier finden Sie Links und Wegbeschreibungen zu den wichtigsten Supermärkten und Fischhändlern in der Gegend."
+    }
+  }
+}

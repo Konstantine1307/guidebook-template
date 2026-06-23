@@ -22,6 +22,20 @@ export interface UiStrings {
     reload: string;
     dismiss: string;
   };
+  routes: {
+    welcome: string;
+    arrival: string;
+    houseManual: string;
+    restaurants: string;
+    beaches: string;
+    attractions: string;
+    emergency: string;
+    departure: string;
+  };
+  hero: {
+    getStarted: string;
+    openMenuAriaLabel: string;
+  };
   sections: {
     arrival: {
       label: string;

@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "arrival": "Ankunft",
+    "emergencies": "Notfälle",
+    "houseManual": "Haushandbuch",
+    "foodShopping": "Lebensmitteleinkauf",
+    "departure": "Abreise",
+    "restaurants": "Restaurants",
+    "attractions": "Sehenswürdigkeiten",
+    "beaches": "Strände"
+  },
+  "navbar": {
+    "homeAriaLabel": "Startseite",
+    "menuTooltip": "Bereiche durchsuchen",
+    "menuAriaLabel": "Navigationsmenü öffnen"
+  },
+  "pwa": {
+    "newVersion": "Neue Version verfügbar.",
+    "offlineReady": "App bereit für die Offline-Nutzung.",
+    "reload": "Neu laden",
+    "dismiss": "Schließen"
+  },
+  "routes": {
+    "welcome": "Willkommen",
+    "arrival": "Ankunft",
+    "houseManual": "Haushandbuch",
+    "restaurants": "Restaurants",
+    "beaches": "Strände",
+    "attractions": "Sehenswürdigkeiten",
+    "emergency": "Notfall",
+    "departure": "Abreise"
+  },
+  "hero": {
+    "getStarted": "Loslegen",
+    "openMenuAriaLabel": "Navigationsmenü öffnen"
+  },
+  "sections": {
+    "arrival": {
+      "label": "Check-in",
+      "sectionTitle": "Check-in",
+      "pageTitle": "Ankunft",
+      "checkIn": "Check-in",
+      "access": "Zugang zum Objekt",
+      "welcomePack": "Willkommenspaket",
+      "wifi": "WiFi"
+    },
+    "directions": {
+      "label": "Anreise",
+      "sectionTitle": "Anreise",
+      "pageTitle": "Ankunft",
+      "addressContact": "Adresse & Kontakt",
+      "directions": "Wegbeschreibung",
+      "parking": "Parken"
+    },
+    "emergency": {
+      "label": "Verfahren & Notfälle",
+      "sectionTitle": "Notfall",
+      "fire": "Brandschutzmaßnahmen",
+      "medical": "Medizinische Notfälle",
+      "police": "Polizei"
+    },
+    "restaurants": {
+      "label": "Restaurants",
+      "title": "Restaurants, Cafés, Bars & Lokale"
+    },
+    "foodShopping": {
+      "label": "Supermärkte & Fischläden",
+      "title": "Lebensmitteleinkauf",
+      "intro": "Hier finden Sie Links und Wegbeschreibungen zu den wichtigsten Supermärkten und Fischhändlern in der Umgebung."
+    },
+    "attractions": {
+      "label": "Freizeitangebote",
+      "title": "Ausflüge – Sehenswürdigkeiten – Gärten"
+    },
+    "beaches": {
+      "label": "Strände in der Nähe",
+      "title": "Strände & Buchten"
+    },
+    "departure": {
+      "label": "Auschecken",
+      "title": "Abreise"
+    },
+    "houseManual": {
+      "label": "Einrichtungen & Ausstattung",
+      "title": "Haushandbuch"
+    }
+  }
+}

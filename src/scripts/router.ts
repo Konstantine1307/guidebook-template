@@ -12,12 +12,12 @@ import { renderEmergency } from "../components/sections/emergency";
 import { renderFoodShopping } from "../components/sections/food-shopping";
 import { renderHouseManual } from "../components/sections/house-manual";
 import { renderRestaurants } from "../components/sections/restaurants";
-import { guidebook } from "../data/config";
+import { guidebook, ui } from "../data/config";
 
 // Home / welcome page
 function renderHome(): string {
-  const { name, heroImage, subtitle } = guidebook.property;
-  const { body } = guidebook.hero;
+  const { name, heroImage } = guidebook.property;
+  const { body, heading } = guidebook.hero;
   return `
     <div
       class="hero"
@@ -27,14 +27,14 @@ function renderHome(): string {
     >
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <h1>Welcome to <span>${name}</span> in ${subtitle}</h1>
+        <h1>${heading}</h1>
         <p>${body}</p>
         <button
           class="btn-cta"
           onclick="document.querySelector('guide-drawer').open()"
-          aria-label="Open navigation menu"
+          aria-label="${ui.hero.openMenuAriaLabel}"
         >
-          Get Started
+          ${ui.hero.getStarted}
         </button>
       </div>
     </div>
@@ -55,49 +55,49 @@ const routes: Route[] = [
   {
     path: "/",
     render: () => renderHome(),
-    title: "Welcome",
+    title: ui.routes.welcome,
     bodyClass: "bg-home",
   },
   {
     path: "/arrival",
     render: () => renderDirections() + renderCheckIn() + renderFoodShopping(),
-    title: "Arrival",
+    title: ui.routes.arrival,
     bodyClass: "bg-arrival",
   },
   {
     path: "/house-manual",
     render: () => renderHouseManual(),
-    title: "House Manual",
+    title: ui.routes.houseManual,
     bodyClass: "bg-manual",
   },
   {
     path: "/places-to-eat",
     render: () => renderRestaurants(),
-    title: "Places to Eat",
+    title: ui.routes.restaurants,
     bodyClass: "bg-food",
   },
   {
     path: "/beaches",
     render: () => renderBeaches(),
-    title: "Beaches",
+    title: ui.routes.beaches,
     bodyClass: "bg-beaches",
   },
   {
     path: "/attractions",
     render: () => renderAttractions(),
-    title: "Attractions",
+    title: ui.routes.attractions,
     bodyClass: "bg-attractions",
   },
   {
     path: "/emergency",
     render: () => renderEmergency(),
-    title: "Emergency",
+    title: ui.routes.emergency,
     bodyClass: "bg-emergency",
   },
   {
     path: "/departure",
     render: () => renderDeparture(),
-    title: "Departure",
+    title: ui.routes.departure,
     bodyClass: "bg-departure",
   },
 ];
