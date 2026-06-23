@@ -64,7 +64,7 @@
   /* Spacing */
   --radius: 1rem;
   --radius-sm: 0.5rem;
-  --navbar-height: 5.5rem;
+  --navbar-height: 7rem;
 
   /* Card */
   --card-bg: #f3e7db;
@@ -497,11 +497,26 @@ dialog::backdrop {
   width: 100%;
   z-index: 100;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 0.5rem 1rem;
+  flex-direction: column;
   background: var(--color-background);
   border-bottom: 1px solid var(--color-border);
+}
+
+/* Row 1: logo/menu + title */
+.navbar-row-main {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  gap: 0;
+}
+
+/* Row 2: language switcher — thin strip, right-aligned */
+.navbar-row-lang {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1rem 0.3rem;
+  border-top: 1px solid var(--color-border);
 }
 
 .navbar-left {
@@ -532,12 +547,6 @@ dialog::backdrop {
   padding: 0.25rem;
 }
 
-.navbar-right {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-
 /* Language dropdown */
 .lang-dropdown {
   position: relative;
@@ -546,25 +555,25 @@ dialog::backdrop {
 .lang-dropdown-btn {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
-  padding: 0.35rem 0.6rem;
-  background: var(--color-surface, #f9f6f1);
-  border: 1px solid var(--color-border, #d1c9bc);
-  border-radius: 0.5rem;
+  gap: 0.25rem;
+  padding: 0.2rem 0.5rem;
+  background: transparent;
+  border: none;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  color: #374151;
+  color: #6b7280;
   white-space: nowrap;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.lang-dropdown-btn:hover {
+  color: #374151;
 }
 
 .lang-icon {
   display: flex;
   align-items: center;
-  width: 1.1rem;
-  height: 1.1rem;
-  color: #6b7280;
+  width: 0.95rem;
+  height: 0.95rem;
   flex-shrink: 0;
 }
 .lang-icon svg {
@@ -572,16 +581,11 @@ dialog::backdrop {
   height: 100%;
 }
 
-.lang-label {
-  /* hidden on very small screens to save space */
-}
-
 .lang-chevron {
   display: flex;
   align-items: center;
-  width: 0.9rem;
-  height: 0.9rem;
-  color: #9ca3af;
+  width: 0.75rem;
+  height: 0.75rem;
   flex-shrink: 0;
   transition: transform 0.2s;
 }
@@ -596,14 +600,14 @@ dialog::backdrop {
 .lang-dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 0.4rem);
+  bottom: calc(100% + 0.3rem);
   right: 0;
   background: #fff;
   border: 1px solid var(--color-border, #d1c9bc);
   border-radius: 0.5rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   list-style: none;
-  padding: 0.25rem 0;
+  padding: 0.2rem 0;
   margin: 0;
   min-width: 7rem;
   z-index: 200;
@@ -613,9 +617,9 @@ dialog::backdrop {
 }
 
 .lang-option {
-  padding: 0.55rem 1rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: #374151;
 }
@@ -625,12 +629,6 @@ dialog::backdrop {
 .lang-option.active {
   font-weight: 700;
   color: var(--color-primary, #c5a880);
-}
-
-@media (max-width: 400px) {
-  .lang-label {
-    display: none;
-  }
 }
 
 .navbar-title {
@@ -674,7 +672,7 @@ dialog::backdrop {
 /* Tablet + desktop shared */
 @media (min-width: 768px) {
   :root {
-    --navbar-height: 7rem;
+    --navbar-height: 8.5rem;
   }
   .navbar-logo {
     width: 3.5rem;

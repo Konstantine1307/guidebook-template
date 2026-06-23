@@ -4,9 +4,9 @@ import { icons } from "../icons/icons";
 /**
  * <guide-navbar title="Page Title">
  *
- * Renders a fixed top navbar with logo, hamburger (opens guide-drawer), and title.
- * Includes a language dropdown (EN/DE) in the top-right corner.
- * SPA-aware: updates title dynamically when the 'title' attribute changes.
+ * Two-row navbar:
+ *   Row 1: logo/menu | property title
+ *   Row 2 (thin): language switcher dropdown, right-aligned
  */
 class GuideNavbar extends HTMLElement {
   private _pageTitleEl: HTMLElement | null = null;
@@ -35,35 +35,41 @@ class GuideNavbar extends HTMLElement {
 
     this.innerHTML = `
       <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="navbar-left">
-          <a href="/" data-route="/" aria-label="${t.navbar.homeAriaLabel}" title="${guidebook.property.subtitle}">
-            <img
-              src="${guidebook.property.logo}"
-              alt="${guidebook.property.name} logo"
-              class="navbar-logo"
-              width="48" height="48"
-            />
-          </a>
-          <button
-            class="navbar-menu-btn"
-            title="${t.navbar.menuTooltip}"
-            aria-label="${t.navbar.menuAriaLabel}"
-            aria-expanded="false"
-            aria-controls="guide-drawer"
-            id="drawer-toggle"
-          >
-            ${icons["menu"]}
-          </button>
-        </div>
-        <div class="navbar-title">
-          <div class="navbar-title-main">
-            <span class="navbar-title-property">${propertyName}</span>
-            <span class="navbar-title-separator"> | </span>
-            <span class="navbar-title-page">${pageTitle}</span>
+
+        <!-- Row 1: logo + menu + title -->
+        <div class="navbar-row navbar-row-main">
+          <div class="navbar-left">
+            <a href="/" data-route="/" aria-label="${t.navbar.homeAriaLabel}" title="${guidebook.property.subtitle}">
+              <img
+                src="${guidebook.property.logo}"
+                alt="${guidebook.property.name} logo"
+                class="navbar-logo"
+                width="48" height="48"
+              />
+            </a>
+            <button
+              class="navbar-menu-btn"
+              title="${t.navbar.menuTooltip}"
+              aria-label="${t.navbar.menuAriaLabel}"
+              aria-expanded="false"
+              aria-controls="guide-drawer"
+              id="drawer-toggle"
+            >
+              ${icons["menu"]}
+            </button>
           </div>
-          <span class="navbar-title-sub" style="color:var(--color-heading-1)">${guidebook.property.subtitle}</span>
+          <div class="navbar-title">
+            <div class="navbar-title-main">
+              <span class="navbar-title-property">${propertyName}</span>
+              <span class="navbar-title-separator"> | </span>
+              <span class="navbar-title-page">${pageTitle}</span>
+            </div>
+            <span class="navbar-title-sub" style="color:var(--color-heading-1)">${guidebook.property.subtitle}</span>
+          </div>
         </div>
-        <div class="navbar-right">
+
+        <!-- Row 2: language switcher -->
+        <div class="navbar-row navbar-row-lang">
           <div class="lang-dropdown" id="lang-dropdown">
             <button class="lang-dropdown-btn" id="lang-dropdown-btn" aria-haspopup="listbox" aria-expanded="false">
               <span class="lang-icon">${icons["languages"]}</span>
@@ -76,6 +82,7 @@ class GuideNavbar extends HTMLElement {
             </ul>
           </div>
         </div>
+
       </nav>
     `;
 
@@ -118,15 +125,10 @@ class GuideNavbar extends HTMLElement {
       });
     });
 
-    // Close dropdown when clicking outside
-    document.addEventListener(
-      "click",
-      () => {
-        dropdownMenu?.classList.remove("open");
-        dropdownBtn?.setAttribute("aria-expanded", "false");
-      },
-      { once: false },
-    );
+    document.addEventListener("click", () => {
+      dropdownMenu?.classList.remove("open");
+      dropdownBtn?.setAttribute("aria-expanded", "false");
+    });
   }
 
   private updateTitle() {
