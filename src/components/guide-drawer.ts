@@ -1,11 +1,11 @@
-import { guidebook, ui } from "../data/config";
+import { getUI, guidebook } from "../data/config";
 import { icons } from "../icons/icons";
 
 interface NavItem {
   route: string;
   icon: string;
   bgColor: string;
-  textKey: keyof typeof ui.nav;
+  textKey: keyof ReturnType<typeof getUI>["nav"];
 }
 
 const NAV_ITEMS: NavItem[] = [
@@ -64,12 +64,19 @@ const NAV_ITEMS: NavItem[] = [
  *
  * Slide-in sidebar navigation. Opened via open() method (called by navbar).
  * Closed via overlay click, close button, or Escape key.
+ * Exposes rerender() so the navbar lang toggle can refresh nav labels.
  */
 class GuideDrawer extends HTMLElement {
   private _overlay!: HTMLElement;
   private _panel!: HTMLElement;
 
   connectedCallback() {
+    this.buildInnerHTML();
+    this.attachListeners();
+  }
+
+  private buildInnerHTML() {
+    const t = getUI();
     this.innerHTML = `
       <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
       <nav
@@ -106,7 +113,7 @@ class GuideDrawer extends HTMLElement {
                 <span class="nav-icon" style="background:${item.bgColor}" aria-hidden="true">
                   ${icons[item.icon] ?? ""}
                 </span>
-                ${ui.nav[item.textKey]}
+                ${t.nav[item.textKey]}
               </a>
             </li>
           `,
@@ -114,7 +121,9 @@ class GuideDrawer extends HTMLElement {
         </ul>
       </nav>
     `;
+  }
 
+  private attachListeners() {
     this._overlay = this.querySelector("#drawer-overlay") as HTMLElement;
     this._panel = this.querySelector("#drawer-panel") as HTMLElement;
 
@@ -126,6 +135,20 @@ class GuideDrawer extends HTMLElement {
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") this.close();
     });
+  }
+
+  /** Re-render nav labels in place (called after language toggle) */
+  rerender() {
+    const wasOpen = this._panel?.classList.contains("open");
+    this.buildInnerHTML();
+    this.attachListeners();
+    if (wasOpen) {
+      this._panel = this.querySelector("#drawer-panel") as HTMLElement;
+      this._overlay = this.querySelector("#drawer-overlay") as HTMLElement;
+      this._panel?.classList.add("open");
+      this._overlay?.classList.add("open");
+      this._panel?.setAttribute("aria-hidden", "false");
+    }
   }
 
   open() {

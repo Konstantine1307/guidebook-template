@@ -1,17 +1,17 @@
 import {
   detailParagraphs,
   getIcon,
+  getUI,
   guidebook,
   sectionCard,
   sectionRow,
   setAccent,
-  ui,
 } from "./helpers";
 
 export function renderDirections(): string {
   setAccent("var(--icon-arrival)");
   const c = guidebook.contact;
-  const s = ui.sections.directions;
+  const s = getUI().sections.directions;
 
   const contactRows = c.contacts
     .map(

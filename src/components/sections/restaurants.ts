@@ -1,10 +1,10 @@
 import type { Restaurant } from "../../data/types";
-import { domain, guidebook, iconBadge, ui } from "./helpers";
+import { domain, getUI, guidebook, iconBadge } from "./helpers";
 
 export function renderRestaurants(): string {
   const meta = guidebook.sections?.restaurants;
-  const label = meta?.label ?? ui.sections.restaurants.label;
-  const title = meta?.title ?? ui.sections.restaurants.title;
+  const label = meta?.label ?? getUI().sections.restaurants.label;
+  const title = meta?.title ?? getUI().sections.restaurants.title;
   const intro = meta?.intro ?? "";
   const MAX_HEARTS = 3;
 

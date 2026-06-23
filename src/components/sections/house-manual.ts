@@ -2,11 +2,11 @@ import type { Facility } from "../../data/types";
 import {
   detailParagraphs,
   getIcon,
+  getUI,
   guidebook,
   iconBadge,
   sectionRow,
   setAccent,
-  ui,
 } from "./helpers";
 
 export function renderHouseManual(): string {
@@ -46,8 +46,8 @@ export function renderHouseManual(): string {
       <div class="section-header">
         ${iconBadge("book-user", "var(--color-manual)")}
         <div class="section-header-text">
-          <p>${ui.sections.houseManual.label}</p>
-          <p class="section-title">${ui.sections.houseManual.title}</p>
+          <p>${getUI().sections.houseManual.label}</p>
+          <p class="section-title">${getUI().sections.houseManual.title}</p>
         </div>
       </div>
       <p class="section-subtitle">${houseManual.intro}</p>

@@ -12,7 +12,7 @@ import { renderEmergency } from "../components/sections/emergency";
 import { renderFoodShopping } from "../components/sections/food-shopping";
 import { renderHouseManual } from "../components/sections/house-manual";
 import { renderRestaurants } from "../components/sections/restaurants";
-import { guidebook, ui } from "../data/config";
+import { getUI, guidebook } from "../data/config";
 
 // Home / welcome page
 function renderHome(): string {
@@ -32,9 +32,9 @@ function renderHome(): string {
         <button
           class="btn-cta"
           onclick="document.querySelector('guide-drawer').open()"
-          aria-label="${ui.hero.openMenuAriaLabel}"
+          aria-label="${getUI().hero.openMenuAriaLabel}"
         >
-          ${ui.hero.getStarted}
+          ${getUI().hero.getStarted}
         </button>
       </div>
     </div>
@@ -51,70 +51,78 @@ interface Route {
   bodyClass: string;
 }
 
-const routes: Route[] = [
-  {
-    path: "/",
-    render: () => renderHome(),
-    title: ui.routes.welcome,
-    bodyClass: "bg-home",
-  },
-  {
-    path: "/arrival",
-    render: () => renderDirections() + renderCheckIn() + renderFoodShopping(),
-    title: ui.routes.arrival,
-    bodyClass: "bg-arrival",
-  },
-  {
-    path: "/house-manual",
-    render: () => renderHouseManual(),
-    title: ui.routes.houseManual,
-    bodyClass: "bg-manual",
-  },
-  {
-    path: "/places-to-eat",
-    render: () => renderRestaurants(),
-    title: ui.routes.restaurants,
-    bodyClass: "bg-food",
-  },
-  {
-    path: "/beaches",
-    render: () => renderBeaches(),
-    title: ui.routes.beaches,
-    bodyClass: "bg-beaches",
-  },
-  {
-    path: "/attractions",
-    render: () => renderAttractions(),
-    title: ui.routes.attractions,
-    bodyClass: "bg-attractions",
-  },
-  {
-    path: "/emergency",
-    render: () => renderEmergency(),
-    title: ui.routes.emergency,
-    bodyClass: "bg-emergency",
-  },
-  {
-    path: "/departure",
-    render: () => renderDeparture(),
-    title: ui.routes.departure,
-    bodyClass: "bg-departure",
-  },
-];
+// Routes are built fresh on each call so titles reflect the current language
+function getRoutes(): Route[] {
+  const t = getUI().routes;
+  return [
+    {
+      path: "/",
+      render: () => renderHome(),
+      title: t.welcome,
+      bodyClass: "bg-home",
+    },
+    {
+      path: "/arrival",
+      render: () => renderDirections() + renderCheckIn() + renderFoodShopping(),
+      title: t.arrival,
+      bodyClass: "bg-arrival",
+    },
+    {
+      path: "/house-manual",
+      render: () => renderHouseManual(),
+      title: t.houseManual,
+      bodyClass: "bg-manual",
+    },
+    {
+      path: "/places-to-eat",
+      render: () => renderRestaurants(),
+      title: t.restaurants,
+      bodyClass: "bg-food",
+    },
+    {
+      path: "/beaches",
+      render: () => renderBeaches(),
+      title: t.beaches,
+      bodyClass: "bg-beaches",
+    },
+    {
+      path: "/attractions",
+      render: () => renderAttractions(),
+      title: t.attractions,
+      bodyClass: "bg-attractions",
+    },
+    {
+      path: "/emergency",
+      render: () => renderEmergency(),
+      title: t.emergency,
+      bodyClass: "bg-emergency",
+    },
+    {
+      path: "/departure",
+      render: () => renderDeparture(),
+      title: t.departure,
+      bodyClass: "bg-departure",
+    },
+  ];
+}
+
+// Keep a module-level reference for external use (e.g. export)
+let routes: Route[] = [];
 
 // Get current route based on pathname
 function getCurrentRoute(): Route {
   const path = window.location.pathname;
-  // Remove trailing slash and handle root
   const normalizedPath = path === "/" ? "/" : path.replace(/\/$/, "");
-  return routes.find((r) => r.path === normalizedPath) || routes[0];
+  const r = getRoutes();
+  return r.find((rt) => rt.path === normalizedPath) || r[0];
 }
 
 // Update page content - NO view transitions to prevent navbar flash
 async function navigateTo(path: string, pushState = true): Promise<void> {
   // Parse path and hash (e.g., "/arrival#food-shopping")
   const [pathname, hash] = path.split("#");
-  const route = routes.find((r) => r.path === pathname) || routes[0];
+  const r = getRoutes();
+  const route = r.find((rt) => rt.path === pathname) || r[0];
 
   // Instant update - no view transitions to avoid navbar flash
   updatePageContent(route, hash);
@@ -193,6 +201,9 @@ function updateDrawerActiveState(currentPath: string): void {
 
 // Initialize router
 export function initRouter(): void {
+  // Build initial routes
+  routes = getRoutes();
+
   // Handle initial page load (including hash)
   const initialRoute = getCurrentRoute();
   const initialHash = window.location.hash.replace("#", "");
@@ -207,8 +218,17 @@ export function initRouter(): void {
     const fullPath =
       e.state?.path || window.location.pathname + window.location.hash;
     const [pathname, hash] = fullPath.split("#");
-    const route = routes.find((r) => r.path === pathname) || routes[0];
+    const r = getRoutes();
+    const route = r.find((rt) => rt.path === pathname) || r[0];
     updatePageContent(route, hash);
+  });
+
+  // Re-render current page when language changes
+  window.addEventListener("language-changed", () => {
+    routes = getRoutes();
+    const route = getCurrentRoute();
+    updatePageContent(route);
+    document.title = `${guidebook.property.name} | ${route.title}`;
   });
 
   // Intercept all navigation clicks

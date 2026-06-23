@@ -1,16 +1,16 @@
 import {
   detailParagraphs,
   getIcon,
+  getUI,
   guidebook,
   sectionCard,
   setAccent,
-  ui,
 } from "./helpers";
 
 export function renderEmergency(): string {
   setAccent("var(--icon-emergency)");
   const { emergency } = guidebook;
-  const s = ui.sections.emergency;
+  const s = getUI().sections.emergency;
 
   const fireInline = `
     <ul style="list-style:disc;padding-left:1.25rem;margin-bottom:0.5rem">

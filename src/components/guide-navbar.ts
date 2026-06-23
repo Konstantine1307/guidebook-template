@@ -1,10 +1,11 @@
-import { guidebook, ui } from "../data/config";
+import { getLanguage, getUI, guidebook, toggleLanguage } from "../data/config";
 import { icons } from "../icons/icons";
 
 /**
- * <guide-navbar title="Page Title" gradient="from-gray-800/90 to-primary">
+ * <guide-navbar title="Page Title">
  *
  * Renders a fixed top navbar with logo, hamburger (opens guide-drawer), and title.
+ * Includes a language toggle button (EN/DE) in the top-right corner.
  * SPA-aware: updates title dynamically when the 'title' attribute changes.
  */
 class GuideNavbar extends HTMLElement {
@@ -16,6 +17,7 @@ class GuideNavbar extends HTMLElement {
 
   connectedCallback() {
     this.render();
+    window.addEventListener("language-changed", () => this.render());
   }
 
   attributeChangedCallback(name: string, _oldValue: string, _newValue: string) {
@@ -25,15 +27,18 @@ class GuideNavbar extends HTMLElement {
   }
 
   private render() {
-    // Page-specific title from attribute
     const pageTitle = this.getAttribute("title") ?? "Guidebook";
-    // Full title for desktop, just page title for mobile (via CSS)
     const propertyName = guidebook.property.name;
+    const t = getUI();
+    const lang = getLanguage();
+    const langLabel = lang === "en" ? "DE" : "EN";
+    const langAriaLabel =
+      lang === "en" ? "Switch to German" : "Auf Englisch wechseln";
 
     this.innerHTML = `
       <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="navbar-left">
-          <a href="/" data-route="/" aria-label="${ui.navbar.homeAriaLabel}" title="${guidebook.property.subtitle}">
+          <a href="/" data-route="/" aria-label="${t.navbar.homeAriaLabel}" title="${guidebook.property.subtitle}">
             <img
               src="${guidebook.property.logo}"
               alt="${guidebook.property.name} logo"
@@ -43,8 +48,8 @@ class GuideNavbar extends HTMLElement {
           </a>
           <button
             class="navbar-menu-btn"
-            title="${ui.navbar.menuTooltip}"
-            aria-label="${ui.navbar.menuAriaLabel}"
+            title="${t.navbar.menuTooltip}"
+            aria-label="${t.navbar.menuAriaLabel}"
             aria-expanded="false"
             aria-controls="guide-drawer"
             id="drawer-toggle"
@@ -59,6 +64,14 @@ class GuideNavbar extends HTMLElement {
             <span class="navbar-title-page">${pageTitle}</span>
           </div>
           <span class="navbar-title-sub" style="color:var(--color-heading-1)">${guidebook.property.subtitle}</span>
+        </div>
+        <div class="navbar-right">
+          <button
+            class="navbar-lang-btn"
+            id="lang-toggle"
+            aria-label="${langAriaLabel}"
+            title="${langAriaLabel}"
+          >${langLabel}</button>
         </div>
       </nav>
     `;
@@ -75,6 +88,15 @@ class GuideNavbar extends HTMLElement {
         "true",
       );
     });
+
+    this.querySelector("#lang-toggle")?.addEventListener("click", () => {
+      toggleLanguage();
+      // Re-render the drawer nav labels too
+      const drawer = document.querySelector("guide-drawer") as HTMLElement & {
+        rerender: () => void;
+      };
+      drawer?.rerender?.();
+    });
   }
 
   private updateTitle() {
@@ -82,7 +104,6 @@ class GuideNavbar extends HTMLElement {
     if (this._pageTitleEl) {
       this._pageTitleEl.textContent = pageTitle;
     } else {
-      // Re-render if element not found
       this.render();
     }
   }

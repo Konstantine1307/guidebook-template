@@ -36,6 +36,9 @@ export interface UiStrings {
     getStarted: string;
     openMenuAriaLabel: string;
   };
+  modal: {
+    close: string;
+  };
   sections: {
     arrival: {
       label: string;

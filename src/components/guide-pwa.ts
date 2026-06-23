@@ -1,5 +1,5 @@
 import { registerSW } from "virtual:pwa-register";
-import { ui } from "../data/config";
+import { getUI } from "../data/config";
 
 /**
  * PWA service worker registration + reload toast UI.
@@ -14,13 +14,13 @@ export function initPWA() {
   const updateSW = registerSW({
     onNeedRefresh() {
       if (toast && toastMsg) {
-        toastMsg.textContent = ui.pwa.newVersion;
+        toastMsg.textContent = getUI().pwa.newVersion;
         toast.classList.add("show");
       }
     },
     onOfflineReady() {
       if (toast && toastMsg) {
-        toastMsg.textContent = ui.pwa.offlineReady;
+        toastMsg.textContent = getUI().pwa.offlineReady;
         toast.classList.add("show");
       }
     },

@@ -34,6 +34,9 @@
     "getStarted": "Get Started",
     "openMenuAriaLabel": "Open navigation menu"
   },
+  "modal": {
+    "close": "Close"
+  },
   "sections": {
     "arrival": {
       "label": "Check In",

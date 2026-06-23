@@ -1,11 +1,11 @@
 import type { Shop } from "../../data/types";
-import { getIcon, guidebook, iconBadge, ui } from "./helpers";
+import { getIcon, getUI, guidebook, iconBadge } from "./helpers";
 
 export function renderFoodShopping(): string {
   const meta = guidebook.sections?.shopping;
-  const label = meta?.label ?? ui.sections.foodShopping.label;
-  const title = meta?.title ?? ui.sections.foodShopping.title;
-  const intro = meta?.intro ?? ui.sections.foodShopping.intro;
+  const label = meta?.label ?? getUI().sections.foodShopping.label;
+  const title = meta?.title ?? getUI().sections.foodShopping.title;
+  const intro = meta?.intro ?? getUI().sections.foodShopping.intro;
 
   const shopCards = guidebook.shopping
     .map(

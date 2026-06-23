@@ -10,6 +10,7 @@
  * HTML attribute encoding issues with SVG strings.
  */
 
+import { getUI } from "../data/config";
 import { getIcon } from "../icons/icons";
 
 class GuideModal extends HTMLElement {
@@ -34,7 +35,7 @@ class GuideModal extends HTMLElement {
           </div>
           <div class="dialog-body">${body}</div>
           <div class="dialog-footer">
-            <button class="btn-close" autofocus>Close</button>
+            <button class="btn-close" autofocus>${getUI().modal.close}</button>
           </div>
         </div>
       </dialog>

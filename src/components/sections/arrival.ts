@@ -1,17 +1,17 @@
 import {
   detailParagraphs,
   getIcon,
+  getUI,
   guidebook,
   sectionCard,
   sectionRow,
   setAccent,
-  ui,
 } from "./helpers";
 
 export function renderCheckIn(): string {
   setAccent("var(--icon-arrival)");
   const { arrival } = guidebook;
-  const s = ui.sections.arrival;
+  const s = getUI().sections.arrival;
   const rows = [
     sectionRow(
       "badge-check",
