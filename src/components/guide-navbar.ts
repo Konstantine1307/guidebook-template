@@ -31,54 +31,48 @@ class GuideNavbar extends HTMLElement {
     const propertyName = guidebook.property.name;
     const t = getUI();
     const lang = getLanguage();
-    const currentLabel = lang === "en" ? "English" : "Deutsch";
+    const currentLabel = lang === "en" ? "🇬🇧 EN" : "🇩🇪 DE";
 
     this.innerHTML = `
       <nav class="navbar" role="navigation" aria-label="Main navigation">
 
-        <!-- Row 1: logo + menu + title -->
-        <div class="navbar-row navbar-row-main">
-          <div class="navbar-left">
-            <a href="/" data-route="/" aria-label="${t.navbar.homeAriaLabel}" title="${guidebook.property.subtitle}">
-              <img
-                src="${guidebook.property.logo}"
-                alt="${guidebook.property.name} logo"
-                class="navbar-logo"
-                width="48" height="48"
-              />
-            </a>
-            <button
-              class="navbar-menu-btn"
-              title="${t.navbar.menuTooltip}"
-              aria-label="${t.navbar.menuAriaLabel}"
-              aria-expanded="false"
-              aria-controls="guide-drawer"
-              id="drawer-toggle"
-            >
-              ${icons["menu"]}
-            </button>
-          </div>
-          <div class="navbar-title">
-            <div class="navbar-title-main">
-              <span class="navbar-title-property">${propertyName}</span>
-              <span class="navbar-title-separator"> | </span>
-              <span class="navbar-title-page">${pageTitle}</span>
-            </div>
-            <span class="navbar-title-sub" style="color:var(--color-heading-1)">${guidebook.property.subtitle}</span>
-          </div>
+        <div class="navbar-left">
+          <a href="/" data-route="/" aria-label="${t.navbar.homeAriaLabel}" title="${guidebook.property.subtitle}">
+            <img
+              src="${guidebook.property.logo}"
+              alt="${guidebook.property.name} logo"
+              class="navbar-logo"
+              width="48" height="48"
+            />
+          </a>
+          <button
+            class="navbar-menu-btn"
+            title="${t.navbar.menuTooltip}"
+            aria-label="${t.navbar.menuAriaLabel}"
+            aria-expanded="false"
+            aria-controls="guide-drawer"
+            id="drawer-toggle"
+          >
+            ${icons["menu"]}
+          </button>
         </div>
-
-        <!-- Row 2: language switcher -->
-        <div class="navbar-row navbar-row-lang">
+        <div class="navbar-title">
+          <div class="navbar-title-main">
+            <span class="navbar-title-property">${propertyName}</span>
+            <span class="navbar-title-separator"> | </span>
+            <span class="navbar-title-page">${pageTitle}</span>
+          </div>
+          <span class="navbar-title-sub" style="color:var(--color-heading-1)">${guidebook.property.subtitle}</span>
+        </div>
+        <div class="navbar-right">
           <div class="lang-dropdown" id="lang-dropdown">
             <button class="lang-dropdown-btn" id="lang-dropdown-btn" aria-haspopup="listbox" aria-expanded="false">
-              <span class="lang-icon">${icons["languages"]}</span>
               <span class="lang-label">${currentLabel}</span>
               <span class="lang-chevron">${icons["chevron-down"]}</span>
             </button>
             <ul class="lang-dropdown-menu" id="lang-dropdown-menu" role="listbox" aria-label="Select language">
-              <li role="option" aria-selected="${lang === "en"}" data-lang="en" class="lang-option${lang === "en" ? " active" : ""}">English</li>
-              <li role="option" aria-selected="${lang === "de"}" data-lang="de" class="lang-option${lang === "de" ? " active" : ""}">Deutsch</li>
+              <li role="option" aria-selected="${lang === "en"}" data-lang="en" class="lang-option${lang === "en" ? " active" : ""}">🇬🇧 English</li>
+              <li role="option" aria-selected="${lang === "de"}" data-lang="de" class="lang-option${lang === "de" ? " active" : ""}">🇩🇪 Deutsch</li>
             </ul>
           </div>
         </div>
