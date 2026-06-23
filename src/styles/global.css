@@ -496,7 +496,8 @@ dialog::backdrop {
   left: 0;
   width: 100%;
   z-index: 100;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: 0.5rem 1rem;
   background: var(--color-background);
@@ -507,7 +508,7 @@ dialog::backdrop {
   display: flex;
   align-items: center;
   gap: 2rem;
-  flex-shrink: 0;
+  justify-content: flex-start;
 }
 
 .navbar-logo {
@@ -534,7 +535,7 @@ dialog::backdrop {
 .navbar-right {
   display: flex;
   align-items: center;
-  flex-shrink: 0;
+  justify-content: flex-end;
 }
 
 /* Language dropdown */
@@ -616,7 +617,6 @@ dialog::backdrop {
   font-family: "Old Standard TT", serif;
   display: flex;
   flex-direction: column;
-  flex: 1;
   text-align: center;
   padding: 0.25rem 0;
 }
