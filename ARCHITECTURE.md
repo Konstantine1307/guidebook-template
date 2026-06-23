@@ -4,7 +4,7 @@
 
 This project is a **Single Page Application (SPA)** built with vanilla HTML + CSS + TypeScript — no front-end framework. It uses native browser APIs (Web Components, `<dialog>`, History API) and Vite purely as a dev server and bundler.
 
-The same codebase serves multiple properties. Switching properties is a single import line change in one file. Each property is deployed as its own independent copy of this repo.
+The same codebase serves multiple properties. Switching properties is two import line changes in one file. Each property is deployed as its own independent copy of this repo.
 
 **Key architectural decision:** SPA with History API routing instead of Multi-Page Application (MPA). This eliminates the navbar flash/jump that guests noticed during navigation — the navbar stays mounted permanently while only the content area updates.
 
@@ -16,18 +16,23 @@ The same codebase serves multiple properties. Switching properties is a single i
 guidebook-template/
 ├── src/
 │   ├── data/
-│   │   ├── config.ts              ← THE switch: change this import to change property
-│   │   ├── cottage.json           ← all cottage content and data
-│   │   ├── barn.json              ← all barn content and data
-│   │   └── types.ts               ← TypeScript interfaces for the JSON schema
+│   │   ├── config.ts              ← THE switch: two imports (EN + DE JSON) to change property
+│   │   ├── language.ts            ← runtime language module (initLanguage, getUI, getGuidebook, toggleLanguage)
+│   │   ├── cottage.json           ← cottage content (English)
+│   │   ├── cottage-de.json        ← cottage content (German)
+│   │   ├── barn.json              ← barn content (English)
+│   │   ├── barn-de.json           ← barn content (German)
+│   │   ├── ui.json                ← shared UI strings (English)
+│   │   ├── ui-de.json             ← shared UI strings (German)
+│   │   └── types.ts               ← TypeScript interfaces for the JSON schema + UiStrings
 │   │
 │   ├── components/
-│   │   ├── guide-navbar.ts        ← <guide-navbar> Web Component (SPA-aware, updates title)
-│   │   ├── guide-drawer.ts        ← <guide-drawer> slide-in nav Web Component (data-route links)
-│   │   ├── guide-modal.ts         ← <guide-modal> native <dialog> Web Component
+│   │   ├── guide-navbar.ts        ← <guide-navbar> — fixed bar, dynamic title, EN/DE dropdown
+│   │   ├── guide-drawer.ts        ← <guide-drawer> — slide-in nav, re-renders on language change
+│   │   ├── guide-modal.ts         ← <guide-modal>  — native <dialog> wrapper, translated close button
 │   │   ├── guide-pwa.ts           ← PWA service worker registration + toast UI
 │   │   └── sections/
-│   │       ├── helpers.ts         ← shared utilities (sectionRow, sectionCard, etc.)
+│   │       ├── helpers.ts         ← shared utilities + re-exports getUI, getGuidebook
 │   │       ├── arrival.ts         ← renderCheckIn
 │   │       ├── directions.ts      ← renderDirections
 │   │       ├── food-shopping.ts   ← renderFoodShopping
@@ -40,20 +45,17 @@ guidebook-template/
 │   │       └── index.ts           ← re-exports all render functions
 │   │
 │   ├── icons/
-│   │   └── icons.ts               ← all SVG icons as inline strings (no icon font)
+│   │   └── icons.ts               ← all SVG icons as inline strings (includes languages, chevron-down)
 │   │
 │   ├── scripts/
-│   │   ├── main.ts                ← SPA entry point (init router, components, PWA)
-│   │   ├── router.ts              ← History API router (client-side navigation)
-│   │   ├── layout.ts              ← legacy bootstrap (deprecated, use main.ts)
-│   │   └── *.ts                   ← legacy page entry points (deprecated)
+│   │   ├── main.ts                ← SPA entry point (initLanguage, router, components, PWA)
+│   │   ├── router.ts              ← History API router + language-changed re-render
+│   │   └── layout.ts              ← legacy bootstrap (deprecated, use main.ts)
 │   │
 │   ├── styles/
-│   │   └── global.css             ← full design system via CSS custom properties
+│   │   └── global.css             ← full design system: CSS custom properties, navbar grid, lang dropdown
 │   │
-│   ├── index.html                 ← single SPA shell (navbar, drawer, mount point)
-│   ├── _backup_html/              ← legacy HTML files (MPA backup)
-│   │   └── *.html                 ← old page shells (not used in SPA mode)
+│   ├── index.html                 ← single SPA shell (navbar, drawer, mount point, PWA toast)
 │   └── vite-pwa.d.ts              ← type declaration for virtual:pwa-register
 │
 ├── public/
@@ -71,7 +73,6 @@ guidebook-template/
 │   └── _redirects                 ← SPA redirect rules (all paths → index.html)
 │
 ├── vite.config.ts                 ← Vite + PWA configuration (SPA build)
-├── sync-to-repos.sh               ← sync template changes to property repos
 ├── tsconfig.json
 ├── package.json
 └── .gitignore
@@ -81,39 +82,44 @@ guidebook-template/
 
 ## How the SPA works
 
-This is a **Single Page Application** with one `index.html` shell and client-side routing:
-
 ```
 src/index.html          ← single SPA shell (navbar, drawer, mount point, PWA toast)
-src/scripts/main.ts     ← SPA entry point (initializes router, components, PWA)
-src/scripts/router.ts   ← History API router (handles navigation without page reloads)
+src/scripts/main.ts     ← entry: initLanguage() → initRouter()
+src/scripts/router.ts   ← History API router + language-changed event handler
 ```
 
 ### Navigation flow
 
-1. **Initial load**: `index.html` loads, `main.ts` initializes the router and mounts the initial route content
-2. **Click navigation**: Drawer links use `data-route="/arrival"` instead of `href="arrival.html"`
-3. **Router intercepts**: `router.ts` catches the click, prevents default, calls `navigateTo('/arrival')`
-4. **Content swap**: Router updates `document.body.className` for background, calls section renderer, injects HTML into `#page-content`
-5. **History update**: `history.pushState()` updates the URL to `/arrival` without page reload
-6. **Navbar update**: `guide-navbar` component updates its title attribute (navbar stays mounted, never flashes)
+1. **Initial load**: `index.html` loads, `main.ts` calls `initLanguage()` then `initRouter()`
+2. **`initLanguage()`**: reads `?lang=`, then `localStorage`, then `navigator.language` — sets active language
+3. **Click navigation**: Drawer links use `data-route="/arrival"` instead of `href`
+4. **Router intercepts**: catches click, calls `navigateTo('/arrival')`
+5. **Content swap**: router calls `getGuidebook()` + `getUI()` at render time — returns DE or EN data based on current language
+6. **History update**: `history.pushState()` updates URL without page reload
+7. **Navbar update**: `guide-navbar` updates its `title` attribute (never remounts)
 
-### Router example
+### Language change flow
+
+1. User clicks the **🇬🇧 EN / 🇩🇪 DE** dropdown in the navbar
+2. `toggleLanguage()` flips `_current`, persists to `localStorage`, updates `<html lang>`
+3. Dispatches `language-changed` CustomEvent on `window`
+4. **Router** listener: re-renders the current route (all content switches language)
+5. **Drawer** listener: re-renders nav labels
+6. **Navbar** listener: re-renders the title and dropdown button label
+
+---
+
+## Language module (`src/data/language.ts`)
 
 ```ts
-// src/scripts/router.ts - route definition
-const routes = [
-  {
-    path: "/arrival",
-    render: () => renderDirections() + renderCheckIn() + renderFoodShopping(),
-    title: "Arrival",
-    bodyClass: "bg-arrival",
-  },
-  // ... other routes
-];
+initLanguage(); // call once at startup — reads ?lang=, localStorage, navigator.language
+getUI(); // returns UiStrings for current language (ui.json or ui-de.json)
+getGuidebook(); // returns GuidebookData for current language (barn.json or barn-de.json)
+getLanguage(); // returns "en" | "de"
+toggleLanguage(); // flips language, persists, dispatches language-changed event
 ```
 
-Section renderers are plain functions that return HTML strings built from the active property's JSON data — same as before, but now called dynamically by the router.
+`getUI()` and `getGuidebook()` are called **at render time** (not at module load), so they always return the current language without needing a page reload.
 
 ---
 
@@ -122,11 +128,13 @@ Section renderers are plain functions that return HTML strings built from the ac
 **`src/data/config.ts`** is the single source of truth for which property is active:
 
 ```ts
-import data from "./cottage.json"; // ← cottage
-// import data from './barn.json';   // ← barn
+import dataEn from "./cottage.json";
+import dataDe from "./cottage-de.json";
+// import dataEn from "./barn.json";
+// import dataDe from "./barn-de.json";
 ```
 
-Change the active import, rebuild, deploy. Every page, every section, every piece of content — including PWA manifest name, theme colour, page titles and meta descriptions — updates automatically.
+Change the two active imports, rebuild, deploy. Every page, section, piece of content — including PWA manifest name, theme colour, page titles and meta descriptions — updates automatically.
 
 ---
 
@@ -135,10 +143,10 @@ Change the active import, rebuild, deploy. Every page, every section, every piec
 Each property gets its own copy of this repo on GitHub, connected to Cloudflare Pages:
 
 ```
-guidebook-template  (this repo — source of truth, never deployed)
+guidebook-template      (source of truth — never deployed directly)
        │
-       ├── cottage-guidebook   (config.ts → cottage.json)
-       └── barn-guidebook      (config.ts → barn.json)
+       ├── cottage-guidebook-v2   (config.ts → cottage.json + cottage-de.json)
+       └── barn-guidebook-v2      (config.ts → barn.json    + barn-de.json)
 ```
 
 **Cloudflare Pages build settings:**
@@ -151,41 +159,32 @@ guidebook-template  (this repo — source of truth, never deployed)
 
 **Updating content:** edit the JSON file directly on GitHub — Cloudflare Pages rebuilds and redeploys automatically.
 
-**Applying template changes:** run `./sync-to-repos.sh` from this repo. This copies:
+**Applying template changes:** copy the changed files to both property repos, rebuild and deploy:
 
-- All TypeScript components and scripts
-- CSS styles
-- The SPA `index.html` shell
-- `vite.config.ts` and `public/_redirects`
+```bash
+npx wrangler pages deploy dist --project-name barn-guidebook-v2
+npx wrangler pages deploy dist --project-name cottage-guidebook-v2
+```
 
-Then commits and pushes to both property repos.
-
-**SPA routing on Cloudflare Pages:** The `public/_redirects` file ensures all routes (`/arrival`, `/emergency`, etc.) serve `index.html`. Without this, direct URL access would 404.
+**SPA routing on Cloudflare Pages:** `public/_redirects` ensures all routes (`/arrival`, `/emergency`, etc.) serve `index.html`. Without this, direct URL access would 404.
 
 ---
 
 ## Web Components
 
-Three custom elements are registered globally via `src/scripts/main.ts`:
+| Element          | File              | Purpose                                                                     |
+| ---------------- | ----------------- | --------------------------------------------------------------------------- |
+| `<guide-navbar>` | `guide-navbar.ts` | Fixed top bar — logo, dynamic title, EN/DE language dropdown                |
+| `<guide-drawer>` | `guide-drawer.ts` | Slide-in sidebar navigation — re-renders nav labels on language change      |
+| `<guide-modal>`  | `guide-modal.ts`  | Wraps native `<dialog>` — translated close button via `getUI().modal.close` |
 
-| Element          | File              | Purpose                                                       |
-| ---------------- | ----------------- | ------------------------------------------------------------- |
-| `<guide-navbar>` | `guide-navbar.ts` | Fixed top bar with logo, dynamic title, menu button           |
-| `<guide-drawer>` | `guide-drawer.ts` | Slide-in sidebar navigation (SPA-aware with data-route links) |
-| `<guide-modal>`  | `guide-modal.ts`  | Wraps native `<dialog>` for info modals                       |
-
-All three are standard Custom Elements — no polyfill needed. They read from the active property config to show the correct logo, name and subtitle.
-
-**SPA-specific behaviors:**
-
-- `guide-navbar`: Updates its `title` attribute dynamically when the route changes (navbar never remounts)
-- `guide-drawer`: Uses `data-route` attributes instead of `href` for links; closes automatically after navigation
+All three are standard Custom Elements — no polyfill needed. Each listens for `language-changed` and re-renders the relevant parts.
 
 ---
 
 ## Section renderers
 
-`src/components/sections/` contains one file per section. Each exports a single `render*()` function that returns an HTML string.
+`src/components/sections/` contains one file per section. Each exports a single `render*()` function that returns an HTML string built from `getGuidebook()` and `getUI()` — called at render time so they always reflect the current language.
 
 | File               | Export               | Used on page  |
 | ------------------ | -------------------- | ------------- |
@@ -199,7 +198,7 @@ All three are standard Custom Elements — no polyfill needed. They read from th
 | `beaches.ts`       | `renderBeaches`      | beaches       |
 | `attractions.ts`   | `renderAttractions`  | attractions   |
 
-Shared utilities (sectionRow, sectionCard, iconBadge, detailParagraphs, etc.) live in `helpers.ts`.
+Shared utilities (`sectionRow`, `sectionCard`, `iconBadge`, `detailParagraphs`, etc.) live in `helpers.ts`, which also re-exports `getUI` and `getGuidebook` for convenience.
 
 ---
 
@@ -221,7 +220,7 @@ All visual tokens live in CSS custom properties in `src/styles/global.css`:
 
 Dark mode is supported via a `.dark` class on `<html>`. No Tailwind — all layout uses standard CSS (flexbox, grid, custom properties).
 
-**Note:** We intentionally do NOT use the CSS View Transitions API for SPA navigation — even though it's available, it causes a flash on the navbar because it captures element snapshots. The router performs instant content swaps instead for zero-flash navigation.
+**Note:** We intentionally do NOT use the CSS View Transitions API for SPA navigation — even though it's available, it causes a flash on the navbar because it captures element snapshots. The router performs instant content swaps instead.
 
 ---
 
@@ -261,3 +260,7 @@ beaches[]       — name, location, description, url, image
 attractions[]   — name, location, title, description, url, image
 shopping[]      — name, location, url, mapEmbed
 ```
+
+The German JSON files (`*-de.json`) follow the exact same schema — all keys identical, values translated.
+
+The UI strings schema is defined as `UiStrings` in `types.ts` and covers navbar, drawer, hero, section labels, modal, and PWA toast strings.
