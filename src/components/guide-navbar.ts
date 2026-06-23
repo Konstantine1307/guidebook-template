@@ -5,7 +5,7 @@ import { icons } from "../icons/icons";
  * <guide-navbar title="Page Title">
  *
  * Renders a fixed top navbar with logo, hamburger (opens guide-drawer), and title.
- * Includes a language toggle button (EN/DE) in the top-right corner.
+ * Includes a language dropdown (EN/DE) in the top-right corner.
  * SPA-aware: updates title dynamically when the 'title' attribute changes.
  */
 class GuideNavbar extends HTMLElement {
@@ -31,9 +31,7 @@ class GuideNavbar extends HTMLElement {
     const propertyName = guidebook.property.name;
     const t = getUI();
     const lang = getLanguage();
-    const langLabel = lang === "en" ? "DE" : "EN";
-    const langAriaLabel =
-      lang === "en" ? "Switch to German" : "Auf Englisch wechseln";
+    const currentLabel = lang === "en" ? "English" : "Deutsch";
 
     this.innerHTML = `
       <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -66,12 +64,17 @@ class GuideNavbar extends HTMLElement {
           <span class="navbar-title-sub" style="color:var(--color-heading-1)">${guidebook.property.subtitle}</span>
         </div>
         <div class="navbar-right">
-          <button
-            class="navbar-lang-btn"
-            id="lang-toggle"
-            aria-label="${langAriaLabel}"
-            title="${langAriaLabel}"
-          >${langLabel}</button>
+          <div class="lang-dropdown" id="lang-dropdown">
+            <button class="lang-dropdown-btn" id="lang-dropdown-btn" aria-haspopup="listbox" aria-expanded="false">
+              <span class="lang-icon">${icons["languages"]}</span>
+              <span class="lang-label">${currentLabel}</span>
+              <span class="lang-chevron">${icons["chevron-down"]}</span>
+            </button>
+            <ul class="lang-dropdown-menu" id="lang-dropdown-menu" role="listbox" aria-label="Select language">
+              <li role="option" aria-selected="${lang === "en"}" data-lang="en" class="lang-option${lang === "en" ? " active" : ""}">English</li>
+              <li role="option" aria-selected="${lang === "de"}" data-lang="de" class="lang-option${lang === "de" ? " active" : ""}">Deutsch</li>
+            </ul>
+          </div>
         </div>
       </nav>
     `;
@@ -89,14 +92,41 @@ class GuideNavbar extends HTMLElement {
       );
     });
 
-    this.querySelector("#lang-toggle")?.addEventListener("click", () => {
-      toggleLanguage();
-      // Re-render the drawer nav labels too
-      const drawer = document.querySelector("guide-drawer") as HTMLElement & {
-        rerender: () => void;
-      };
-      drawer?.rerender?.();
+    const dropdownBtn = this.querySelector("#lang-dropdown-btn") as HTMLElement;
+    const dropdownMenu = this.querySelector(
+      "#lang-dropdown-menu",
+    ) as HTMLElement;
+
+    dropdownBtn?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = dropdownMenu.classList.toggle("open");
+      dropdownBtn.setAttribute("aria-expanded", String(isOpen));
     });
+
+    this.querySelectorAll(".lang-option").forEach((opt) => {
+      opt.addEventListener("click", () => {
+        const selected = (opt as HTMLElement).dataset.lang as "en" | "de";
+        if (selected !== getLanguage()) {
+          toggleLanguage();
+          const drawer = document.querySelector(
+            "guide-drawer",
+          ) as HTMLElement & { rerender: () => void };
+          drawer?.rerender?.();
+        }
+        dropdownMenu.classList.remove("open");
+        dropdownBtn.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener(
+      "click",
+      () => {
+        dropdownMenu?.classList.remove("open");
+        dropdownBtn?.setAttribute("aria-expanded", "false");
+      },
+      { once: false },
+    );
   }
 
   private updateTitle() {

@@ -538,18 +538,99 @@ dialog::backdrop {
   flex-shrink: 0;
 }
 
-.navbar-lang-btn {
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 50%;
-  background: var(--color-primary);
-  color: #4b5563;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  border: none;
+/* Language dropdown */
+.lang-dropdown {
+  position: relative;
+}
+
+.lang-dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.6rem;
+  background: var(--color-surface, #f9f6f1);
+  border: 1px solid var(--color-border, #d1c9bc);
+  border-radius: 0.5rem;
   cursor: pointer;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.lang-icon {
+  display: flex;
+  align-items: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+.lang-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.lang-label {
+  /* hidden on very small screens to save space */
+}
+
+.lang-chevron {
+  display: flex;
+  align-items: center;
+  width: 0.9rem;
+  height: 0.9rem;
+  color: #9ca3af;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.lang-chevron svg {
+  width: 100%;
+  height: 100%;
+}
+.lang-dropdown-btn[aria-expanded="true"] .lang-chevron {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  right: 0;
+  background: #fff;
+  border: 1px solid var(--color-border, #d1c9bc);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  list-style: none;
+  padding: 0.25rem 0;
+  margin: 0;
+  min-width: 7rem;
+  z-index: 200;
+}
+.lang-dropdown-menu.open {
+  display: block;
+}
+
+.lang-option {
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+}
+.lang-option:hover {
+  background: var(--color-primary-light, #f3ede3);
+}
+.lang-option.active {
   font-weight: 700;
-  letter-spacing: 0.05em;
+  color: var(--color-primary, #c5a880);
+}
+
+@media (max-width: 400px) {
+  .lang-label {
+    display: none;
+  }
 }
 
 .navbar-title {
