@@ -68,13 +68,12 @@ function initPageMeta(): void {
 }
 
 // Initialize everything when DOM is ready
-document.addEventListener("DOMContentLoaded", () => {
-  initPageMeta();
-  initRouter();
-});
-
-// Also init immediately in case DOM is already loaded
-if (document.readyState !== "loading") {
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => {
+    initPageMeta();
+    initRouter();
+  });
+} else {
   initPageMeta();
   initRouter();
 }
