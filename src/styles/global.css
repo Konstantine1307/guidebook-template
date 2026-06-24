@@ -508,7 +508,7 @@ dialog::backdrop {
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
 }
 
@@ -533,6 +533,11 @@ dialog::backdrop {
   padding: 0.25rem;
 }
 
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
 /* Language dropdown */
 .lang-dropdown {
@@ -543,12 +548,12 @@ dialog::backdrop {
   display: flex;
   align-items: left;
   gap: 0.2rem;
-  padding: 0.25rem 0.45rem;
+  padding: 0.25rem 0.45rem 0.25rem 0;
   background: transparent;
   border: 1px solid var(--color-border, #d1c9bc);
   border-radius: 0.4rem;
   cursor: pointer;
-  font-size: 0.72rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #4b5563;
   white-space: nowrap;
@@ -556,6 +561,12 @@ dialog::backdrop {
 }
 .lang-dropdown-btn:hover {
   background: var(--color-primary-light, #f3ede3);
+}
+
+@media (max-width: 768px) {
+  .lang-dropdown-btn {
+    font-size: 1rem;
+  }
 }
 
 .lang-chevron {
@@ -613,6 +624,7 @@ dialog::backdrop {
   font-family: "Old Standard TT", serif;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
   padding: 0.25rem 0;
 }

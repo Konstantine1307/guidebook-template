@@ -4,9 +4,9 @@
  * Dispatches 'language-changed' on window when toggled.
  */
 
-import uiEn from "./ui.json";
-import uiDe from "./ui-de.json";
 import type { UiStrings } from "./types";
+import uiDe from "./ui-de.json";
+import uiEn from "./ui.json";
 
 export type Language = "en" | "de";
 
@@ -17,9 +17,11 @@ const languages: Record<Language, UiStrings> = {
   de: uiDe as UiStrings,
 };
 
-let _current: Language = "en";
+const _savedAtLoad = localStorage.getItem(STORAGE_KEY) as Language | null;
+let _current: Language =
+  _savedAtLoad && _savedAtLoad in languages ? _savedAtLoad : "en";
 
-/** Call once at app startup — reads localStorage then URL param */
+/** Call once at app startup — reads URL param then browser language as fallback */
 export function initLanguage(): void {
   // URL param takes priority: ?lang=de
   const param = new URLSearchParams(window.location.search).get(
@@ -30,10 +32,9 @@ export function initLanguage(): void {
     localStorage.setItem(STORAGE_KEY, _current);
     return;
   }
-  // Saved preference
-  const saved = localStorage.getItem(STORAGE_KEY) as Language | null;
-  if (saved && saved in languages) {
-    _current = saved;
+  // Already loaded from localStorage at module init — only fall through to
+  // browser detection if nothing was saved
+  if (_savedAtLoad && _savedAtLoad in languages) {
     return;
   }
   // Browser language auto-detection
@@ -55,5 +56,7 @@ export function toggleLanguage(): void {
   _current = _current === "en" ? "de" : "en";
   localStorage.setItem(STORAGE_KEY, _current);
   document.documentElement.lang = _current;
-  window.dispatchEvent(new CustomEvent("language-changed", { detail: { lang: _current } }));
+  window.dispatchEvent(
+    new CustomEvent("language-changed", { detail: { lang: _current } }),
+  );
 }
