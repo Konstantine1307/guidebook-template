@@ -421,20 +421,28 @@ dialog::backdrop {
   text-align: center;
   color: white;
   padding: 1rem;
-  max-width: 24rem;
+  max-width: 32rem;
   margin: 0 auto;
 }
 
-.hero-content h1 {
+.hero-content h1,
+.hero-content .subheading {
   font-family: "Nunito Sans", system-ui, sans-serif !important;
   font-size: 2.25rem;
   line-height: 1.2;
   font-weight: 700;
-  margin-bottom: 1.25rem;
   color: white;
 }
+
+
 .hero-content h1 span {
+  white-space: nowrap;
   color: var(--color-primary);
+}
+
+.hero-content .subheading {
+  max-width: 24rem;
+  margin-bottom: 0 auto 1.25rem;
 }
 
 .hero-content p {
@@ -443,7 +451,24 @@ dialog::backdrop {
   letter-spacing: 0.015em;
   font-weight: 600;
   color: #f3f4f6;
-  margin-bottom: 1.25rem;
+  max-width: 24rem;
+  text-align: center;
+  margin: 0 auto 1.25rem;
+}
+
+@media (max-width: 767px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content h1 span {
+    display: block;
+  }
+
+  .hero-content .subheading {
+    font-size: 1.7rem;
+
+  }
 }
 
 .btn-cta {

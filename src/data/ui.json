@@ -21,7 +21,7 @@
     "dismiss": "Dismiss"
   },
   "routes": {
-    "welcome": "Welcome",
+    "welcome": "Guidebook",
     "arrival": "Arrival",
     "houseManual": "House Manual",
     "restaurants": "Places to Eat",

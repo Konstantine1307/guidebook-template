@@ -18,7 +18,7 @@ import { getGuidebook, getUI, guidebook } from "../data/config";
 function renderHome(): string {
   const gb = getGuidebook();
   const { name, heroImage } = gb.property;
-  const { body, heading } = gb.hero;
+  const { body, heading, subheading } = gb.hero;
   return `
     <div
       class="hero"
@@ -28,7 +28,8 @@ function renderHome(): string {
     >
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <h1>${heading}</h1>
+        <h1>${heading.replace(name, `<span>${name}</span>`)}</h1>
+        <h2 class="subheading">${subheading}</h2>
         <p>${body}</p>
         <button
           class="btn-cta"

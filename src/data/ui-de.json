@@ -21,7 +21,7 @@
     "dismiss": "Schließen"
   },
   "routes": {
-    "welcome": "Willkommen",
+    "welcome": "Gästebuch",
     "arrival": "Ankunft",
     "houseManual": "Haushandbuch",
     "restaurants": "Restaurants",

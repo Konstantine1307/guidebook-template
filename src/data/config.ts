@@ -1,10 +1,10 @@
 // ============================================================
 // PROPERTY CONFIG — change these imports to switch properties
 // ============================================================
-import dataDe from "./barn-de.json";
-import dataEn from "./barn.json";
-// import dataEn from "./cottage.json";
-// import dataDe from "./cottage-de.json";
+// import dataDe from "./barn-de.json";
+// import dataEn from "./barn.json";
+import dataEn from "./cottage.json";
+import dataDe from "./cottage-de.json";
 
 import type { GuidebookData } from "./types";
 export { getLanguage, getUI, initLanguage, toggleLanguage } from "./language";

@@ -1,15 +1,15 @@
 {
   "property": {
-    "name": "The Barn",
-    "title": "The Barn | Gästebuch",
+    "name": "The Cottage",
+    "title": "The Cottage | Gästebuch",
     "subtitle": "Tresowes Green Cottage",
-    "shortName": "Barn Gästebuch",
-    "description": "Willkommensbuch für The Barn in Tresowes Green Cottage",
-    "siteUrl": "https://the-barn.tgcottage.com",
-    "heroImage": "/images/the-barn-exterior.webp",
+    "shortName": "Cottage Gästebuch",
+    "description": "Willkommensbuch für The Cottage in Tresowes Green Cottage",
+    "siteUrl": "https://the-cottage.tgcottage.com",
+    "heroImage": "/images/the-cottage-exterior.webp",
     "logo": "/icons/logo-150.webp",
     "themeColor": "#c5a880",
-    "type": "barn"
+    "type": "cottage"
   },
   "contact": {
     "address": "Tresowes Green Cottage, Tresowes, Ashton",
@@ -31,27 +31,27 @@
     ],
     "what3words": "escapades.twit.tribes",
     "what3wordsUrl": "https://w3w.co/escapades.twit.tribes",
-    "what3wordsSiteUrl": "https://what3words.com",
+    "what3wordsSiteUrl": "https://what3words.com/",
     "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.5477652680033!2d-5.371000287133512!3d50.11347117141103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486ad965755ad565%3A0xeb8e49e608fbc47d!2sTresowes%20Green%20Cottage!5e0!3m2!1sen!2suk!4v1718180197256!5m2!1sen!2suk",
     "directions": [
       "Genauer als eine Straßenadresse, dies zeigt auf den genauen Ankunftsort. Geben Sie es in die kostenlose what3words-App ein, um uns leicht zu finden. Alternativ ist GPS hilfreich, bringt Sie aber nicht zu unserem Haus und führt Menschen oft durch sehr enge Gassen. Es ist am einfachsten, der untenstehenden Route zu folgen.",
-      "Von der A30 fahren Sie auf die A394 in Richtung Helston. Nach den Dörfern Rosudgeon und Newtown passieren Sie den Praa Sands Golf Course rechts und es gibt ein Schild nach Tresowes links. Tresowes Green ist das erste Haus rechts (nach dem Parkplatz).",
-      "Von Helston folgen Sie der A394 in Richtung Penzance und suchen Sie das zweite Schild nach Tresowes nach dem Dorf Ashton. Tresowes Green ist das erste Haus rechts, nach dem Parkplatz und zwei hohen Schornsteinen."
+      "Von der A30 fahren Sie auf die A394 in Richtung Helston. Nach den Dörfern Rosudgeon und Newtown passieren Sie den Praa Sands Golf Course rechts und es gibt ein Schild nach Tresowes links. Tresowes Green Cottage ist das erste Haus rechts (nach dem Parkplatz).",
+      "Von Helston folgen Sie der A394 in Richtung Penzance und suchen Sie das zweite Schild nach Tresowes nach dem Dorf Ashton. Tresowes Green Cottage ist das erste Haus rechts, nach dem Parkplatz und zwei hohen Schornsteinen."
     ],
     "parking": {
       "summary": "Sie können auf der Einfahrt bei der Pergola parken.",
       "detail": [
         "Sie können auf der Einfahrt bei der Pergola parken.",
         "Ein Auto pro Ferienwohnung. Wenn Sie mehr Platz für ein weiteres Auto benötigen, gibt es in der Nähe einen Parkplatz.",
-        "Bitte parken Sie auf der linken Seite der Einfahrt.",
+        "Bitte parken Sie beim Herunterfahren auf der rechten Seite.",
         "Schließen Sie das Einfahrtstor, nachdem Sie das Grundstück betreten haben. Lassen Sie nur den rechten Riegel herunter, nachdem Sie das Tor geschlossen haben."
       ]
     }
   },
   "hero": {
-    "heading": "Willkommen in The Barn",
+    "heading": "Willkommen in The Cottage",
     "subheading": "bei Tresowes Green Cottage",
-    "body": "The Barn ist ein gemütlicher Einzimmer-Rückzugsort auf dem Gelände von Tresowes Green Cottage. Wir freuen uns sehr, ihn mit Ihnen zu teilen. Wir hoffen, dass dieses Gästebuch Ihnen hilft, Ihren Aufenthalt bei uns so angenehm wie möglich zu gestalten. Bitte lassen Sie uns wissen, wenn Sie weitere Informationen benötigen oder Vorschläge haben, was wir für zukünftige Gäste ergänzen könnten.",
+    "body": "The Cottage ist eine gut ausgestattete Zwei-Zimmer-Unterkunft, die auf dem Gelände von Tresowes Green Cottage liegt. Wir freuen uns, sie mit Ihnen zu teilen. Wir hoffen, dass dieses Gästebuch Ihren Aufenthalt bei uns angenehm macht. Bitte lassen Sie uns wissen, wenn Sie weitere Informationen benötigen.",
     "navbarTitle": "Gästebuch"
   },
   "arrival": {
@@ -74,27 +74,27 @@
       "summary": "Wir stellen Ihnen ein Willkommenspaket bereit.",
       "detail": [
         "Wir stellen Ihnen ein Willkommenspaket für den Beginn Ihres Aufenthalts bereit.",
-        "Normalerweise enthält es Orangensaft, Butter, Milch, Kekse, Eier, Marmeladen und Brot.",
+        "Normalerweise enthalten wir Orangensaft, Butter, Milch, Kekse, Eier, Marmeladen und Brot.",
         "Bitte lassen Sie uns wissen, ob Sie Lebensmittelallergien haben, damit wir den Inhalt des Korbes anpassen können."
       ]
     },
     "wifi": {
-      "summary": "WiFi ist verfügbar und der Code befindet sich in The Barn.",
+      "summary": "WiFi ist verfügbar und der Code befindet sich im Cottage.",
       "detail": [
-        "WiFi ist verfügbar und der Code befindet sich in The Barn. Viel Spaß damit! Wenn Sie Probleme haben, kontaktieren Sie uns bitte."
+        "WiFi ist verfügbar und der Code befindet sich im Cottage. Viel Spaß damit! Wenn Sie Probleme haben, kontaktieren Sie uns bitte."
       ]
     }
   },
   "houseManual": {
-    "intro": "The Barn ist ein gemütlicher, einzimmeriger Rückzugsort, der mit allem ausgestattet ist, was Sie für einen angenehmen Aufenthalt benötigen. Wir stellen Ihnen Toilettenartikel, Handtücher und Bademäntel zur Verfügung. Die Küche ist mit Grundnahrungsmitteln bestückt, darunter Kaffee, Tee, Zucker, Öl, Essig, Salz und Pfeffer. Sie finden außerdem ein Willkommenspaket bei Ihrer Ankunft.",
+    "intro": "Wir hoffen, dass Sie das Cottage und die Einrichtungen genießen. Nachfolgend finden Sie Informationen zu den Annehmlichkeiten, die Ihnen während Ihres Aufenthalts zur Verfügung stehen. Zögern Sie bitte nicht, uns zu kontaktieren, wenn Sie Fragen haben.",
     "facilities": [
       {
         "id": "laundry",
         "icon": "washing-machine",
         "title": "Wäsche",
-        "summary": "In der Küche befindet sich eine Waschmaschine mit Trockner.",
+        "summary": "Im Waschraum befinden sich eine Waschmaschine und ein Trockner.",
         "detail": [
-          "In der Küche befindet sich eine Waschmaschine mit integriertem Trockner. Die Bedienungsanleitung liegt in der unteren Schublade in der Küche.",
+          "Im Waschraum befinden sich eine Waschmaschine und ein Trockner.",
           "Wir stellen Ihnen Waschmittel und Weichspüler zur Verfügung.",
           "Es gibt auch eine Wäscheleine im Freien für diejenigen, die sie nutzen möchten."
         ]
@@ -103,22 +103,24 @@
         "id": "coffee",
         "icon": "coffee",
         "title": "Kaffee",
-        "summary": "In der Küche befindet sich eine Kaffeemaschine.",
+        "summary": "In der Küche befindet sich eine Espressomaschine.",
         "detail": [
-          "In der Küche befinden sich eine Kaffeemaschine und eine Kaffeepresse.",
+          "In der Küche befinden sich eine Espressomaschine, eine Kaffeepresse und eine Filterkaffeemaschine. Wir lieben unseren Kaffee.",
           "Kaffee und Zucker sind vorhanden.",
-          "Die Bedienungsanleitung für die Kaffeemaschine liegt in der Küchenschublade."
+          "Die Bedienungsanleitung für die Espressomaschine liegt auf der Küchenarbeitsplatte."
         ]
       },
       {
         "id": "television",
         "icon": "tv",
         "title": "Fernsehen & Medien",
-        "summary": "Im Wohnbereich befindet sich ein Flachbildfernseher.",
+        "summary": "Im Wohnzimmer befindet sich ein Flachbildfernseher.",
         "detail": [
-          "Im Wohnbereich befindet sich ein Flachbildfernseher.",
-          "Ein Netflix-Abonnement ist vorhanden.",
-          "Die Mini-HiFi-Anlage bietet Bluetooth, DAB-Radio und Radio."
+          "Im Wohnzimmer befindet sich ein Flachbildfernseher.",
+          "Smart TV und Netflix-Abonnements sind vorhanden.",
+          "Es gibt auch einen DVD-Player im Wohnzimmer und einige Filme im Wandschrank.",
+          "Die Mini-HiFi-Anlage im Wohnzimmer bietet die Möglichkeiten CD, Bluetooth, DAB-Radio und Radio.",
+          "Musik-CDs befinden sich in beiden Türmen neben der HiFi-Anlage und dem Fernseher."
         ]
       },
       {
@@ -129,7 +131,7 @@
         "detail": [
           "Es gibt Rauch-, Wärme- und CO-Melder.",
           "Diese wurden vor Ihrer Ankunft geprüft.",
-          "In der Küche befindet sich ein Feuerlöscher.",
+          "In der Küche befinden sich ein Feuerlöscher und eine Feuerdecke.",
           "Bitte manipulieren Sie die Alarme nicht."
         ]
       },
@@ -150,19 +152,32 @@
         "title": "Heizung",
         "summary": "Heizung ist vorhanden.",
         "detail": [
-          "Im Raum ist Heizung verfügbar.",
-          "Das Thermostat befindet sich auf einem Regal neben dem Staubsauger beim Essbereich.",
-          "Bei Fragen zur Heizung kontaktieren Sie uns bitte."
+          "In allen Räumen ist Heizung verfügbar.",
+          "Das Programm läuft täglich und das Thermostatdisplay befindet sich auf dem Regal im Wohnzimmer neben der Mini-HiFi-Anlage.",
+          "Die Heizung wird mit einer Wärmepumpe betrieben und läuft 24 Stunden mit der gleichen Temperatur, um effektiver zu sein.",
+          "Wenn Sie die Temperatur in den Räumen senken möchten, stellen Sie bitte das Heizkörperventil im Raum ein."
+        ]
+      },
+      {
+        "id": "summerhouse",
+        "icon": "home",
+        "title": "Gartenhaus",
+        "summary": "Ein beliebter Ort am See.",
+        "detail": [
+          "Das Gartenhaus steht allen Gästen zur Verfügung und bietet die Möglichkeit, zu essen, etwas zu trinken oder Musik zu hören, während Sie die fantastische Aussicht genießen.",
+          "Bitte halten Sie es ordentlich.",
+          "Die Gartenhausbeleuchtung geht jeden Tag bei Sonnenuntergang an und um 22:30 Uhr aus."
         ]
       },
       {
         "id": "garden",
         "icon": "tree",
         "title": "Garten",
-        "summary": "Genießen Sie den Außensitzbereich.",
+        "summary": "Genießen Sie unsere Gärten und die Sitzbereiche.",
         "detail": [
-          "Genießen Sie den Außensitzbereich.",
-          "Bitte bringen Sie die Kissen nach der Nutzung wieder herein.",
+          "Genießen Sie unsere Gärten und die Sitzbereiche.",
+          "Es gibt mehrere Bereiche im Garten mit Sitzgelegenheiten und Esstischen.",
+          "Bitte bringen Sie die Kissen für die verschiedenen Sitzbereiche nach Gebrauch ins Haus oder in die Gartenkiste.",
           "Bitte lassen Sie die Kissen möglichst nicht über Nacht draußen."
         ]
       },
@@ -170,9 +185,9 @@
         "id": "barbecue",
         "icon": "barbecue",
         "title": "Grill",
-        "summary": "Es gibt einen Holzkohlegrill zur Nutzung durch die Gäste.",
+        "summary": "Es gibt Holzkohlegrills zur Nutzung durch die Gäste.",
         "detail": [
-          "Es gibt einen Holzkohlegrill zur Nutzung durch die Gäste.",
+          "Es gibt Holzkohlegrills zur Nutzung durch die Gäste.",
           "Wenn Sie die vorhandene Holzkohle verwendet haben, ersetzen Sie sie bitte.",
           "Stellen Sie sicher, dass Sie den Grill und das Zubehör für zukünftige Gäste gereinigt haben."
         ]
@@ -181,7 +196,7 @@
         "id": "transport",
         "icon": "car",
         "title": "Transport",
-        "summary": "Taxis und Busse in der Gegend.",
+        "summary": "Taxis und Busse, die in der Gegend verkehren.",
         "detail": [
           "Hier sind Links zu einigen lokalen Taxis und dem Cornwall First Bus:"
         ],
@@ -205,14 +220,24 @@
         ]
       },
       {
+        "id": "septic",
+        "icon": "circle-off",
+        "title": "Kläranlagen",
+        "summary": "Bitte verwenden Sie im WC nur Toilettenpapier.",
+        "detail": [
+          "Bitte verwenden Sie im WC nur Toilettenpapier.",
+          "Damenhygieneartikel, Zahnseide usw. müssen in den Abfalleimer entsorgt werden."
+        ]
+      },
+      {
         "id": "waste",
         "icon": "recycle",
         "title": "Abfall & Recycling",
-        "summary": "Recycling, Abfall und Kompost.",
+        "summary": "Recycling, Abfall, Müll und Kompost.",
         "detail": [
-          "<strong>Kompost:</strong> Bitte geben Sie kompostierbaren Abfall in die Kompostbehälter. Keine Eierschalen.",
+          "<strong>Kompost:</strong> Bitte legen Sie kompostierbare Abfälle in die Kompostbehälter neben dem schwarzen Gartenschuppen auf der anderen Seite des Cottages. Keine Eierschalen.",
           "</br>",
-          "<strong>Recycling:</strong> Recycelbarer Abfall sollte in den grünen Müllbeutel im Metalleimer neben The Barn gegeben werden. Recycelbare Materialien sind Glas, Metall (Dosen, Konservendosen und Deckel), Kunststoff, Papier und Pappe.",
+          "<strong>Recycling:</strong> Recycelbare Abfälle sollten in den grünen Müllbeutel in der Schublade unter den Öfen gelegt werden. Recycelbare Gegenstände sind Glas, Metall (Dosen, Konserven und Deckel), Kunststoff, Papier und Pappe. Dies wird im Depot sortiert.",
           "</br>",
           "<strong>Abfall:</strong> Alle anderen Abfälle sollten in die Küchenabfalltonne gelegt werden.",
           "</br>",
@@ -228,7 +253,9 @@
         "summary": "Einige Richtlinien und Regeln für einen angenehmen Aufenthalt.",
         "detail": [
           "Bitte kein Lärm im Freien nach 23:00 Uhr.",
-          "Rauchen oder Dampfen im Gebäude ist nicht erlaubt.",
+          "Rauchen oder Dampfen im Haus ist nicht erlaubt.",
+          "Wir stellen Ihnen Strandhandtücher zur Verfügung. Bitte nehmen Sie die Badezimmerhandtücher nicht außerhalb der Unterkunft mit.",
+          "Wenn Sie während Ihres Aufenthalts einen Handtuchwechsel benötigen, kontaktieren Sie uns bitte.",
           "Haustiere sind nicht erlaubt.",
           "Die Unterkunft ist für die in der Buchung angegebene Anzahl an Gästen bestimmt."
         ]
@@ -238,7 +265,7 @@
   "departure": {
     "label": "Check-out",
     "title": "Abreise",
-    "intro": "Wir hoffen, dass Sie einen angenehmen Aufenthalt in The Barn hatten und dass alles für Sie perfekt war. Wir bitten Sie, vor der Abreise diese Liste zu prüfen. Wir freuen uns darauf, Sie bald wieder bei uns begrüßen zu dürfen.",
+    "intro": "Wir hoffen, dass Sie einen angenehmen Aufenthalt in The Cottage hatten und dass alles für Sie perfekt war. Wir bitten Sie, vor der Abreise diese Liste zu prüfen. Wir freuen uns darauf, Sie bald wieder bei uns begrüßen zu dürfen.",
     "items": [
       {
         "id": "checkout",
@@ -247,7 +274,7 @@
         "summary": "Check-out vor 10:00 Uhr",
         "detail": [
           "Wir bitten Sie, vor 10:00 Uhr auszuchecken.",
-          "Dies gibt uns Zeit, The Barn vor der Ankunft des nächsten Gastes zu reinigen.",
+          "Dies gibt uns Zeit, das Cottage vor der Ankunft des nächsten Gastes zu reinigen.",
           "Wenn Sie einen späten Check-out wünschen, kontaktieren Sie uns bitte. Bitte beachten Sie jedoch, dass wir Ihrer Bitte möglicherweise nicht nachkommen können, wenn am selben Tag ein neuer Gast einzieht."
         ]
       },
@@ -276,7 +303,7 @@
         "summary": "Bitte stellen Sie alle Möbel wieder an den ursprünglichen Platz.",
         "detail": [
           "Bitte stellen Sie alle Möbel wieder an den ursprünglichen Platz.",
-          "Wenn etwas fehlt oder beschädigt ist, teilen Sie uns dies bitte im Voraus mit, damit wir den Gegenstand ersetzen oder reparieren können."
+          "Wenn etwas fehlt oder beschädigt ist, teilen Sie es uns bitte im Voraus mit, damit wir den Gegenstand ersetzen oder reparieren können."
         ]
       },
       {
@@ -293,21 +320,22 @@
         "id": "barbecue",
         "icon": "barbecue",
         "title": "Grill",
-        "summary": "Bitte denken Sie daran, den Grill zu reinigen.",
+        "summary": "Bitte denken Sie daran, die Grills zu reinigen.",
         "detail": [
-          "Bitte denken Sie daran, den Grill zu reinigen.",
-          "Wenn Sie die vorhandene Holzkohle verwendet haben, ersetzen Sie sie bitte."
+          "Bitte denken Sie daran, die Grills zu reinigen.",
+          "Wenn Sie die vorhandene Holzkohle verwendet haben, ersetzen Sie sie bitte.",
+          "Stellen Sie sicher, dass Sie den Grill und das Zubehör für zukünftige Gäste gereinigt haben."
         ]
       },
       {
         "id": "waste",
         "icon": "recycle",
         "title": "Abfall & Recycling",
-        "summary": "Recycling, Abfall und Kompost.",
+        "summary": "Recycling, Abfall, Müll und Kompost.",
         "detail": [
-          "<strong>Kompost:</strong> Bitte geben Sie kompostierbaren Abfall in die Kompostbehälter. Keine Eierschalen.",
+          "<strong>Kompost:</strong> Bitte legen Sie kompostierbare Abfälle in die Kompostbehälter neben dem schwarzen Gartenschuppen auf der anderen Seite des Cottages. Keine Eierschalen.",
           "</br>",
-          "<strong>Recycling:</strong> Recycelbarer Abfall sollte in den grünen Müllbeutel im Metalleimer neben The Barn gegeben werden. Recycelbare Materialien sind Glas, Metall (Dosen, Konservendosen und Deckel), Kunststoff, Papier und Pappe.",
+          "<strong>Recycling:</strong> Recycelbare Abfälle sollten in den grünen Müllbeutel in der Schublade unter den Öfen gelegt werden. Recycelbare Gegenstände sind Glas, Metall (Dosen, Konserven und Deckel), Kunststoff, Papier und Pappe. Dies wird im Depot sortiert.",
           "</br>",
           "<strong>Abfall:</strong> Alle anderen Abfälle sollten in die Küchenabfalltonne gelegt werden.",
           "</br>",
@@ -331,7 +359,7 @@
         "title": "Feedback",
         "summary": "Wir würden uns sehr über Ihren Aufenthalt freuen.",
         "detail": [
-          "Wir würden uns sehr über Ihre Erfahrungen in The Barn freuen.",
+          "Wir würden uns sehr über Ihre Erfahrungen in The Cottage freuen.",
           "Tragen Sie sich in unser Gästebuch ein.",
           "Wenn Ihnen Ihr Aufenthalt gefallen hat, hinterlassen Sie bitte eine Bewertung auf der Buchungsplattform, die Sie genutzt haben.",
           "Wenn es etwas gibt, das wir tun könnten, um das Erlebnis unserer Gäste zu verbessern, teilen Sie uns dies bitte persönlich mit.",
@@ -345,7 +373,7 @@
       "summary": "Im Brandfall das Gebäude verlassen und 999 anrufen.",
       "steps": [
         "Verlassen Sie das Gebäude und gehen Sie zum Parkplatz.",
-        "Rufen Sie die Feuerwehr unter <a href=\"tel:999\" class=\"text-primary font-bold\">999</a> an",
+        "Rufen Sie die Feuerwehr an, indem Sie <a href=\"tel:999\" class=\"text-primary font-bold\">999</a> wählen.",
         "Kontaktieren Sie <a href=\"tel:07790611150\" class=\"text-primary\">Leslie</a> oder <a href=\"tel:07854306340\" class=\"text-primary\">Johnny</a>"
       ],
       "note": "Im Falle eines kleinen Brandes,stehen ein Feuerlöscher und eine Feuerdecke zur Verfügung."
@@ -353,9 +381,9 @@
     "medical": {
       "summary": "Für einen Krankenwagen, wenn das Leben in Gefahr ist, rufen Sie 999 oder 112.",
       "detail": [
-        "Bei lebensbedrohlichen Situationen rufen Sie <a href=\"tel:999\" class=\"text-primary font-bold\">999</a> oder <a href=\"tel:112\" class=\"text-primary font-bold\">112</a>.",
-        "Bei anderen medizinischen Problemen rufen Sie <a href=\"tel:111\" class=\"text-primary font-bold\">111</a> an oder nutzen Sie den <a href=\"https://111.nhs.uk\" target=\"_blank\" rel=\"noopener\" class=\"text-primary underline\">NHS 111 Online-Dienst</a>.",
-        "Im Badezimmer befindet sich ein Erste-Hilfe-Kasten.",
+        "Für einen Krankenwagen, wenn das Leben in Gefahr ist, rufen Sie <a href=\"tel:999\" class=\"text-primary font-bold\">999</a> oder <a href=\"tel:112\" class=\"text-primary font-bold\">112</a>.",
+        "Bei anderen medizinischen Problemen rufen Sie <a href=\"tel:111\" class=\"text-primary font-bold\">111</a> an oder nutzen Sie den <a href=\"https://111.nhs.uk\" target=\"_blank\" rel=\"noopener\" class=\"text-primary underline\">NHS 111 Online-Service</a>.",
+        "In der Küche befindet sich ein Erste-Hilfe-Kasten.",
         "Bitte informieren Sie <a href=\"tel:07790611150\" class=\"text-primary\">Leslie</a> oder <a href=\"tel:07854306340\" class=\"text-primary\">Johnny</a>, wenn Sie während Ihres Aufenthalts einen Unfall haben."
       ]
     },
@@ -480,7 +508,7 @@
       "name": "Praa Sands",
       "location": "Helston, near Tresowes Green",
       "url": "https://www.cornwall-beaches.co.uk/west-cornwall/praa-sands.htm",
-      "description": "Ein breiter Sandstrand nur 5 Minuten von Tresowes Green Cottage entfernt, ideal zum Schwimmen und Surfen.",
+      "description": "Ein breiter Sandstrand nur 5 Minuten vom Cottage entfernt, ideal zum Schwimmen und Surfen.",
       "image": "/images/beaches/praa-sands.webp"
     },
     {
@@ -757,7 +785,7 @@
     "attractions": {
       "label": "Aktivitäten",
       "title": "Ausflüge - Attraktionen - Gärten",
-      "intro": "Erkunden Sie die wunderbaren Attraktionen, Ausflugsziele und Gärten in der Gegend, die meisten nur 5 bis 30 Minuten mit dem Auto entfernt. Bitte beachten Sie, dass während der Hochsaison eine vorherige Ticketbuchung erforderlich sein kann."
+      "intro": "Erkunden Sie die wunderbaren Attraktionen, Ausflugsziele und Gärten in der Umgebung, die meisten nur 5 bis 30 Minuten mit dem Auto entfernt. Bitte beachten Sie, dass während der Hochsaison eine vorherige Ticketbuchung erforderlich sein kann."
     },
     "shopping": {
       "label": "Supermärkte & Fischgeschäfte",
