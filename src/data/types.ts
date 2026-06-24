@@ -180,7 +180,7 @@ export interface SectionMeta {
 export interface GuidebookData {
   property: PropertyConfig;
   contact: Contact;
-  hero: { heading: string; subheading: string; body: string; navbarTitle?: string };
+  hero: { heading: string; subheading: string; body: string };
   arrival: ArrivalInfo;
   houseManual: { intro: string; facilities: Facility[] };
   departure: {

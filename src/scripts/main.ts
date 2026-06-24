@@ -18,7 +18,7 @@ import { initPWA } from "../components/guide-pwa";
 import { initRouter } from "./router";
 
 // Import guidebook data and language init
-import { guidebook, initLanguage } from "../data/config";
+import { getUI, guidebook, initLanguage } from "../data/config";
 
 // Initialize language before anything else renders
 initLanguage();
@@ -34,14 +34,18 @@ function initPageMeta(): void {
   const path = window.location.pathname;
 
   // Get page name from current route
-  const pageName =
-    path === "/"
-      ? "House Manual"
-      : path
-          .replace(/^\//, "")
-          .split("-")
-          .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-          .join(" ");
+  const t = getUI().routes;
+  const routeMap: Record<string, string> = {
+    "/": t.welcome,
+    "/arrival": t.arrival,
+    "/house-manual": t.houseManual,
+    "/places-to-eat": t.restaurants,
+    "/beaches": t.beaches,
+    "/attractions": t.attractions,
+    "/emergency": t.emergency,
+    "/departure": t.departure,
+  };
+  const pageName = routeMap[path] ?? t.welcome;
 
   // Update title
   document.title = `${propertyName} | ${pageName}`;
