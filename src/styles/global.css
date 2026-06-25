@@ -442,7 +442,7 @@ dialog::backdrop {
 
 .hero-content .subheading {
   max-width: 28rem;
-  margin-bottom: 0 auto 1.25rem;
+  margin: 0 auto 1.25rem;
 }
 
 .hero-content p {
