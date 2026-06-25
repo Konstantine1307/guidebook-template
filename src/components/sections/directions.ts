@@ -25,7 +25,6 @@ export function renderDirections(): string {
     <p>${c.addressFull}</p>
     <br/>
     <p><strong>Email:</strong> <a href="mailto:${c.email}" style="color:var(--color-primary)">${c.email}</a></p>
-    <p><strong>Home Phone:</strong> <a href="tel:${c.homePhoneHref}" style="color:var(--color-primary)">${c.homePhone}</a></p>
     ${contactRows}
   `;
 

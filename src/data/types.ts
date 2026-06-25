@@ -90,8 +90,6 @@ export interface Contact {
   address: string;
   addressFull: string;
   email: string;
-  homePhone: string;
-  homePhoneHref: string;
   contacts: Array<{ name: string; phone: string; phoneHref: string }>;
   what3words: string;
   what3wordsUrl: string;
